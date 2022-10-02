@@ -6,7 +6,276 @@
         <description>Recent content in Posts on Akansha Jha</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 24 Aug 2022 13:15:46 +0530</lastBuildDate><atom:link href="https://jhaakansha.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 18 Sep 2022 10:44:35 +0530</lastBuildDate><atom:link href="https://jhaakansha.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Heap Sort</title>
+        <link>https://jhaakansha.github.io/p/heap-sort/</link>
+        <pubDate>Sun, 18 Sep 2022 10:44:35 +0530</pubDate>
+        
+        <guid>https://jhaakansha.github.io/p/heap-sort/</guid>
+        <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;Runtime&lt;/strong&gt;&lt;/em&gt;:   O(nlogn)       &lt;em&gt;&lt;strong&gt;Memory&lt;/strong&gt;&lt;/em&gt; :   O(1)&lt;/p&gt;
+&lt;p&gt;Heap Sort is a comparison-based sorting technique based on binary heap data structure. It is an in-place algorithm. Its typical implementation is not stable, but can be made stable. Typically, it is 2-3 times slower than well-implemented quicksort due to lack of locality of reference.&lt;br&gt;
+&lt;strong&gt;Advantages of heapsort&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;Efficiency&lt;/em&gt; : The time required to perform heap sort increases logarithmicallywhile other algorithms may grow exponentially slower as the number of items to sort increases.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Memory usage&lt;/em&gt; : Memory usage is minimal because apart from what is necessary to hold the initial list of items to be sorted,it needs no additional memory space to work.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Simplicity&lt;/em&gt; : It is simpler to understand than other sorting algorithm because it does not use advanced computer science concepts.&lt;br&gt;
+&lt;strong&gt;Heapify&lt;/strong&gt;&lt;br&gt;
+It is the process of creating a heap data structure from a binary tree represented using an array. It is used to create Min-Heap or Max-Heap.Start from the first index of the non-leaf node whose index is given by n/2 - 1. Heapify using recursion.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Implementation of Heap Sort&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&#34;https://jhaakansha.github.io/Pictures/heapsort.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;What are the two phases of heap sort?&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;Array is converted into max heap.&lt;/li&gt;
+&lt;li&gt;Highest element is removed and the remaining elements are used to create a new max heap.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Which is better: Heapsort or Mergesort?&lt;/strong&gt;
+Mergesort is slightly faster than heapsort but mergesort requires extra storage space. Depending on the requirement, one should be chosen.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Why is heapsort better than selection sort?&lt;/strong&gt;&lt;br&gt;
+Heapsort is similar to selection sort, but with a better way to get the maximum element. It takes advantage os the heap data structure to get the maximum element in constant time.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Quick Sort</title>
+        <link>https://jhaakansha.github.io/p/quick-sort/</link>
+        <pubDate>Sat, 17 Sep 2022 13:18:51 +0530</pubDate>
+        
+        <guid>https://jhaakansha.github.io/p/quick-sort/</guid>
+        <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;Runtime&lt;/strong&gt;&lt;/em&gt;:   average : O(nlogn)   worst : O(n²)       &lt;em&gt;&lt;strong&gt;Auxiliary Space&lt;/strong&gt;&lt;/em&gt; :   O(n)
+In quick sort, we pick a random element and partition the array, such that all numbers that are less than the partitioning element come before all elements greater than it.&lt;br&gt;
+If we repeatedly partition the array around an element, the array will eventually become sorted. However, as the partitioned element is not huaranteed to be the median, our sorting could be very slow.&lt;br&gt;
+Quick Sort is not a stable algorithm. However, any sorting algorithm can be made stable by considering indexes as comparison parametres.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Implementation of QuickSort&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&#34;https://jhaakansha.github.io/Pictures/quicksort.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;Worst Case&lt;/em&gt;&lt;br&gt;
+The worst case occurs when the partition process always picks the greatest or the smallest element as the pivot. If we consider the partition startegy where the last element is always picked as a pivot, the worst case obviously occurs when the array is already sorted.&lt;br&gt;
+&lt;em&gt;Best Case&lt;/em&gt;&lt;br&gt;
+The best case occurs when the partition process always picks the middle element as the pivot.&lt;br&gt;
+&lt;strong&gt;3 WAY QUICKSORT&lt;/strong&gt;&lt;br&gt;
+Consider an array which has many redundant elements. For example {1,2,3,6,6,8,9,9,0,0,0,7}, If we pick 6 as the pivot, we fix only one 6 and recursively process remaining occurrences. The idea of 3 way quicksort is to process all occurrences of the pivot and is based on Dutch National Flag algorithm.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Implementation of 3 way quicksort using Dutch National Flag algorithm&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&#34;https://jhaakansha.github.io/Pictures/dnfa_quicksort.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The time complexity of this algorithm is O(nlogn) and the space complexity is o(logn).&lt;br&gt;
+&lt;strong&gt;Why is Quick Sort preferred over Merge Sort for sorting arrays?&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;QuickSort is an in-place sort (i.e. it does not require any extra storage) whereas mergesort requires O(n) extra storage.&lt;/li&gt;
+&lt;li&gt;Allocating and de-allocating the extra space used for mergesort increases the running time of the algorithm.&lt;/li&gt;
+&lt;li&gt;Most practical implementations of QuickSort use randomized version. It has expected time complexity of O(nlogn). The worst case is possible in randomized version also, but worst case does not occur for a particular pattern (like sorted array) and works well in practice.&lt;/li&gt;
+&lt;li&gt;QuickSort is also cache friendly sorting algorithm as it has good locality of reference when used for arrays.&lt;/li&gt;
+&lt;li&gt;It is also tail recursive, therefore tail call optimization is done.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Merge Sort</title>
+        <link>https://jhaakansha.github.io/p/merge-sort/</link>
+        <pubDate>Sat, 17 Sep 2022 13:18:43 +0530</pubDate>
+        
+        <guid>https://jhaakansha.github.io/p/merge-sort/</guid>
+        <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;Runtime&lt;/strong&gt;&lt;/em&gt;:   O(nlogn)       &lt;em&gt;&lt;strong&gt;Auxiliary Space&lt;/strong&gt;&lt;/em&gt; :   O(n)&lt;/p&gt;
+&lt;p&gt;Merge Sort divides the array in half, sorts each of those halves and then merges them back together. Each of these halves has the same sorting algorithm applied to it. Eventually, its like merging two single-element arrays. The merge method operates by copying all the elements from target array segment into a helper array,keeping track of where the start of the left and right halves should be. Then, iterate through helper, copying the smaller element from each half into the array.&lt;br&gt;
+Its is a stable algorithm.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Implemetation of MergeSort&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&#34;https://jhaakansha.github.io/Pictures/mergesort.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;DRAWBACKS&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;It is slower compared to other sort algorithms for smaller tasks.&lt;/li&gt;
+&lt;li&gt;It requires additional memory space of O(n).&lt;/li&gt;
+&lt;li&gt;Merge sort goes through whole process even if array is sorted.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>Insertion Sort</title>
+        <link>https://jhaakansha.github.io/p/insertion-sort/</link>
+        <pubDate>Sat, 17 Sep 2022 02:03:01 +0530</pubDate>
+        
+        <guid>https://jhaakansha.github.io/p/insertion-sort/</guid>
+        <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;Best Case Runtime&lt;/strong&gt;&lt;/em&gt;:   O(n)       &lt;em&gt;&lt;strong&gt;Worst Case Runtime&lt;/strong&gt;&lt;/em&gt; :   O(n²)&lt;/p&gt;
+&lt;p&gt;The method for implementation of insertion sort is similar to the one we use to arrange our cards. It is a stable sorting algorithm. The steps followed are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Iterate from arr[1] to arr[n] over the array.&lt;/li&gt;
+&lt;li&gt;Compare the current element (key) to its predecessor.
+If the key element is smaller than its predecessor, compare it to the element before. Move the greater elements one position up to make space for the swapped element.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Implementation of InsertionSort&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&#34;https://jhaakansha.github.io/Pictures/insertionsort.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;BINARY INSERTIONSORT&lt;/strong&gt;
+This method uses binary search to find the proper location to insert the selected item at each iteration. In normal insertion, sorting takes O(i) time (at ith iteration) in worst case, this can be reduced to O(log i). The algorithm, as a whole, still has the worst case running time of O(n²).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Implementation of binary InsertionSort&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&#34;https://jhaakansha.github.io/Pictures/binaryinsertionsort.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
+        <title>Selection Sort</title>
+        <link>https://jhaakansha.github.io/p/selection-sort/</link>
+        <pubDate>Sun, 11 Sep 2022 14:20:15 +0530</pubDate>
+        
+        <guid>https://jhaakansha.github.io/p/selection-sort/</guid>
+        <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;Runtime&lt;/strong&gt;&lt;/em&gt;:   O(n²)       &lt;em&gt;&lt;strong&gt;Memory&lt;/strong&gt;&lt;/em&gt; :   O(1)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Find the smallest element using a linear scan and move it to the front.&lt;/li&gt;
+&lt;li&gt;Using linear scane, traverse the array from the second element onwards and find the least element in this sub-array.&lt;/li&gt;
+&lt;li&gt;Swap the second element with the least element in the sub-array (which will the second least element in the array).&lt;/li&gt;
+&lt;li&gt;Continue doing this until all elements are in place.&lt;br&gt;
+The default implementation of selection sort is not stable.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Implementation of SelectionSort&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&#34;https://jhaakansha.github.io/Pictures/selectionsort.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
+        <title>Bubble Sort</title>
+        <link>https://jhaakansha.github.io/p/bubble-sort/</link>
+        <pubDate>Sun, 11 Sep 2022 12:27:42 +0530</pubDate>
+        
+        <guid>https://jhaakansha.github.io/p/bubble-sort/</guid>
+        <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;Runtime&lt;/strong&gt;&lt;/em&gt;:   O(n²)       &lt;em&gt;&lt;strong&gt;Memory&lt;/strong&gt;&lt;/em&gt; :   O(1)&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;*In this article each n refers to the number of elements present in the array.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;In BubbleSort, we start at the beginning of the array and swap the first two elements if the first is greater than the second. Then, we go to the next pair and so on, continuously making sweeps of the array until it is sorted.&lt;br&gt;
+It ia a stable algorithm, i.e, the relative positions of equivalent elements remains the same.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Implementation of simple BubbleSort&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&#34;https://jhaakansha.github.io/Pictures/simple_bubblesort.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The above method is not optimized it could be bettered by stopping the algorithm if the inner loop does not cause any swap.&lt;br&gt;
+The optimized approach will run a little slower than the original one if all the passes are made. However, in the best situation, the time complexity will be O(n) as opposed to the original which was (n²) in all circumstances.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Worst Case&lt;/strong&gt; :   The worst case occurs when all the elements are arranged in descending order.&lt;br&gt;
+Total number of iterations = n - 1&lt;br&gt;
+At pass 1:   comparisons = n - 1       swaps = n - 1&lt;br&gt;
+At pass 2:   compartisons = n - 2       swaps = n - 2&lt;br&gt;
+and so on until the number of comparisons is 1. Therefore, total number of comparisons required to sort the array&lt;br&gt;
+= (n - 1) + (n - 2) + (n - 3) + &amp;hellip;. + 2 + 1&lt;br&gt;
+= (n - 1)(n - 1 + 1)/2&lt;br&gt;
+= n(n - 1)/2&lt;br&gt;
+This is equivalent to n².&lt;br&gt;
+&lt;strong&gt;Best Case&lt;/strong&gt; :   The best occurs when the array is already sorted. The time complexity in this case is O(n).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Implementation of optimized BubbleSort&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&#34;https://jhaakansha.github.io/Pictures/optimized_bubblesort.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;RECURSIVE BUBBLESORT&lt;/strong&gt;&lt;br&gt;
+The following steps are followed to implement recursive bubblesort:-&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Place the largest element at its position, this operation makes sure that the first largest element will be placed at the end of the array.&lt;/li&gt;
+&lt;li&gt;Recursively call for the rest n - 1 elements with the same operation and place the next greater element at its position.&lt;/li&gt;
+&lt;li&gt;The base condition for this recursion call would be when the number of elements in the array becomes 0 or 1 then, simply return.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Implementation of recursive BubbleSort&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&#34;https://jhaakansha.github.io/Pictures/recursive_bubblesort.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
         <title>Data Bending</title>
         <link>https://jhaakansha.github.io/p/data-bending/</link>
         <pubDate>Wed, 24 Aug 2022 13:15:46 +0530</pubDate>
