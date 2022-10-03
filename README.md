@@ -8,7 +8,7 @@
 
 ## Build static pages
 `hugo` add `-D` flag to build draft sites. 
-Command if stuff not updating `hugo --ignoreCache --cleanDestinationDir --destination ~/Desktop/git/JhaAkansha.github.io/docs -v`
+Command if stuff not updating `hugo --cleanDestinationDir --destination ~/Desktop/git/JhaAkansha.github.io/docs -v`
 
 #  starting up
 After cloning, add theme: `git submodule add https://github.com/dillonzq/LoveIt.git`
