@@ -6,7 +6,73 @@
         <description>Recent content in Posts on Akansha Jha</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 18 Sep 2022 10:44:35 +0530</lastBuildDate><atom:link href="https://jhaakansha.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 22 Sep 2022 04:55:43 +0530</lastBuildDate><atom:link href="https://jhaakansha.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Indexed Sequential Search</title>
+        <link>https://jhaakansha.github.io/p/indexed-sequential-search/</link>
+        <pubDate>Thu, 22 Sep 2022 04:55:43 +0530</pubDate>
+        
+        <guid>https://jhaakansha.github.io/p/indexed-sequential-search/</guid>
+        <description>&lt;p&gt;In this searching method, first of all, an index file is created that contains some specific group or division of required record when the index is obtained, then the partial indexing takes less time because it is located in a specific group.&lt;br&gt;
+&lt;strong&gt;Characteristics of indexed sequential search&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;In indexed sequential search, a sorted index is set aside in addition to the array.&lt;/li&gt;
+&lt;li&gt;Each element in the index points to a block of elements in the array or another expanded index.&lt;/li&gt;
+&lt;li&gt;The index is searched first then the array and guides the search in the array.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Implementation of Indexed Sequential Search&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&#34;https://jhaakansha.github.io/Pictures/ndexedsequentialsearch.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
+        <title>Binary Search</title>
+        <link>https://jhaakansha.github.io/p/binary-search/</link>
+        <pubDate>Thu, 22 Sep 2022 04:35:32 +0530</pubDate>
+        
+        <guid>https://jhaakansha.github.io/p/binary-search/</guid>
+        <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;Runtime&lt;/strong&gt;&lt;/em&gt; :   O(log n)&lt;br&gt;
+The approximate middle item of the data set is located, and its key value is examined. If its value is too high, then the key of the middle element of the first half of the set is examined and procedure is repeated on the first half until the required item is found. If the value is too low, then the key of the middle entry of the second half of the data set is tried and the procedure is repeated on the second half. The process is continued until the desired key is found or search interval becomes empty.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Implementation of Binary search&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&#34;https://jhaakansha.github.io/Pictures/binarysearch.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;RECURSIVE BINARY SEARCH&lt;/strong&gt;&lt;br&gt;
+Binary search can be implemented using recursion as well.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Implementation of recursive Binary search&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&#34;https://jhaakansha.github.io/Pictures/recurbinary.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
         <title>Heap Sort</title>
         <link>https://jhaakansha.github.io/p/heap-sort/</link>
         <pubDate>Sun, 18 Sep 2022 10:44:35 +0530</pubDate>
