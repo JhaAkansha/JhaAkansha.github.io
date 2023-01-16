@@ -1,6 +1,6 @@
 ---
 title: "Selection Sort"
-date: 2022-09-11T14:20:15+05:30
+date: 2022-08-06T14:20:15+05:30
 #draft: true
 ---
 ***Runtime***: &nbsp; O(n²) &emsp; &emsp; &emsp; ***Memory*** : &nbsp; O(1)

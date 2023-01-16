@@ -1,6 +1,6 @@
 ---
 title: "Binary Search"
-date: 2022-09-22T04:35:32+05:30
+date: 2022-09-21T04:35:32+05:30
 ---
 ***Runtime*** : &nbsp; O(log n)  
 The approximate middle item of the data set is located, and its key value is examined. If its value is too high, then the key of the middle element of the first half of the set is examined and procedure is repeated on the first half until the required item is found. If the value is too low, then the key of the middle entry of the second half of the data set is tried and the procedure is repeated on the second half. The process is continued until the desired key is found or search interval becomes empty. 

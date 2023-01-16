@@ -1,6 +1,6 @@
 ---
 title: "Data Bending"
-date: 2022-08-24T13:15:46+05:30
+date: 2022-07-24T13:15:46+05:30
 #draft: true
 ---
 ![img](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.s7_sp2tGLHalcnpZTPELMAHaE8%26pid%3DApi&f=1)

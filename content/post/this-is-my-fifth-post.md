@@ -1,6 +1,6 @@
 ---
 title: "Insertion Sort"
-date: 2022-09-17T02:03:01+05:30
+date: 2022-08-13T02:03:01+05:30
 #draft: true
 ---
 ***Best Case Runtime***: &nbsp; O(n) &emsp; &emsp; &emsp; ***Worst Case Runtime*** : &nbsp; O(n²)

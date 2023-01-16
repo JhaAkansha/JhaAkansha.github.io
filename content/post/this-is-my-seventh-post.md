@@ -1,6 +1,6 @@
 ---
 title: "Quick Sort"
-date: 2022-09-17T13:18:51+05:30
+date: 2022-08-26T13:18:51+05:30
 #draft: true
 ---
 ***Runtime***: &nbsp; average : O(nlogn) &emsp; worst : O(n²) &emsp; &emsp; &emsp; ***Auxiliary Space*** : &nbsp; O(n)

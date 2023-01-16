@@ -1,6 +1,6 @@
 ---
 title: "Merge Sort"
-date: 2022-09-17T13:18:43+05:30
+date: 2022-08-21T13:18:43+05:30
 #draft: true
 ---
 ***Runtime***: &nbsp; O(nlogn) &emsp; &emsp; &emsp; ***Auxiliary Space*** : &nbsp; O(n)

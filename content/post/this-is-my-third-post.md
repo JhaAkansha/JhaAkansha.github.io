@@ -1,6 +1,6 @@
 ---
 title: "Bubble Sort"
-date: 2022-09-11T12:27:42+05:30
+date: 2022-07-30T12:27:42+05:30
 #draft: true
 ---
 ***Runtime***: &nbsp; O(n²) &emsp; &emsp; &emsp; ***Memory*** : &nbsp; O(1)
