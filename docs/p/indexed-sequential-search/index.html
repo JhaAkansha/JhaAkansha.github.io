@@ -2,22 +2,19 @@
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='In this searching method, first of all, an index file is created that contains some specific group or division of required record when the index is obtained, then the partial indexing takes less time because it is located in a specific group.
-Characteristics of indexed sequential search
-In indexed sequential search, a sorted index is set aside in addition to the array. Each element in the index points to a block of elements in the array or another expanded index.'><title>Indexed Sequential Search</title>
+Characteristics of indexed sequential search In indexed sequential search, a sorted index is set aside in addition to the array. Each element in the index points to a block of elements in the array or another expanded index.'><title>Indexed Sequential Search</title>
 
 <link rel='canonical' href='https://jhaakansha.github.io/p/indexed-sequential-search/'>
 
-<link rel="stylesheet" href="/scss/style.min.18145888f21de6cb02d8cb0891be8240096206785da14eda35f6c23c239b966a.css"><meta property='og:title' content='Indexed Sequential Search'>
+<link rel="stylesheet" href="/scss/style.min.bd6a25840373b4ba250cc3dee245d947386fe3973a1452568fca5164df565e19.css"><meta property='og:title' content='Indexed Sequential Search'>
 <meta property='og:description' content='In this searching method, first of all, an index file is created that contains some specific group or division of required record when the index is obtained, then the partial indexing takes less time because it is located in a specific group.
-Characteristics of indexed sequential search
-In indexed sequential search, a sorted index is set aside in addition to the array. Each element in the index points to a block of elements in the array or another expanded index.'>
+Characteristics of indexed sequential search In indexed sequential search, a sorted index is set aside in addition to the array. Each element in the index points to a block of elements in the array or another expanded index.'>
 <meta property='og:url' content='https://jhaakansha.github.io/p/indexed-sequential-search/'>
 <meta property='og:site_name' content='Akansha Jha'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-09-22T04:55:43&#43;05:30'/><meta property='article:modified_time' content='2022-09-22T04:55:43&#43;05:30'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-09-11T04:55:43&#43;05:30'/><meta property='article:modified_time' content='2022-09-11T04:55:43&#43;05:30'/>
 <meta name="twitter:title" content="Indexed Sequential Search">
 <meta name="twitter:description" content="In this searching method, first of all, an index file is created that contains some specific group or division of required record when the index is obtained, then the partial indexing takes less time because it is located in a specific group.
-Characteristics of indexed sequential search
-In indexed sequential search, a sorted index is set aside in addition to the array. Each element in the index points to a block of elements in the array or another expanded index.">
+Characteristics of indexed sequential search In indexed sequential search, a sorted index is set aside in addition to the array. Each element in the index points to a block of elements in the array or another expanded index.">
     </head>
     <body class="
     article-page
@@ -318,7 +315,7 @@ In indexed sequential search, a sorted index is set aside in addition to the arr
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Sep 22, 2022</time>
+                <time class="article-time--published">Sep 11, 2022</time>
             </div>
         
 
@@ -333,7 +330,7 @@ In indexed sequential search, a sorted index is set aside in addition to the arr
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    2 minute read
                 </time>
             </div>
         
@@ -347,27 +344,97 @@ In indexed sequential search, a sorted index is set aside in addition to the arr
     <section class="article-content">
     
     
-    <p>In this searching method, first of all, an index file is created that contains some specific group or division of required record when the index is obtained, then the partial indexing takes less time because it is located in a specific group.<br>
-<strong>Characteristics of indexed sequential search</strong></p>
+    <p>In this searching method, first of all, an index file is created that contains some specific group or division of required record when the index is obtained, then the partial indexing takes less time because it is located in a specific group.</p>
+<h2 id="characteristics-of-indexed-sequential-search">Characteristics of indexed sequential search</h2>
 <ol>
 <li>In indexed sequential search, a sorted index is set aside in addition to the array.</li>
 <li>Each element in the index points to a block of elements in the array or another expanded index.</li>
 <li>The index is searched first then the array and guides the search in the array.</li>
 </ol>
-<blockquote>
-<p><strong>Implementation of Indexed Sequential Search</strong><br>
-<img src="/Pictures/ndexedsequentialsearch.png"
-	
-	
-	
-	loading="lazy"
-	
-		alt="img"
-	
-	
-></p>
-</blockquote>
-
+<h2 id="implementation-of-indexed-sequential-search">Implementation of Indexed Sequential Search</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">gn</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">//gn is the number of elements in a group
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">elements</span><span class="p">[</span><span class="n">gn</span><span class="p">],</span> <span class="n">indices</span><span class="p">[</span><span class="n">gn</span><span class="p">],</span> <span class="n">i</span><span class="p">,</span> <span class="n">set</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ind</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">+=</span><span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">elements</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="n">indices</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ind</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">k</span> <span class="o">&lt;</span> <span class="n">elements</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Not found&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">ind</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">k</span> <span class="o">&lt;=</span> <span class="n">elements</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">start</span> <span class="o">=</span> <span class="n">indices</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">            <span class="n">end</span> <span class="o">=</span> <span class="n">indices</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">            <span class="n">set</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">set</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">start</span> <span class="o">=</span> <span class="n">indices</span><span class="p">[</span><span class="n">gn</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="n">end</span> <span class="o">=</span> <span class="n">gn</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="n">start</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">end</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">k</span> <span class="o">==</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Found at index %d&#34;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;element not found&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 
@@ -435,7 +502,9 @@ In indexed sequential search, a sorted index is set aside in addition to the arr
     <section class="copyright">
         &copy; 
         
-        2022 Akansha Jha
+            2022 - 
+        
+        2023 Akansha Jha
     </section>
     
     <section class="powerby">
@@ -524,7 +593,39 @@ In indexed sequential search, a sorted index is set aside in addition to the arr
             >
 
             </main>
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#characteristics-of-indexed-sequential-search">Characteristics of indexed sequential search</a></li>
+    <li><a href="#implementation-of-indexed-sequential-search">Implementation of Indexed Sequential Search</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
         </div>
         <script 
