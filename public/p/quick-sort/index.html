@@ -6,12 +6,12 @@ If we repeatedly partition the array around an element, the array will eventuall
 
 <link rel='canonical' href='https://jhaakansha.github.io/p/quick-sort/'>
 
-<link rel="stylesheet" href="/scss/style.min.18145888f21de6cb02d8cb0891be8240096206785da14eda35f6c23c239b966a.css"><meta property='og:title' content='Quick Sort'>
+<link rel="stylesheet" href="/scss/style.min.bd6a25840373b4ba250cc3dee245d947386fe3973a1452568fca5164df565e19.css"><meta property='og:title' content='Quick Sort'>
 <meta property='og:description' content='Runtime: average : O(nlogn) worst : O(n²) Auxiliary Space : O(n) In quick sort, we pick a random element and partition the array, such that all numbers that are less than the partitioning element come before all elements greater than it.
 If we repeatedly partition the array around an element, the array will eventually become sorted. However, as the partitioned element is not huaranteed to be the median, our sorting could be very slow.'>
 <meta property='og:url' content='https://jhaakansha.github.io/p/quick-sort/'>
 <meta property='og:site_name' content='Akansha Jha'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-09-17T13:18:51&#43;05:30'/><meta property='article:modified_time' content='2022-09-17T13:18:51&#43;05:30'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-08-26T13:18:51&#43;05:30'/><meta property='article:modified_time' content='2022-08-26T13:18:51&#43;05:30'/>
 <meta name="twitter:title" content="Quick Sort">
 <meta name="twitter:description" content="Runtime: average : O(nlogn) worst : O(n²) Auxiliary Space : O(n) In quick sort, we pick a random element and partition the array, such that all numbers that are less than the partitioning element come before all elements greater than it.
 If we repeatedly partition the array around an element, the array will eventually become sorted. However, as the partitioned element is not huaranteed to be the median, our sorting could be very slow.">
@@ -315,7 +315,7 @@ If we repeatedly partition the array around an element, the array will eventuall
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Sep 17, 2022</time>
+                <time class="article-time--published">Aug 26, 2022</time>
             </div>
         
 
@@ -330,7 +330,7 @@ If we repeatedly partition the array around an element, the array will eventuall
 
 
                 <time class="article-time--reading">
-                    2 minute read
+                    3 minute read
                 </time>
             </div>
         
@@ -348,40 +348,130 @@ If we repeatedly partition the array around an element, the array will eventuall
 In quick sort, we pick a random element and partition the array, such that all numbers that are less than the partitioning element come before all elements greater than it.<br>
 If we repeatedly partition the array around an element, the array will eventually become sorted. However, as the partitioned element is not huaranteed to be the median, our sorting could be very slow.<br>
 Quick Sort is not a stable algorithm. However, any sorting algorithm can be made stable by considering indexes as comparison parametres.</p>
-<blockquote>
-<p><strong>Implementation of QuickSort</strong><br>
-<img src="/Pictures/quicksort.png"
-	
-	
-	
-	loading="lazy"
-	
-		alt="img"
-	
-	
-></p>
-</blockquote>
-<p><em>Worst Case</em><br>
-The worst case occurs when the partition process always picks the greatest or the smallest element as the pivot. If we consider the partition startegy where the last element is always picked as a pivot, the worst case obviously occurs when the array is already sorted.<br>
-<em>Best Case</em><br>
-The best case occurs when the partition process always picks the middle element as the pivot.<br>
-<strong>3 WAY QUICKSORT</strong><br>
-Consider an array which has many redundant elements. For example {1,2,3,6,6,8,9,9,0,0,0,7}, If we pick 6 as the pivot, we fix only one 6 and recursively process remaining occurrences. The idea of 3 way quicksort is to process all occurrences of the pivot and is based on Dutch National Flag algorithm.</p>
-<blockquote>
-<p><strong>Implementation of 3 way quicksort using Dutch National Flag algorithm</strong><br>
-<img src="/Pictures/dnfa_quicksort.png"
-	
-	
-	
-	loading="lazy"
-	
-		alt="img"
-	
-	
-></p>
-</blockquote>
-<p>The time complexity of this algorithm is O(nlogn) and the space complexity is o(logn).<br>
-<strong>Why is Quick Sort preferred over Merge Sort for sorting arrays?</strong></p>
+<h2 id="implementation-of-quicksort">Implementation of QuickSort</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">quickSort</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">arr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">left</span><span class="p">,</span> <span class="kt">int</span> <span class="n">right</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="nf">partition</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">left</span><span class="o">&lt;</span><span class="n">index</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">quickSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">index</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">index</span> <span class="o">&lt;</span> <span class="n">right</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">quickSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">right</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">partition</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">arr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">left</span><span class="p">,</span> <span class="kt">int</span> <span class="n">right</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">pivot</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[(</span><span class="n">left</span> <span class="o">+</span> <span class="n">right</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">left</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">left</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">pivot</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">left</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">right</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">pivot</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">right</span><span class="o">--</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">left</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">swap</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">left</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">right</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">left</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">right</span><span class="o">--</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">left</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="worst-case"><em>Worst Case</em></h3>
+<p>The worst case occurs when the partition process always picks the greatest or the smallest element as the pivot. If we consider the partition startegy where the last element is always picked as a pivot, the worst case obviously occurs when the array is already sorted.</p>
+<h3 id="best-case"><em>Best Case</em></h3>
+<p>The best case occurs when the partition process always picks the middle element as the pivot.</p>
+<h2 id="3-way-quicksort">3 Way QuickSort</h2>
+<p>Consider an array which has many redundant elements. For example {1,2,3,6,6,8,9,9,0,0,0,7}, If we pick 6 as the pivot, we fix only one 6 and recursively process remaining occurrences. The idea of 3 way quicksort is to process all occurrences of the pivot and is based on Dutch National Flag algorithm.<br>
+<strong>Implementation of 3 way quicksort using Dutch National Flag algorithm</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Python" data-lang="Python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">partition</span> <span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">first</span><span class="p">,</span> <span class="n">last</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">mid</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pivot</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">last</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">end</span> <span class="o">=</span> <span class="n">last</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">mid</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">end</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">&lt;</span> <span class="n">pivot</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">arr</span><span class="p">[</span><span class="n">start</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">start</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">            <span class="n">mid</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">mid</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="n">start</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">start</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">elif</span> <span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">&gt;</span> <span class="n">pivot</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">arr</span><span class="p">[</span><span class="n">end</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">end</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">            <span class="n">end</span> <span class="o">=</span> <span class="n">end</span> <span class="o">-</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">mid</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">mid</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">quickSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">first</span><span class="p">,</span> <span class="n">last</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">first</span> <span class="o">&gt;=</span> <span class="n">last</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">last</span> <span class="o">==</span> <span class="n">first</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">first</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">last</span><span class="p">]):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">arr</span><span class="p">[</span><span class="n">first</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">last</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">last</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">first</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span>
+</span></span><span class="line"><span class="cl">    <span class="n">start</span> <span class="o">=</span> <span class="p">[</span><span class="n">first</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">mid</span> <span class="o">=</span> <span class="p">[</span><span class="n">first</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">partition</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">first</span><span class="p">,</span> <span class="n">last</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">mid</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">quickSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">first</span><span class="p">,</span> <span class="n">start</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">quickSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">mid</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">last</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The time complexity of this algorithm is O(nlogn) and the space complexity is o(logn).</p>
+<h2 id="why-is-quick-sort-preferred-over-merge-sort-for-sorting-arrays">Why is Quick Sort preferred over Merge Sort for sorting arrays?</h2>
 <ul>
 <li>QuickSort is an in-place sort (i.e. it does not require any extra storage) whereas mergesort requires O(n) extra storage.</li>
 <li>Allocating and de-allocating the extra space used for mergesort increases the running time of the algorithm.</li>
@@ -457,7 +547,9 @@ Consider an array which has many redundant elements. For example {1,2,3,6,6,8,9,
     <section class="copyright">
         &copy; 
         
-        2022 Akansha Jha
+            2022 - 
+        
+        2023 Akansha Jha
     </section>
     
     <section class="powerby">
@@ -546,7 +638,45 @@ Consider an array which has many redundant elements. For example {1,2,3,6,6,8,9,
             >
 
             </main>
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#implementation-of-quicksort">Implementation of QuickSort</a>
+      <ol>
+        <li><a href="#worst-case"><em>Worst Case</em></a></li>
+        <li><a href="#best-case"><em>Best Case</em></a></li>
+      </ol>
+    </li>
+    <li><a href="#3-way-quicksort">3 Way QuickSort</a></li>
+    <li><a href="#why-is-quick-sort-preferred-over-merge-sort-for-sorting-arrays">Why is Quick Sort preferred over Merge Sort for sorting arrays?</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
         </div>
         <script 
