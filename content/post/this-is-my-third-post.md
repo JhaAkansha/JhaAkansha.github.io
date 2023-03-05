@@ -37,7 +37,18 @@ This is equivalent to n².
 **Best Case** : &nbsp; The best occurs when the array is already sorted. The time complexity in this case is O(n).  
 ## Optimized BubbleSort  
 ```C
-
+for (i = 0; i < n-1; i++) {
+	swapped = false;
+	for (j = 0; j < n-i-1; j++) {
+		if (arr[j] > arr[j+1]) {
+			swap(&arr[j], &arr[j+1]);
+			swapped = true;
+		}
+	}
+	if (swapped == false) {
+		break;
+	}
+}
 ```
 
 ## Recursive BubbleSort
@@ -46,5 +57,19 @@ The following steps are followed to implement recursive bubblesort:-
 2. Recursively call for the rest n - 1 elements with the same operation and place the next greater element at its position.
 3. The base condition for this recursion call would be when the number of elements in the array becomes 0 or 1 then, simply return.  
 ```C
-
+void recursiveBubble (int arr[], int len) {
+	int temp, i;
+	if (len == 0) {
+		return;
+	}
+	for (i = 0; i < len-1; i++) {
+		if (arr[i] > arr[i+1]) {
+			temp = arr[i];
+			arr[i] = arr[i+1];
+			arr[i+1] = temp;
+		}
+	}
+	len = len-1;
+	recursiveBubble(arr,len);
+}
 ```

@@ -10,5 +10,17 @@ date: 2022-08-06T14:20:15+05:30
 * Swap the second element with the least element in the sub-array (which will the second least element in the array). 
 * Continue doing this until all elements are in place.  
 The default implementation of selection sort is not stable.
->**Implementation of SelectionSort**  
-![img](/Pictures/selectionsort.png "Implemetation of SelectionSort")
+## Implementation of SelectionSort 
+```C
+for (i = 0; i < n - 1; i++) {
+	min_idx = i;
+	for (j = i+1; j < n; j++) {
+		if (arr[j] < arr[min_idx]){
+			min_idx = j;
+		}
+	}
+	if (min_idx != i) {
+		swap(&arr[i], &arr[min_idx]);
+	}
+}
+```
