@@ -1,6 +1,6 @@
 ---
 title: "Linked List"
-date: 2022-10-02T19:17:59+05:30
+date: 2022-10-21T19:17:59+05:30
 #draft: true
 ---
 A linked list is a list or chain of items where each item points to the next one in the list. Each item in a linked list is called a node. Each node contains the data and the location of the next item.  

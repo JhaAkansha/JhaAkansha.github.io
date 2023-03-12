@@ -1,6 +1,6 @@
 ---
 title: "Indexed Sequential Search"
-date: 2022-09-11T04:55:43+05:30
+date: 2022-10-02T04:55:43+05:30
 #draft: true
 ---
 In this searching method, first of all, an index file is created that contains some specific group or division of required record when the index is obtained, then the partial indexing takes less time because it is located in a specific group.  
