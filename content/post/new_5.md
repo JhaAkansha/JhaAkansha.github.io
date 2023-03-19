@@ -1,6 +1,16 @@
 ---
-title: "New_5"
+title: "GPT 4.0"
 date: 2022-12-17T13:23:49+05:30
-draft: true
+#draft: true
 ---
-
+ChatGPT is a conversational AI that listens, learns and challenges developed by OpenAI. It was launched in November 2022. The model is based on Generative Pretrained Transformer 3 (GPT 3) architecture, which is the largest and most advanced models to date. It has been fine-tuned by both supervised and reinforced machine learning techniques. ChatGPT is a sibling model to InstructGPT, which is trained to follow an instruction in a prompt and provide a detailed response.
+## Training method
+The model was using Reinforcement Learning from Human Feedback (RLHF), using the same methods as InstructGPT, but with slight differences in the data collection setup. An initial model was trained using supervised fine-tuning: human AI trainers provided conversations in which they played both sides—the user and an AI assistant. The trainers were given access to model-written suggestions to help them compose their responses. This new dialogue dataset was mixed with the InstructGPT dataset, which was then transformed into a dialogue format.
+To create a reward model for reinforcement learning, it was necessary to collect comparison data, which consisted of two or more model responses ranked by quality. To collect this data, conversations that AI trainers had with the chatbot were taken. A model-written message was randomly selected, several alternative completions were sampled, and AI trainers ranked them. Using these reward models the model can be fine-tuned using Proximal Policy Optimization. Several iterations of this process were performed to perfect the chatbot.  
+ChatGPT is fine-tuned from a model in the GPT-3.5 series, which finished training in early 2022.
+## Limitations
+* ChatGPT sometimes writes plausible-sounding but incorrect or nonsensical answers. Fixing this issue is challenging, as: (1) during RL training, there’s currently no source of truth; (2) training the model to be more cautious causes it to decline questions that it can answer correctly; and (3) supervised training misleads the model because the ideal answer depends on what the model knows, rather than what the human demonstrator knows.
+* ChatGPT is sensitive to tweaks to the input phrasing or attempting the same prompt multiple times. For example, given one phrasing of a question, the model can claim to not know the answer, but given a slight rephrase, can answer correctly.
+* The model is often excessively verbose and overuses certain phrases, such as restating that it’s a language model trained by OpenAI. These issues arise from biases in the training data (trainers prefer longer answers that look more comprehensive) and well-known over-optimization issues.
+* Ideally, the model would ask clarifying questions when the user provided an ambiguous query. Instead, the current models usually guess what the user intended.
+* While we’ve made efforts to make the model refuse inappropriate requests, it will sometimes respond to harmful instructions or exhibit biased behavior. Currently, the Moderation API is being used to warn or block certain types of unsafe content, but it is expected to have some false negatives and positives for now.
