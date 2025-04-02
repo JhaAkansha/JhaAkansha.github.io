@@ -16,11 +16,13 @@ A stack is an ordered list in which insertion and deletion are done at one end c
 ## Simple Array Implementation
 This implementation of stack uses simple array. We add elements from left to right and use a variable to keep track of the index of the top element. If the array i full, a push operation will throw a *full stack exception*. Similarly, if we try to delete an element from an empty array, it will throw a *stack empty exception*.  
 ```C
+
 struct StackArr { 
 	int top;
 	int capacity;
 	int *array;
 };
+
 struct StackArr *CreateStack() {
 	struct StackArr *S = malloc(sizeof(struct StackArr));
 	if (!S) {
@@ -34,12 +36,15 @@ struct StackArr *CreateStack() {
 	}
 	return S;
 }
+
 int IsEmptyStack (struct StackArr *S) {
 	return (S->top == -1);
 }
+
 int IsFullStack (struct StackArr *S) {
 	return (S->top == S->capacity - 1);
 }
+
 void Push (struct StackArr *S, int data) {
 	if (IsFullStack(S)) {
 		printf("Stack Overflow");
@@ -49,6 +54,7 @@ void Push (struct StackArr *S, int data) {
 		S->array[S->top]=data;
 	}
 }
+
 int Pop (struct StackArr *S) {
 	if (IsEMptyStack(S)) {
 		printf("Stack is empty");
@@ -58,6 +64,7 @@ int Pop (struct StackArr *S) {
 		return (S->array[top--]);
 	}
 }
+
 ```
 ### Performance 
 | Function | Time complexity |  
@@ -79,6 +86,7 @@ struct DynArr {
 	int capacity;
 	int *array;
 };
+
 struct DynArr *CreateStack() {
 	struct DynArr *S = malloc(sizeof(struct DynArr));
 	if(!S) {
@@ -94,34 +102,41 @@ struct DynArr *CreateStack() {
 	}
 	return S;
 }
+
 int IsFullStack(struct DynArr *S) {
 	return (S->top == S->capacity-1);
 }
+
 void DoubleStack(struct DynArr *S) {
 	S->capacity*=2;
 	S->array = realloc(S->array, S->capacity);
 }
+
 void Push(struct DynArr *S, int x) {
 	if (IsFullStack(S)) {
 		DoubleStack(S);
 	}
 	S->array[++S->top] = x;
 }
+
 int IsEmptyStack(struct DynArr *S) {
 	return S->top == -1;
 }
+
 int Top(struct DynArr *S) {
 	if (IsEmptySrack(S)) {
 		return INT_MIN;
 	}
 	return S->array[S->top];
 }
+
 int Pop(struct DynArr *S) {
 	if(IsEmptyStack(S)) {
 		return INT_MIN;
 	}
 	return S->array[S->top--];
 }
+
 ```
 ### Perfromance  
 | Function | Time complexity |  
