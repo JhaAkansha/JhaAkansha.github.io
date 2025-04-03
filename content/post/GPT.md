@@ -1,5 +1,5 @@
 ---
-title: "GPT 4.0 gibberish"
+title: "GPT 4.0"
 date: 2023-03-20T04:49:14+05:30
 #draft: true
 ---
