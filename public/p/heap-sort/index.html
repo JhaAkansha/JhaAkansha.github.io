@@ -7,7 +7,7 @@ Advantages of heapsort Efficiency : The time required to perform heap sort incre
 
 <link rel='canonical' href='https://jhaakansha.github.io/p/heap-sort/'>
 
-<link rel="stylesheet" href="/scss/style.min.bd6a25840373b4ba250cc3dee245d947386fe3973a1452568fca5164df565e19.css"><meta property='og:title' content='Heap Sort'>
+<link rel="stylesheet" href="/scss/style.min.c32ba5886893ec572b27b41be98ca34af7c71c5404d0512d886865922dfe30bf.css"><meta property='og:title' content='Heap Sort'>
 <meta property='og:description' content='Runtime: O(nlogn) Memory : O(1)
 Heap Sort is a comparison-based sorting technique based on binary heap data structure. It is an in-place algorithm. Its typical implementation is not stable, but can be made stable. Typically, it is 2-3 times slower than well-implemented quicksort due to lack of locality of reference.
 Advantages of heapsort Efficiency : The time required to perform heap sort increases logarithmicallywhile other algorithms may grow exponentially slower as the number of items to sort increases.'>
@@ -397,17 +397,17 @@ Advantages of heapsort Efficiency : The time required to perform heap sort incre
 </span></span><span class="line"><span class="cl">        <span class="n">largest</span> <span class="o">=</span> <span class="n">right</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">largest</span> <span class="o">!=</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">swap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="o">&amp;</span><span class="n">arr</span><span class="p">[</span><span class="n">largest</span><span class="p">]);</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">heapify</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">largest</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">swap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="o">&amp;</span><span class="n">arr</span><span class="p">[</span><span class="n">largest</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">heapify</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">largest</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">heapSort</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">n</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">heapify</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">heapify</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">swap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">&amp;</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">heapify</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">swap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">&amp;</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">heapify</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
@@ -418,7 +418,7 @@ Advantages of heapsort Efficiency : The time required to perform heap sort incre
 <li>Highest element is removed and the remaining elements are used to create a new max heap.</li>
 </ol>
 <ul>
-<li><strong>Which is better: Heapsort or Mergesort?</strong>
+<li><strong>Which is better: Heapsort or Mergesort?</strong> 
 Mergesort is slightly faster than heapsort but mergesort requires extra storage space. Depending on the requirement, one should be chosen.</li>
 <li><strong>Why is heapsort better than selection sort?</strong><br>
 Heapsort is similar to selection sort, but with a better way to get the maximum element. It takes advantage os the heap data structure to get the maximum element in constant time.</li>
@@ -493,7 +493,7 @@ Heapsort is similar to selection sort, but with a better way to get the maximum 
         
             2022 - 
         
-        2023 Akansha Jha
+        2025 Akansha Jha
     </section>
     
     <section class="powerby">

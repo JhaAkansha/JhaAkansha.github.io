@@ -6,7 +6,7 @@ Main Stack Operations Push: Inserts data onto the stack. Pull: Removes and retur
 
 <link rel='canonical' href='https://jhaakansha.github.io/p/stack/'>
 
-<link rel="stylesheet" href="/scss/style.min.bd6a25840373b4ba250cc3dee245d947386fe3973a1452568fca5164df565e19.css"><meta property='og:title' content='Stack'>
+<link rel="stylesheet" href="/scss/style.min.c32ba5886893ec572b27b41be98ca34af7c71c5404d0512d886865922dfe30bf.css"><meta property='og:title' content='Stack'>
 <meta property='og:description' content='A stack is an ordered list in which insertion and deletion are done at one end called the &amp;ldquo;top&amp;rdquo;.
 Main Stack Operations Push: Inserts data onto the stack. Pull: Removes and returns the last inserted data from the stack. Auxiliary Stack Operations Top: Returns the last inserted element without removing it. Size: returns the number of elements stored in the stack. IsEmptyStack: Check whether the stack is empty or not. IsFullStack: Check whether the stack is full or not.'>
 <meta property='og:url' content='https://jhaakansha.github.io/p/stack/'>
@@ -403,44 +403,56 @@ Main Stack Operations Push: Inserts data onto the stack. Pull: Removes and retur
 </span><span class="lnt">40
 </span><span class="lnt">41
 </span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl"><span class="k">struct</span> <span class="n">StackArr</span> <span class="p">{</span> 
+<pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="n">StackArr</span> <span class="p">{</span> 
 </span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">top</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">capacity</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="o">*</span><span class="n">array</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="n">StackArr</span> <span class="o">*</span><span class="nf">CreateStack</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="k">struct</span> <span class="n">StackArr</span> <span class="o">*</span><span class="n">S</span> <span class="o">=</span> <span class="nf">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">StackArr</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	<span class="k">struct</span> <span class="n">StackArr</span> <span class="o">*</span><span class="n">S</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">StackArr</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">S</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">	<span class="n">S</span><span class="o">-&gt;</span><span class="n">capacity</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="n">S</span><span class="o">-&gt;</span><span class="n">top</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="n">S</span><span class="o">-&gt;</span><span class="n">array</span> <span class="o">=</span> <span class="nf">malloc</span><span class="p">(</span><span class="n">S</span><span class="o">-&gt;</span><span class="n">capacity</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	<span class="n">S</span><span class="o">-&gt;</span><span class="n">array</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="n">S</span><span class="o">-&gt;</span><span class="n">capacity</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">S</span><span class="o">-&gt;</span><span class="n">array</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">S</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">IsEmptyStack</span> <span class="p">(</span><span class="k">struct</span> <span class="n">StackArr</span> <span class="o">*</span><span class="n">S</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="p">(</span><span class="n">S</span><span class="o">-&gt;</span><span class="n">top</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">IsFullStack</span> <span class="p">(</span><span class="k">struct</span> <span class="n">StackArr</span> <span class="o">*</span><span class="n">S</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="p">(</span><span class="n">S</span><span class="o">-&gt;</span><span class="n">top</span> <span class="o">==</span> <span class="n">S</span><span class="o">-&gt;</span><span class="n">capacity</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Push</span> <span class="p">(</span><span class="k">struct</span> <span class="n">StackArr</span> <span class="o">*</span><span class="n">S</span><span class="p">,</span> <span class="kt">int</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="nf">IsFullStack</span><span class="p">(</span><span class="n">S</span><span class="p">))</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Stack Overflow&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">IsFullStack</span><span class="p">(</span><span class="n">S</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">printf</span><span class="p">(</span><span class="s">&#34;Stack Overflow&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">	<span class="k">else</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="n">S</span><span class="o">-&gt;</span><span class="n">top</span><span class="o">++</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">		<span class="n">S</span><span class="o">-&gt;</span><span class="n">array</span><span class="p">[</span><span class="n">S</span><span class="o">-&gt;</span><span class="n">top</span><span class="p">]</span><span class="o">=</span><span class="n">data</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">Pop</span> <span class="p">(</span><span class="k">struct</span> <span class="n">StackArr</span> <span class="o">*</span><span class="n">S</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="nf">IsEMptyStack</span><span class="p">(</span><span class="n">S</span><span class="p">))</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Stack is empty&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">IsEMptyStack</span><span class="p">(</span><span class="n">S</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">printf</span><span class="p">(</span><span class="s">&#34;Stack is empty&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">	<span class="k">else</span> <span class="p">{</span>
@@ -537,6 +549,13 @@ Main Stack Operations Push: Inserts data onto the stack. Pull: Removes and retur
 </span><span class="lnt">46
 </span><span class="lnt">47
 </span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl"><span class="k">struct</span> <span class="n">DynArr</span> <span class="p">{</span>
@@ -544,45 +563,52 @@ Main Stack Operations Push: Inserts data onto the stack. Pull: Removes and retur
 </span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">capacity</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="o">*</span><span class="n">array</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="n">DynArr</span> <span class="o">*</span><span class="nf">CreateStack</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="k">struct</span> <span class="n">DynArr</span> <span class="o">*</span><span class="n">S</span> <span class="o">=</span> <span class="nf">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">DynArr</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	<span class="k">struct</span> <span class="n">DynArr</span> <span class="o">*</span><span class="n">S</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">DynArr</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">S</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">	<span class="k">else</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="n">S</span><span class="o">-&gt;</span><span class="n">capacity</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">		<span class="n">S</span><span class="o">-&gt;</span><span class="n">top</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">		<span class="n">S</span><span class="o">-&gt;</span><span class="n">array</span> <span class="o">=</span> <span class="nf">malloc</span><span class="p">(</span><span class="n">S</span><span class="o">-&gt;</span><span class="n">capacity</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">		<span class="n">S</span><span class="o">-&gt;</span><span class="n">array</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="n">S</span><span class="o">-&gt;</span><span class="n">capacity</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">S</span><span class="o">-&gt;</span><span class="n">array</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">S</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">IsFullStack</span><span class="p">(</span><span class="k">struct</span> <span class="n">DynArr</span> <span class="o">*</span><span class="n">S</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="p">(</span><span class="n">S</span><span class="o">-&gt;</span><span class="n">top</span> <span class="o">==</span> <span class="n">S</span><span class="o">-&gt;</span><span class="n">capacity</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">DoubleStack</span><span class="p">(</span><span class="k">struct</span> <span class="n">DynArr</span> <span class="o">*</span><span class="n">S</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="n">S</span><span class="o">-&gt;</span><span class="n">capacity</span><span class="o">*=</span><span class="mi">2</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="n">S</span><span class="o">-&gt;</span><span class="n">array</span> <span class="o">=</span> <span class="nf">realloc</span><span class="p">(</span><span class="n">S</span><span class="o">-&gt;</span><span class="n">array</span><span class="p">,</span> <span class="n">S</span><span class="o">-&gt;</span><span class="n">capacity</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">S</span><span class="o">-&gt;</span><span class="n">array</span> <span class="o">=</span> <span class="n">realloc</span><span class="p">(</span><span class="n">S</span><span class="o">-&gt;</span><span class="n">array</span><span class="p">,</span> <span class="n">S</span><span class="o">-&gt;</span><span class="n">capacity</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Push</span><span class="p">(</span><span class="k">struct</span> <span class="n">DynArr</span> <span class="o">*</span><span class="n">S</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="nf">IsFullStack</span><span class="p">(</span><span class="n">S</span><span class="p">))</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="nf">DoubleStack</span><span class="p">(</span><span class="n">S</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">IsFullStack</span><span class="p">(</span><span class="n">S</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">DoubleStack</span><span class="p">(</span><span class="n">S</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">	<span class="n">S</span><span class="o">-&gt;</span><span class="n">array</span><span class="p">[</span><span class="o">++</span><span class="n">S</span><span class="o">-&gt;</span><span class="n">top</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">IsEmptyStack</span><span class="p">(</span><span class="k">struct</span> <span class="n">DynArr</span> <span class="o">*</span><span class="n">S</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">S</span><span class="o">-&gt;</span><span class="n">top</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">Top</span><span class="p">(</span><span class="k">struct</span> <span class="n">DynArr</span> <span class="o">*</span><span class="n">S</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="nf">IsEmptySrack</span><span class="p">(</span><span class="n">S</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">IsEmptySrack</span><span class="p">(</span><span class="n">S</span><span class="p">))</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="n">INT_MIN</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">S</span><span class="o">-&gt;</span><span class="n">array</span><span class="p">[</span><span class="n">S</span><span class="o">-&gt;</span><span class="n">top</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">Pop</span><span class="p">(</span><span class="k">struct</span> <span class="n">DynArr</span> <span class="o">*</span><span class="n">S</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="nf">IsEmptyStack</span><span class="p">(</span><span class="n">S</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">IsEmptyStack</span><span class="p">(</span><span class="n">S</span><span class="p">))</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="n">INT_MIN</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">S</span><span class="o">-&gt;</span><span class="n">array</span><span class="p">[</span><span class="n">S</span><span class="o">-&gt;</span><span class="n">top</span><span class="o">--</span><span class="p">];</span>
@@ -678,7 +704,7 @@ Main Stack Operations Push: Inserts data onto the stack. Pull: Removes and retur
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Push</span><span class="p">(</span><span class="k">struct</span> <span class="n">Stack</span> <span class="o">**</span><span class="n">top</span><span class="p">,</span> <span class="kt">int</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="k">struct</span> <span class="n">Stack</span> <span class="o">*</span><span class="n">temp</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="n">temp</span> <span class="o">=</span> <span class="nf">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">Stack</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	<span class="n">temp</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">Stack</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">temp</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
@@ -692,17 +718,17 @@ Main Stack Operations Push: Inserts data onto the stack. Pull: Removes and retur
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">Pop</span><span class="p">(</span><span class="k">struct</span> <span class="n">Stack</span> <span class="o">**</span><span class="n">top</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">data</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="k">struct</span> <span class="n">Stack</span> <span class="o">*</span><span class="n">temp</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="nf">IsEmptyStack</span><span class="p">(</span><span class="n">top</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">IsEmptyStack</span><span class="p">(</span><span class="n">top</span><span class="p">))</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="n">INT_MIN</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">	<span class="n">temp</span> <span class="o">=</span> <span class="o">*</span><span class="n">top</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="o">*</span><span class="n">top</span> <span class="o">=</span> <span class="o">*</span><span class="n">top</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="n">data</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="nf">free</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">free</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">data</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">Top</span><span class="p">(</span><span class="k">struct</span> <span class="n">Stack</span> <span class="o">*</span><span class="n">top</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="nf">IsEmptyStack</span><span class="p">(</span><span class="n">top</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">IsEmptyStack</span><span class="p">(</span><span class="n">top</span><span class="p">))</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="n">INT_MIN</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">top</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">;</span>
@@ -829,7 +855,7 @@ Main Stack Operations Push: Inserts data onto the stack. Pull: Removes and retur
         
             2022 - 
         
-        2023 Akansha Jha
+        2025 Akansha Jha
     </section>
     
     <section class="powerby">

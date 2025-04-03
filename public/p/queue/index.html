@@ -6,7 +6,7 @@ Main queue operations Enqueue: Inserts an element at the end of the queue. Deque
 
 <link rel='canonical' href='https://jhaakansha.github.io/p/queue/'>
 
-<link rel="stylesheet" href="/scss/style.min.bd6a25840373b4ba250cc3dee245d947386fe3973a1452568fca5164df565e19.css"><meta property='og:title' content='Queue'>
+<link rel="stylesheet" href="/scss/style.min.c32ba5886893ec572b27b41be98ca34af7c71c5404d0512d886865922dfe30bf.css"><meta property='og:title' content='Queue'>
 <meta property='og:description' content='A queue is an ordered list in which insertions are done at one end (rear) and deletions are done at the other end (front). The first element to be inserted is the first element to be deleted, i.e. it follows FIFO (First In First Out) concept. Circular linked lists and circular arrays are used to implement queues.
 Main queue operations Enqueue: Inserts an element at the end of the queue. Dequeue: Removes and return the element at the front of the queue.'>
 <meta property='og:url' content='https://jhaakansha.github.io/p/queue/'>
@@ -433,13 +433,13 @@ The array may become full and an enqueue operation will throw a full queue excep
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="o">*</span><span class="n">array</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="n">arrayQueue</span> <span class="o">*</span><span class="nf">Queue</span><span class="p">(</span><span class="kt">int</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">arrayQueue</span> <span class="o">*</span><span class="n">Q</span> <span class="o">=</span> <span class="nf">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">structarrayQueue</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">arrayQueue</span> <span class="o">*</span><span class="n">Q</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">structarrayQueue</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">Q</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="n">Q</span><span class="o">-&gt;</span><span class="n">capacity</span> <span class="o">=</span> <span class="n">size</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">Q</span><span class="o">-&gt;</span><span class="n">front</span> <span class="o">=</span> <span class="n">Q</span><span class="o">-&gt;</span><span class="n">rear</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">Q</span><span class="o">-&gt;</span><span class="n">array</span> <span class="o">=</span> <span class="nf">malloc</span><span class="p">(</span><span class="n">Q</span><span class="o">-&gt;</span><span class="n">capacity</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Q</span><span class="o">-&gt;</span><span class="n">array</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="n">Q</span><span class="o">-&gt;</span><span class="n">capacity</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">Q</span><span class="o">-&gt;</span><span class="n">array</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
@@ -455,8 +455,8 @@ The array may become full and an enqueue operation will throw a full queue excep
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">((</span><span class="n">Q</span><span class="o">-&gt;</span><span class="n">capacity</span> <span class="o">-</span> <span class="n">Q</span><span class="o">-&gt;</span><span class="n">front</span> <span class="o">+</span> <span class="n">Q</span><span class="o">-&gt;</span><span class="n">rear</span> <span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="n">Q</span><span class="o">-&gt;</span><span class="n">capacity</span><span class="p">)</span> <span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Enqueue</span><span class="p">(</span><span class="k">struct</span> <span class="n">arrayQueue</span> <span class="o">*</span><span class="n">Q</span><span class="p">,</span> <span class="kt">int</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nf">isFullQueue</span><span class="p">(</span><span class="n">Q</span><span class="p">))</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Queue Overflow&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">isFullQueue</span><span class="p">(</span><span class="n">Q</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Queue Overflow&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="n">Q</span><span class="o">-&gt;</span><span class="n">rear</span> <span class="o">=</span> <span class="p">(</span><span class="n">Q</span><span class="o">-&gt;</span><span class="n">rear</span> <span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">%</span> <span class="n">Q</span><span class="o">-&gt;</span><span class="n">capacity</span><span class="p">;</span>
@@ -468,8 +468,8 @@ The array may become full and an enqueue operation will throw a full queue excep
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">Dequeue</span><span class="p">(</span><span class="k">struct</span> <span class="n">arrayQueue</span> <span class="o">*</span><span class="n">Q</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">data</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nf">isEmptyQueue</span><span class="p">(</span><span class="n">Q</span><span class="p">))</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Queue is empty&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">isEmptyQueue</span><span class="p">(</span><span class="n">Q</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Queue is empty&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="p">{</span>
@@ -486,9 +486,9 @@ The array may become full and an enqueue operation will throw a full queue excep
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">deleteQueue</span><span class="p">(</span><span class="k">struct</span> <span class="n">arrayQueue</span> <span class="o">*</span><span class="n">Q</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">Q</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">Q</span><span class="o">-&gt;</span><span class="n">array</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nf">free</span><span class="p">(</span><span class="n">Q</span><span class="o">-&gt;</span><span class="n">array</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">free</span><span class="p">(</span><span class="n">Q</span><span class="o">-&gt;</span><span class="n">array</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">free</span><span class="p">(</span><span class="n">Q</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">free</span><span class="p">(</span><span class="n">Q</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
@@ -579,13 +579,13 @@ The array may become full and an enqueue operation will throw a full queue excep
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="o">*</span><span class="n">array</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="n">DynArrayQueue</span> <span class="o">*</span> <span class="nf">createQueue</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">DynArrayQueue</span> <span class="o">*</span><span class="n">Q</span> <span class="o">=</span> <span class="nf">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">DynArrayQueue</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">DynArrayQueue</span> <span class="o">*</span><span class="n">Q</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">DynArrayQueue</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">Q</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="n">Q</span><span class="o">-&gt;</span><span class="n">capacity</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">Q</span><span class="o">-&gt;</span><span class="n">front</span> <span class="o">=</span> <span class="n">Q</span><span class="o">-&gt;</span><span class="n">rear</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">Q</span><span class="o">-&gt;</span><span class="n">array</span> <span class="o">=</span> <span class="nf">malloc</span><span class="p">(</span><span class="n">Q</span><span class="o">-&gt;</span><span class="n">capacity</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Q</span><span class="o">-&gt;</span><span class="n">array</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="n">Q</span><span class="o">-&gt;</span><span class="n">capacity</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">Q</span><span class="o">-&gt;</span><span class="n">array</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
@@ -601,16 +601,16 @@ The array may become full and an enqueue operation will throw a full queue excep
 </span></span><span class="line"><span class="cl">    <span class="k">return</span><span class="p">((</span><span class="n">Q</span><span class="o">-&gt;</span><span class="n">capacity</span> <span class="o">-</span> <span class="n">Q</span><span class="o">-&gt;</span><span class="n">front</span> <span class="o">+</span> <span class="n">Q</span><span class="o">-&gt;</span><span class="n">rear</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="n">Q</span><span class="o">-&gt;</span><span class="n">capacity</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Enqueue</span><span class="p">(</span><span class="k">struct</span> <span class="n">DynArrayQueue</span> <span class="o">*</span><span class="n">Q</span><span class="p">,</span> <span class="kt">int</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="nf">isFullQueue</span><span class="p">(</span><span class="n">Q</span><span class="p">))</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">resizeQueue</span><span class="p">(</span><span class="n">Q</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">isFullQueue</span><span class="p">(</span><span class="n">Q</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">resizeQueue</span><span class="p">(</span><span class="n">Q</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">resizeQueue</span><span class="p">(</span><span class="k">struct</span> <span class="n">DynArrayQueue</span> <span class="o">*</span><span class="n">Q</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="n">Q</span><span class="o">-&gt;</span><span class="n">capacity</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">Q</span><span class="o">-&gt;</span><span class="n">capacity</span> <span class="o">=</span> <span class="n">Q</span><span class="o">-&gt;</span><span class="n">capacity</span><span class="o">*</span><span class="mi">2</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">Q</span><span class="o">-&gt;</span><span class="n">array</span> <span class="o">=</span> <span class="nf">realloc</span><span class="p">(</span><span class="n">Q</span><span class="o">-&gt;</span><span class="n">array</span><span class="p">,</span> <span class="n">Q</span><span class="o">-&gt;</span><span class="n">capacity</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Q</span><span class="o">-&gt;</span><span class="n">array</span> <span class="o">=</span> <span class="n">realloc</span><span class="p">(</span><span class="n">Q</span><span class="o">-&gt;</span><span class="n">array</span><span class="p">,</span> <span class="n">Q</span><span class="o">-&gt;</span><span class="n">capacity</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="o">-&gt;</span><span class="n">array</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Memory error&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Memory error&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">Q</span><span class="o">-&gt;</span><span class="n">front</span> <span class="o">&gt;</span> <span class="n">Q</span><span class="o">-&gt;</span><span class="n">rear</span><span class="p">)</span> <span class="p">{</span>
@@ -622,8 +622,8 @@ The array may become full and an enqueue operation will throw a full queue excep
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">Dequeue</span><span class="p">(</span><span class="k">struct</span> <span class="n">DynArrayQueue</span> <span class="o">*</span><span class="n">Q</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">data</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nf">isEmptyQueue</span><span class="p">(</span><span class="n">Q</span><span class="p">))</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Queue is empty&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">isEmptyQueue</span><span class="p">(</span><span class="n">Q</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Queue is empty&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="p">{</span>
@@ -640,9 +640,9 @@ The array may become full and an enqueue operation will throw a full queue excep
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">deleteQueue</span><span class="p">(</span><span class="k">struct</span> <span class="n">DynArrayQueue</span> <span class="o">*</span><span class="n">Q</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">Q</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">Q</span><span class="o">-&gt;</span><span class="n">array</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nf">free</span><span class="p">(</span><span class="n">Q</span><span class="o">-&gt;</span><span class="n">array</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">free</span><span class="p">(</span><span class="n">Q</span><span class="o">-&gt;</span><span class="n">array</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">free</span><span class="p">(</span><span class="n">Q</span><span class="o">-&gt;</span><span class="n">array</span><span class="p">)</span> <span class="c1">//CROSS CHECK THIS ONCE
+</span></span><span class="line"><span class="cl">        <span class="n">free</span><span class="p">(</span><span class="n">Q</span><span class="o">-&gt;</span><span class="n">array</span><span class="p">)</span> <span class="c1">//CROSS CHECK THIS ONCE
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
@@ -723,11 +723,11 @@ The array may become full and an enqueue operation will throw a full queue excep
 </span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="n">queue</span> <span class="o">*</span><span class="nf">createQueue</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">queue</span> <span class="o">*</span><span class="n">Q</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">ListNode</span> <span class="o">*</span><span class="n">temp</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">Q</span> <span class="o">=</span> <span class="nf">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">queue</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Q</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">queue</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">Q</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="n">temp</span> <span class="o">=</span> <span class="nf">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">ListNode</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">temp</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">ListNode</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">    <span class="n">Q</span><span class="o">-&gt;</span><span class="n">front</span> <span class="o">=</span> <span class="n">Q</span><span class="o">-&gt;</span><span class="n">rear</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">Q</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -736,7 +736,7 @@ The array may become full and an enqueue operation will throw a full queue excep
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Enqueue</span> <span class="p">(</span><span class="k">struct</span> <span class="n">queue</span> <span class="o">*</span><span class="n">Q</span><span class="p">,</span> <span class="kt">int</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">ListNode</span> <span class="o">*</span><span class="n">newNode</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">newNode</span> <span class="o">=</span> <span class="nf">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">ListNode</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">newNode</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">ListNode</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">newNode</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
@@ -751,15 +751,15 @@ The array may become full and an enqueue operation will throw a full queue excep
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">Dequeue</span><span class="p">(</span><span class="k">struct</span> <span class="n">queue</span> <span class="o">*</span><span class="n">Q</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">data</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">ListNode</span> <span class="o">*</span><span class="n">temp</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nf">isEmptyQueue</span><span class="p">(</span><span class="n">Q</span><span class="p">))</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Queue is empty&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">isEmptyQueue</span><span class="p">(</span><span class="n">Q</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Queue is empty&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="n">temp</span> <span class="o">=</span> <span class="n">Q</span><span class="o">-&gt;</span><span class="n">front</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="n">data</span> <span class="o">=</span> <span class="n">Q</span><span class="o">-&gt;</span><span class="n">front</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="n">Q</span><span class="o">-&gt;</span><span class="n">front</span> <span class="o">=</span> <span class="n">Q</span><span class="o">-&gt;</span><span class="n">front</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">free</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">free</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">data</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -768,9 +768,9 @@ The array may become full and an enqueue operation will throw a full queue excep
 </span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">Q</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="n">temp</span> <span class="o">=</span> <span class="n">Q</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="n">Q</span> <span class="o">=</span> <span class="n">Q</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">free</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">free</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="nf">free</span><span class="p">(</span><span class="n">Q</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">free</span><span class="p">(</span><span class="n">Q</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
@@ -844,7 +844,7 @@ The array may become full and an enqueue operation will throw a full queue excep
         
             2022 - 
         
-        2023 Akansha Jha
+        2025 Akansha Jha
     </section>
     
     <section class="powerby">

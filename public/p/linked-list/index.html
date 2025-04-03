@@ -6,7 +6,7 @@ PROPERTIES Successive elements are connected by pointers. Last element points to
 
 <link rel='canonical' href='https://jhaakansha.github.io/p/linked-list/'>
 
-<link rel="stylesheet" href="/scss/style.min.bd6a25840373b4ba250cc3dee245d947386fe3973a1452568fca5164df565e19.css"><meta property='og:title' content='Linked List'>
+<link rel="stylesheet" href="/scss/style.min.c32ba5886893ec572b27b41be98ca34af7c71c5404d0512d886865922dfe30bf.css"><meta property='og:title' content='Linked List'>
 <meta property='og:description' content='A linked list is a list or chain of items where each item points to the next one in the list. Each item in a linked list is called a node. Each node contains the data and the location of the next item.
 PROPERTIES Successive elements are connected by pointers. Last element points to NULL. Can grow or shrink in size during execution of a program. Can be made just as long as required.'>
 <meta property='og:url' content='https://jhaakansha.github.io/p/linked-list/'>
@@ -441,9 +441,9 @@ PROPERTIES Successive elements are connected by pointers. Last element points to
 <pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">insert</span><span class="p">(</span><span class="k">struct</span> <span class="n">listNode</span> <span class="o">**</span><span class="n">head</span><span class="p">,</span> <span class="kt">int</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">position</span><span class="p">)</span> <span class="p">{</span>  
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>  
 </span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">listNode</span> <span class="o">*</span><span class="n">p</span><span class="p">,</span> <span class="o">*</span><span class="n">q</span><span class="p">,</span> <span class="o">*</span><span class="n">newNode</span><span class="p">;</span>  
-</span></span><span class="line"><span class="cl">    <span class="n">newNode</span> <span class="o">=</span> <span class="p">(</span><span class="n">listNode</span><span class="o">*</span><span class="p">)</span><span class="nf">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">listNode</span><span class="p">));</span>  
+</span></span><span class="line"><span class="cl">    <span class="n">newNode</span> <span class="o">=</span> <span class="p">(</span><span class="n">listNode</span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">listNode</span><span class="p">));</span>  
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">newNode</span><span class="p">)</span> <span class="p">{</span>  
-</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Memory Error&#34;</span><span class="p">);</span>  
+</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Memory Error&#34;</span><span class="p">);</span>  
 </span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>  
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>  
 </span></span><span class="line"><span class="cl">    <span class="n">newNode</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">;</span>  
@@ -508,14 +508,14 @@ PROPERTIES Successive elements are connected by pointers. Last element points to
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>  
 </span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">listNode</span> <span class="o">*</span><span class="n">p</span><span class="p">,</span> <span class="o">*</span><span class="n">q</span><span class="p">;</span>  
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">head</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>  
-</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;List Empty&#34;</span><span class="p">);</span>  
+</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;List Empty&#34;</span><span class="p">);</span>  
 </span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>  
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>  
 </span></span><span class="line"><span class="cl">    <span class="n">p</span> <span class="o">=</span> <span class="o">*</span><span class="n">head</span><span class="p">;</span>  
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">position</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>  
 </span></span><span class="line"><span class="cl">        <span class="n">p</span> <span class="o">=</span> <span class="o">*</span><span class="n">head</span><span class="p">;</span>  
 </span></span><span class="line"><span class="cl">        <span class="o">*</span><span class="n">head</span> <span class="o">=</span> <span class="o">*</span><span class="n">head</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>  
-</span></span><span class="line"><span class="cl">        <span class="nf">free</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>  
+</span></span><span class="line"><span class="cl">        <span class="n">free</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>  
 </span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>  
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>  
 </span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="p">{</span>  
@@ -525,11 +525,11 @@ PROPERTIES Successive elements are connected by pointers. Last element points to
 </span></span><span class="line"><span class="cl">            <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>  
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>  
 </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">p</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>  <span class="p">{</span>  
-</span></span><span class="line"><span class="cl">            <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Position does not exist&#34;</span><span class="p">);</span>  
+</span></span><span class="line"><span class="cl">            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Position does not exist&#34;</span><span class="p">);</span>  
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>  
 </span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="p">{</span>  
 </span></span><span class="line"><span class="cl">            <span class="n">q</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>  
-</span></span><span class="line"><span class="cl">            <span class="nf">free</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>  
+</span></span><span class="line"><span class="cl">            <span class="n">free</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>  
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>  
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>  
 </span></span><span class="line"><span class="cl"><span class="p">}</span>  
@@ -602,9 +602,9 @@ A node in a singly linked list cannot be removed unless we have the pointer to i
 <pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">DLLInsert</span><span class="p">(</span><span class="k">struct</span> <span class="n">DLLnode</span> <span class="o">**</span><span class="n">head</span><span class="p">,</span> <span class="kt">int</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">position</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">DLLnode</span> <span class="o">*</span><span class="n">temp</span><span class="p">,</span> <span class="o">*</span><span class="n">newNode</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">newNode</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">DLLnode</span><span class="o">*</span><span class="p">)</span><span class="nf">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">DLLnode</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">newNode</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">DLLnode</span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">DLLnode</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">newNode</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Memory error&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Memory error&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="n">newNode</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">;</span>
@@ -676,7 +676,7 @@ A node in a singly linked list cannot be removed unless we have the pointer to i
 </span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">DLLNode</span> <span class="o">*</span><span class="n">temp</span><span class="p">,</span> <span class="o">*</span><span class="n">temp2</span><span class="p">,</span> <span class="n">temp</span> <span class="o">=</span> <span class="o">*</span><span class="n">head</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">head</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;List is empty&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;List is empty&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">position</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">//at the beginning
@@ -684,7 +684,7 @@ A node in a singly linked list cannot be removed unless we have the pointer to i
 </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">head</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="o">*</span><span class="n">head</span><span class="o">-&gt;</span><span class="n">prev</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">free</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">free</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span> <span class="p">(</span><span class="n">k</span><span class="o">&lt;</span><span class="n">position</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;&amp;</span>  <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
@@ -694,13 +694,13 @@ A node in a singly linked list cannot be removed unless we have the pointer to i
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//from the end
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">temp2</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">prev</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="n">temp2</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">free</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">free</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="p">{</span>  <span class="c1">//in the middle
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">temp2</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">prev</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="n">temp2</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">-&gt;</span><span class="n">prev</span> <span class="o">=</span> <span class="n">temp2</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">free</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">free</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -749,9 +749,9 @@ A node in a singly linked list cannot be removed unless we have the pointer to i
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">insertAtEnd</span><span class="p">(</span><span class="k">struct</span> <span class="n">CLLnode</span> <span class="o">**</span><span class="n">head</span><span class="p">,</span> <span class="kt">int</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">CLLnode</span> <span class="n">current</span> <span class="o">=</span> <span class="o">*</span><span class="n">head</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">CLLnode</span> <span class="o">*</span><span class="n">newNode</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">node</span><span class="o">*</span><span class="p">)</span><span class="nf">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">CLLnode</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">CLLnode</span> <span class="o">*</span><span class="n">newNode</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">node</span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">CLLnode</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">newNode</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Memory Error&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Memory Error&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="n">newNode</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">;</span>
@@ -798,9 +798,9 @@ A node in a singly linked list cannot be removed unless we have the pointer to i
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">insertAtBegin</span><span class="p">(</span><span class="k">struct</span> <span class="n">CLLnode</span> <span class="o">**</span><span class="n">head</span><span class="p">,</span> <span class="kt">int</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">CLLnode</span> <span class="o">*</span><span class="n">current</span> <span class="o">=</span> <span class="o">*</span><span class="n">head</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">CLLnode</span> <span class="o">*</span><span class="n">newNode</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">node</span><span class="o">*</span><span class="p">)</span><span class="nf">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">CLLnode</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">CLLnode</span> <span class="o">*</span><span class="n">newNode</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">node</span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">CLLnode</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">newNode</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Memory Error&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Memory Error&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="n">newNode</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">;</span>
@@ -844,7 +844,7 @@ A node in a singly linked list cannot be removed unless we have the pointer to i
 </span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">CLLnode</span> <span class="o">*</span><span class="n">temp</span> <span class="o">=</span> <span class="o">*</span><span class="n">head</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">CLLnode</span> <span class="o">*</span><span class="n">current</span> <span class="o">=</span> <span class="o">*</span><span class="n">head</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">head</span> <span class="o">==</span>  <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;List is empty&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;List is empty&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">current</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">!=</span> <span class="o">*</span><span class="n">head</span><span class="p">)</span> <span class="p">{</span>
@@ -852,7 +852,7 @@ A node in a singly linked list cannot be removed unless we have the pointer to i
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="n">current</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="o">*</span><span class="n">head</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="o">*</span><span class="n">head</span> <span class="o">=</span> <span class="o">*</span><span class="n">head</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="nf">free</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">free</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
@@ -880,14 +880,14 @@ A node in a singly linked list cannot be removed unless we have the pointer to i
 </span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">CLLNode</span> <span class="o">*</span><span class="n">temp</span> <span class="o">=</span> <span class="o">*</span><span class="n">head</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">CLLnode</span> <span class="o">*</span><span class="n">current</span> <span class="o">=</span> <span class="o">*</span><span class="n">head</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">head</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;List is empty&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;List is empty&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span> 
 </span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">current</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">!=</span> <span class="o">*</span><span class="n">head</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="n">temp</span> <span class="o">=</span> <span class="n">current</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="nf">free</span><span class="p">(</span><span class="n">current</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">free</span><span class="p">(</span><span class="n">current</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
@@ -962,7 +962,7 @@ A node in a singly linked list cannot be removed unless we have the pointer to i
         
             2022 - 
         
-        2023 Akansha Jha
+        2025 Akansha Jha
     </section>
     
     <section class="powerby">
