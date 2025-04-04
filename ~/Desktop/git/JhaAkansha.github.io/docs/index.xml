@@ -6,12 +6,23 @@
         <description>Recent content on Akansha Jha</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 20 Mar 2023 04:49:14 +0530</lastBuildDate><atom:link href="https://jhaakansha.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>GPT 4.0 gibberish</title>
-        <link>https://jhaakansha.github.io/p/gpt-4.0-gibberish/</link>
+        <lastBuildDate>Mon, 12 Aug 2024 13:23:39 +0530</lastBuildDate><atom:link href="https://jhaakansha.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>More Than Just Photoshop: My Adobe Internship Experience</title>
+        <link>https://jhaakansha.github.io/p/more-than-just-photoshop-my-adobe-internship-experience/</link>
+        <pubDate>Mon, 12 Aug 2024 13:23:39 +0530</pubDate>
+        
+        <guid>https://jhaakansha.github.io/p/more-than-just-photoshop-my-adobe-internship-experience/</guid>
+        <description>&lt;p&gt;Getting an internship at Adobe was a very unexpected but welcome change for me, it was a stepping stone towards my career goals. I could not wait to go to corporate and see how things work, see how different things are and embrace challening tasks. I was a part of the Photoshop Express team and mainly worked on the android app.
+My biggest task was taking feature ownership of the Generative Expand feature. It took me 3 weeks to deliver it. It got shipped into the app for everyone and I had the ability to pull it out and show it to anyone wondering what I do. It was felt amazing, that feeling of having something to show for after all the efforts you put it.
+Another task I did was to perform Prompt Engineering for the Firefly model to be used for the upcoming features of the Photoshop Express iOS app. My job was to look into competitor apps and community gallery to find what is popular and produce additional prompts and categories as well as Work on prompts already present and alter them to get better results.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>GPT 4.0</title>
+        <link>https://jhaakansha.github.io/p/gpt-4.0/</link>
         <pubDate>Mon, 20 Mar 2023 04:49:14 +0530</pubDate>
         
-        <guid>https://jhaakansha.github.io/p/gpt-4.0-gibberish/</guid>
+        <guid>https://jhaakansha.github.io/p/gpt-4.0/</guid>
         <description>&lt;p&gt;ChatGPT is a conversational AI that listens, learns and challenges developed by OpenAI. It was launched in November 2022. The model is based on Generative Pretrained Transformer 3 (GPT 3) architecture, which is the largest and most advanced models to date. It has been fine-tuned by both supervised and reinforced machine learning techniques. ChatGPT is a sibling model to InstructGPT, which is trained to follow an instruction in a prompt and provide a detailed response.&lt;/p&gt;
 &lt;h2 id=&#34;training-method&#34;&gt;Training method&lt;/h2&gt;
 &lt;p&gt;The model was using Reinforcement Learning from Human Feedback (RLHF), using the same methods as InstructGPT, but with slight differences in the data collection setup. An initial model was trained using supervised fine-tuning: human AI trainers provided conversations in which they played both sides—the user and an AI assistant. The trainers were given access to model-written suggestions to help them compose their responses. This new dialogue dataset was mixed with the InstructGPT dataset, which was then transformed into a dialogue format.
