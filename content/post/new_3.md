@@ -21,6 +21,9 @@ The goal was to introduce a feature that showcased community-generated images wh
 
 By the end of the project, I had successfully built an **automated image slider**. It displayed community images hosted remotely, along with captions showing the prompts used to generate them. Users could easily copy these prompts, giving them a sense of connection and inspiration as they waited for their own images to process.
 
+Here's a demo video
+![](media/wait_state_loader.mp4)
+
 ## Leading the **Generative Expand** Feature
 
 The most exciting part of my internship came when I was entrusted with the **Generative Expand feature**. This innovative feature enabled users to adjust the aspect ratio of an image by using AI to intelligently fill in the additional space, based on the image’s context.
