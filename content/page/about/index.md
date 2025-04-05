@@ -1,6 +1,6 @@
 ---
 title: About
-description: A student at Cummins College o Engineering, Pune
+description: A student at Cummins College of Engineering, Pune
 date: '2022-07-11'
 aliases:
   - about-us
