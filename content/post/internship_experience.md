@@ -22,13 +22,21 @@ The goal was to introduce a feature that showcased community-generated images wh
 By the end of the project, I had successfully built an **automated image slider**. It displayed community images hosted remotely, along with captions showing the prompts used to generate them. Users could easily copy these prompts, giving them a sense of connection and inspiration as they waited for their own images to process.
 
 Here's a demo video
-![](media/wait_state_loader.mp4)
+<video width="640" height="360" controls>
+  <source src="media/wait_state_loader.mp4" type="video/quicktime">
+</video>
+
 
 ## Leading the **Generative Expand** Feature
 
 The most exciting part of my internship came when I was entrusted with the **Generative Expand feature**. This innovative feature enabled users to adjust the aspect ratio of an image by using AI to intelligently fill in the additional space, based on the image’s context.
 
 Taking ownership of this feature was a monumental responsibility. I spent three weeks diligently working on it, perfecting every detail to ensure it provided a seamless experience. When it was finally launched, I was beyond proud to see my work shipped out into the app and available to everyone. It was an incredibly satisfying feeling to know that my contribution was now something tangible, something I could proudly show off to anyone curious about my work.
+
+Here's a demo video
+<video width="640" height="360" controls>
+  <source src="media\GenExpand.mp4" type="video/quicktime">
+</video>
 
 ## Enhancing the Firefly Model through Prompt Engineering
 
