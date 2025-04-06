@@ -23,7 +23,7 @@ By the end of the project, I had successfully built an **automated image slider*
 
 Here's a demo video
 <video width="640" height="360" controls>
-  <source src="media/wait_state_loader.mp4" type="video/quicktime">
+  <source src="media/wait_state_loader.mp4" type="video/mp4">
 </video>
 
 
@@ -35,7 +35,7 @@ Taking ownership of this feature was a monumental responsibility. I spent three 
 
 Here's a demo video
 <video width="640" height="360" controls>
-  <source src="media\GenExpand.mp4" type="video/quicktime">
+  <source src="C:\Users\akans\JhaAkansha.github.io\media\GenExpand.mp4" type="video/mp4">
 </video>
 
 ## Enhancing the Firefly Model through Prompt Engineering
