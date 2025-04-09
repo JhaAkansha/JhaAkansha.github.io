@@ -4,18 +4,96 @@ date: 2025-04-08T13:23:44+05:30
 draft: false
 ---
 
-ByteBattles is an all india firmware hackathon organized by Ather Energy where the bring together engineers to come up with innovative solutions to their problem statement related to issues faced by the EV development community.
-There was first an eliminatory round where we had to submit an arduino code for LED lights.
-The final round was held in their Bangalore office and it was a 30-hour hackathon that was divided into 2 phases and went on for the entire weekend.
-We were a team of five coming from Pune. We took a 3 am flight to Bangalore and made it to the office around 8, 30 minutes before the reporting time. We completed our registration, got our ids and t-shirt. We were first shown around to get a glimpse of the office and where to go to get whatever we wanted, considering it was  going to be our home for the next 2 days. We had breakfast and were ready for the orientation, our enthusiasm was high and sleep was elusive. Then, we were explained the problem statement. There were around 7 features we were required to add to the Ather 450x we were given.
-Finally, at around 11 am, we were all geared up to code away. THe submission time was 4 pm. We brainstormed and were able to code the first problem statement within the first 10 minutes. We flashed the code to the hardware and alas it didn't work. After seeking some help from the Ather volunteers, we realised there was some issue with the cable. While the issue was being solved, we brainstormed over the other problem statements.
-By the time the problem was solved, we had tackled tow more problems to the best of our abilities without any firmware available.
-Obviously, we ran into some logical errors that we realised after flashing the code to the EV. We had two people working on debugging while the rest worked on the code.
-Time trickled away and with around 2 hours left, we were done with the code but faced problems debugging. AFter 2 hours of debugging, we were able to get 4 things off the checklist. The solution to others remained elusive to us.
-We had lunch and waited for the results as phase 1 came to an end.
-Since we spent so long trying to make the code work, which it didn't, we lost the extra point we would have gotten for submitting early, which were all the points we needed to make it to the next round so that was unfortunate for us.
-The next phase brought on more advanced problem staements. The fifteen teams that made it to phase 2 worked on those on the first floor where there was an entire set up for them. THe rest of us remained where we were and networked with other competitors, which included people in the workforce since this competition was open to both, students and working peofessionals. We also chatted with the volunteers from Ather.
-The volunteers did great work, they had interactive sessions for us where we could ask them questions, they had stripped down versions of the new and old model for us to compare and see how the EV industry has evolved. The also had other fun activities for us like dumb charades, there was s dj and some people were singing as well. I don;t know where it came from but there was s guitar.
-We had dinner and could go downstairs to see how phase 2 was advancing. By 3 am everyone was exhausted and sleep was definitely causing some brainfogging. So taking our bedsheets to the floor or finding a bean bag if you are lucky, people went to sleep.
-The next day, we got access to our EV and were allowed to work on our problems and within 30 minutes we were able to fix the issue we were facing which instantly solved 3 more problem statements for us. I would say that was pretty unlucky, if only that had happened the previous day.
-All in all, it was a once in a lifetime opportunity, getting to code an actual, real Electric Vehicle and make it work. As a software engineering, getting to do something like this was not something I had expected. I learned a lot, got to meet a lot of new people and got hands on experience on firmware so even though our team did not win, the experience and knowledge we walked away with was priceless.
+# ⚡ ByteBattles with Ather Energy: 30 Hours, One EV & a Lot of Coffee
+
+> *“When was the last time you coded on a real electric vehicle?”*  
+> – Probably never. Until ByteBattles.
+
+---
+
+## 🚀 What is ByteBattles?
+
+**ByteBattles** is a national-level firmware hackathon hosted by [Ather Energy](https://www.atherenergy.com/), inviting students and professionals from across India to tackle real-world challenges in the EV (Electric Vehicle) space.
+
+Participants were challenged to develop firmware solutions for the **Ather 450x**, a flagship electric scooter—and yes, we were actually given the scooter to code on.
+
+---
+
+## ✈️ Pune to Bangalore: The Journey Begins
+
+- 🕒 **3:00 AM**: Flight from Pune
+- 🕗 **8:00 AM**: Land in Bangalore and reach Ather HQ
+- ☕ **8:30 AM**: Check-in, breakfast, orientation
+- 🎽 Swag secured: T-shirts + ID cards
+- 🏢 Office tour: Our base for the next 30 hours
+
+We were five caffeine-powered engineers, barely awake but buzzing with excitement.
+
+---
+
+## 🧠 The Problem Statement
+
+At the orientation, we were introduced to the real challenge:  
+> Implement **7 firmware features** on the Ather 450x over the weekend.
+
+With access to development boards, firmware libraries, and the Ather 450x, we were off to a flying start. Kind of.
+
+---
+
+## 💥 Hack Mode: ON
+
+- **11:00 AM**: Coding begins  
+- ⌨️ Problem 1 solved in 10 mins—*or so we thought*
+- 😓 Turns out... it was a faulty **USB cable**
+
+While the volunteers helped debug the hardware, we brainstormed and coded two more features—with no working hardware in hand. Grit.
+
+### 😵 Debug, Debug, Repeat
+
+- Two team members: Locked into debugging mode  
+- Rest of us: Shipping code like our lives depended on it  
+- **Result**: 4 features implemented by the end of the round
+
+But we missed the early submission points—by **just a few minutes**. That sealed our fate: we didn’t make it to **Phase 2**.
+
+---
+
+## 🧩 Phase 2: Watching from the Sidelines
+
+While the top 15 teams moved upstairs to tackle advanced problem statements, we made the most of our time:
+
+- 🤝 Networked with students & working pros
+- 🎤 Interactive Q&As with Ather engineers
+- 🛵 Explored stripped-down Ather 450x models
+- 🎉 Activities: Dumb charades, music, DJ, even a mystery guitar jam session
+
+---
+
+## 💤 Night Mode: Floor is the New Bed
+
+By 3 AM, the office had turned into a co-living space:
+
+- 🛏️ Bean bags, sleeping bags, and even just floors
+- 💤 Brain fog, but hearts still racing with excitement
+
+---
+
+## ⚙️ The Plot Twist
+
+The next morning, we got another shot at accessing our EV.
+
+> **30 minutes later**, we solved the bug that had blocked us the entire day before.  
+> In one shot, **3 additional features** started working.
+
+Talk about tragic timing.
+
+---
+
+## 🎯 Final Takeaways
+
+Despite not making it to the final round, ByteBattles was:
+
+- 💡 A rare opportunity to work with **real EV hardware**
+- 🔧 Our first hands-on experience with **firmware development**
+- 🤝 A brilliant space to **network** with passionate engineers
+- 📚 A steep learning curve that pushed all our boundaries
