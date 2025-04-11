@@ -1,7 +1,7 @@
 ---
-title: "New_6"
-date: 2022-12-18T13:23:53+05:30
-draft: true
+title: "Fueling Victory: How Formula One Uses Big Data to Win Races"
+date: 2025-02-14T13:23:53+05:30
+draft: false
 ---
 
 # 🏎️ Fueling Victory: How Formula One Uses Big Data to Win Races
