@@ -1,5 +1,5 @@
 ---
-title: "Fueling Victory: How Formula One Uses Big Data to Win Races"
+title: "Understanding Big Data Analytics with Formula One"
 date: 2025-02-14T13:23:53+05:30
 draft: false
 ---
