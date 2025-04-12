@@ -16,7 +16,7 @@ Think of it like this: if **circuit bending** is the act of rewiring a kid’s t
 
 ---
 
-## 🎨 What Even *Is*  Glitch Art?
+## What Even Is Glitch Art?
 
 Glitch art is exactly what it sounds like: art made from glitches. Sometimes they happen by accident (your computer crashes and corrupts an image), and sometimes they’re 100% intentional. Artists have started embracing these weird little moments when tech fails—because in those moments, something raw and chaotic shows up. And it’s kind of beautiful.
 
@@ -24,7 +24,7 @@ There's even some debate: does it *have* to be accidental to count as glitch art
 
 ---
 
-## 🛠 Tools of the Trade
+## Tools of the Trade
 
 To start databending, you don’t need fancy software. You just need the courage to open a file in the *wrong* program and see what happens.
 
@@ -35,22 +35,22 @@ Some go-to tools:
 
 ---
 
-## 🔧 Types of Databending
+##  Types of Databending
 
 There are a few classic techniques people use:
 
-### 1. 🛠 Incorrect Editing
+### 1.  Incorrect Editing
 This is the OG move: open a file (like a JPEG) in a program meant for something totally different—like a sound editor—and just go wild. Save it, and open it again as an image. Boom, glitch.
 
-### 2. 🔄 Reinterpretation
+### 2.  Reinterpretation
 Here, you're converting files between formats in weird ways. Treating a picture as audio, or vice versa. Sometimes even just renaming the file extension can trip up your system in fun ways.
 
-### 3. 🧪 Forced Errors
+### 3.  Forced Errors
 This is where you exploit bugs on purpose. Maybe you know a certain plugin crashes under specific conditions—or that a program saves corrupt files if you interrupt it mid-process. So… you interrupt it on purpose. Glitchy magic.
 
 ---
 
-## 🧠 A Little Backstory
+##  A Little Backstory
 
 Glitch art didn’t come out of nowhere. It’s got roots in hacker culture, experimental music, and early digital art scenes. Artists like **Rosa Menkman** have helped shape the conversation around glitch art, even writing whole books about the aesthetic of digital error (*The Glitch Moment(um)* is a must-read).
 
@@ -58,7 +58,7 @@ You might’ve seen databending in music videos (like Kanye’s “Welcome to He
 
 ---
 
-## 🤔 Why Break Something on Purpose?
+##  Why Break Something on Purpose?
 
 Because perfection gets boring.
 
@@ -68,7 +68,7 @@ In a world where everything’s edited, filtered, and polished, glitch art feels
 
 ---
 
-## 🧪 Wanna Try It?
+##  Wanna Try It?
 
 Here’s how to jump in:
 
@@ -86,7 +86,7 @@ Or go wild with Audacity:
 
 ---
 
-## ✨ Final Thoughts
+##  Final Thoughts
 
 Databending is like digital vandalism—but in a good way. It’s about twisting tools, breaking files, and celebrating the unexpected results. Whether you’re into tech, art, or just the joy of messing with things you “shouldn’t,” databending offers a whole new way to express yourself.
 
