@@ -6,7 +6,6 @@ date: 2022-07-24T13:15:46+05:30
 # Databending & Glitch Art: Turning Digital Errors into Art
 
 ![Databending Example](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.s7_sp2tGLHalcnpZTPELMAHaE8%26pid%3DApi&f=1)
-![Glitch Art](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.3mHON0qJAwp8j86TP7_VDgHaFj%26pid%3DApi&f=1 "glitch art")
 
 ---
 
