@@ -67,7 +67,7 @@
         
         <div class="site-meta">
             <h1 class="site-name"><a href="/">Akansha Jha</a></h1>
-            <h2 class="site-description">Budding programmer, Music lover, Language enthusiast</h2>
+            <h2 class="site-description">Budding programmer, Music lover</h2>
         </div>
     </header><ol class="social-menu">
             
@@ -341,7 +341,7 @@
     <section class="article-content">
     
     
-    <!-- raw HTML omitted -->
+    <div style = "text-align: center;">  
 <p><img src="https://cdn-images-1.medium.com/max/1600/1*MojRMNBNOHLqwe5ak7hTug.png"
 	
 	
@@ -352,7 +352,7 @@
 	
 	
 ></p>
-<!-- raw HTML omitted -->
+</div>
 <p>Big O is the used to decribe the efficiency of algorithms. Academics use big O, big θ and big Ω to decribe runtimes.  </p>
 <div class="table-wrapper"><table>
 <thead>
@@ -375,8 +375,9 @@
 </tr>
 </tbody>
 </table></div>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<!--* ***Big O*** : Big O describes the upper bound on time. An algorithm that requires O(n) time can also be described as requiring O(n²), O(n³), O(2ⁿ) etc. The algorithm is at least as fast as any of these. Therefore, they are upper bounds on the runtime. For example, if x<13, it is also true that x<100, x<1000 etc.
+* ***Big Ω*** :  Big Ω is a similar concept but for lower bound. If the runtime is decribed as Ω(n), then it can also be described by Ω(log n) and Ω(1). But, it won't be faster than those runtimes.
+* ***Big θ*** : θ means both O and Ω. That is, an algorithm is θ(n) if its both O(n) and Ω(n). θ gives a tight bound on runtimes.  -->
 <p>In industry, the meaning of O and θ seem to have been merged. Industry&rsquo;s meaning of big O is closer to what academics mean by θ. The runtime for an algorithm is described in three different ways:</p>
 <ul>
 <li><strong>Best Case :</strong> If we consider the case of sorting an array, then if all the elements are equal, then quick sort will traverse the array only once giving the runtime O(n). This is the least runtime possible, hence it is the best case scenario.</li>
@@ -417,7 +418,7 @@
             return;
         }
         var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.src = '//' + "AJ" + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
