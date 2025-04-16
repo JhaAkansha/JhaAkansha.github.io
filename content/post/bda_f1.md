@@ -9,6 +9,7 @@ draft: false
 Formula One might look like a sport where victory comes down to the fastest car or most daring driver — but behind every blistering lap is an enormous engine of *data*. Welcome to the world where machine learning meets motorsport, and terabytes of real-time information help shape every twist, turn, and pit stop decision.
 
 In this post, we’ll walk you through how Formula One teams use the **big data lifecycle** to gain a competitive edge — from sensor-packed cars and telemetry streams to predictive modeling and post-race analysis.
+
 ---
 
 ## 📥 1. Data Collection: The Stream Begins
