@@ -6,7 +6,7 @@ Merge Sort divides the array in half, sorts each of those halves and then merges
 
 <link rel='canonical' href='https://jhaakansha.github.io/p/merge-sort/'>
 
-<link rel="stylesheet" href="/scss/style.min.bd6a25840373b4ba250cc3dee245d947386fe3973a1452568fca5164df565e19.css"><meta property='og:title' content='Merge Sort'>
+<link rel="stylesheet" href="/scss/style.min.c32ba5886893ec572b27b41be98ca34af7c71c5404d0512d886865922dfe30bf.css"><meta property='og:title' content='Merge Sort'>
 <meta property='og:description' content='Runtime: O(nlogn) Auxiliary Space : O(n)
 Merge Sort divides the array in half, sorts each of those halves and then merges them back together. Each of these halves has the same sorting algorithm applied to it. Eventually, its like merging two single-element arrays. The merge method operates by copying all the elements from target array segment into a helper array,keeping track of where the start of the left and right halves should be.'>
 <meta property='og:url' content='https://jhaakansha.github.io/p/merge-sort/'>
@@ -70,7 +70,7 @@ Merge Sort divides the array in half, sorts each of those halves and then merges
         
         <div class="site-meta">
             <h1 class="site-name"><a href="/">Akansha Jha</a></h1>
-            <h2 class="site-description">Budding programmer, Music lover, Language enthusiast</h2>
+            <h2 class="site-description">Budding programmer, Music lover</h2>
         </div>
     </header><ol class="social-menu">
             
@@ -390,14 +390,14 @@ It is a stable algorithm.</p>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">mergesort</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">array</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span><span class="p">[]</span> <span class="n">helper</span> <span class="o">=</span> <span class="n">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">array</span><span class="p">.</span><span class="n">length</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">    <span class="nf">mergesort</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">helper</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">array</span><span class="p">.</span><span class="n">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">mergesort</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">helper</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">array</span><span class="p">.</span><span class="n">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">mergesort</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">array</span><span class="p">,</span> <span class="kt">int</span><span class="p">[]</span> <span class="n">helper</span><span class="p">,</span> <span class="kt">int</span> <span class="n">low</span><span class="p">,</span> <span class="kt">int</span> <span class="n">high</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">low</span> <span class="o">&lt;</span> <span class="n">high</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">middle</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span><span class="o">+</span><span class="n">high</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">mergesort</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">helper</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">middle</span><span class="p">);</span> <span class="c1">//sort left half
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">mergesort</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">helper</span><span class="p">,</span> <span class="n">middle</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">high</span><span class="p">);</span> <span class="c1">//sort right half
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">mergesort</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">helper</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">middle</span><span class="p">,</span> <span class="n">high</span><span class="p">);</span> <span class="c1">//merge them
+</span></span><span class="line"><span class="cl">        <span class="n">mergesort</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">helper</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">middle</span><span class="p">);</span> <span class="c1">//sort left half
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">mergesort</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">helper</span><span class="p">,</span> <span class="n">middle</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">high</span><span class="p">);</span> <span class="c1">//sort right half
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">mergesort</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">helper</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">middle</span><span class="p">,</span> <span class="n">high</span><span class="p">);</span> <span class="c1">//merge them
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">merge</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">array</span><span class="p">,</span> <span class="kt">int</span><span class="p">[]</span> <span class="n">helper</span><span class="p">,</span> <span class="kt">int</span> <span class="n">low</span><span class="p">,</span> <span class="kt">int</span> <span class="n">middle</span><span class="p">,</span> <span class="kt">int</span> <span class="n">high</span><span class="p">)</span> <span class="p">{</span>
@@ -466,7 +466,7 @@ It is a stable algorithm.</p>
             return;
         }
         var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.src = '//' + "AJ" + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
@@ -502,7 +502,7 @@ It is a stable algorithm.</p>
         
             2022 - 
         
-        2023 Akansha Jha
+        2025 Akansha Jha
     </section>
     
     <section class="powerby">

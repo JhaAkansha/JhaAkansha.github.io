@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='🏎️ Fueling Victory: How Formula One Uses Big Data to Win Races Formula One might look like a sport where victory comes down to the fastest car or most daring driver — but behind every blistering lap is an enormous engine of data. Welcome to the world where machine learning meets motorsport, and terabytes of real-time information help shape every twist, turn, and pit stop decision.
+In this post, we’ll walk you through how Formula One teams use the big data lifecycle to gain a competitive edge — from sensor-packed cars and telemetry streams to predictive modeling and post-race analysis.'><title>Understanding Big Data Analytics with Formula One</title>
+
+<link rel='canonical' href='https://jhaakansha.github.io/p/understanding-big-data-analytics-with-formula-one/'>
+
+<link rel="stylesheet" href="/scss/style.min.c32ba5886893ec572b27b41be98ca34af7c71c5404d0512d886865922dfe30bf.css"><meta property='og:title' content='Understanding Big Data Analytics with Formula One'>
+<meta property='og:description' content='🏎️ Fueling Victory: How Formula One Uses Big Data to Win Races Formula One might look like a sport where victory comes down to the fastest car or most daring driver — but behind every blistering lap is an enormous engine of data. Welcome to the world where machine learning meets motorsport, and terabytes of real-time information help shape every twist, turn, and pit stop decision.
+In this post, we’ll walk you through how Formula One teams use the big data lifecycle to gain a competitive edge — from sensor-packed cars and telemetry streams to predictive modeling and post-race analysis.'>
+<meta property='og:url' content='https://jhaakansha.github.io/p/understanding-big-data-analytics-with-formula-one/'>
+<meta property='og:site_name' content='Akansha Jha'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-02-14T13:23:53&#43;05:30'/><meta property='article:modified_time' content='2025-02-14T13:23:53&#43;05:30'/>
+<meta name="twitter:title" content="Understanding Big Data Analytics with Formula One">
+<meta name="twitter:description" content="🏎️ Fueling Victory: How Formula One Uses Big Data to Win Races Formula One might look like a sport where victory comes down to the fastest car or most daring driver — but behind every blistering lap is an enormous engine of data. Welcome to the world where machine learning meets motorsport, and terabytes of real-time information help shape every twist, turn, and pit stop decision.
+In this post, we’ll walk you through how Formula One teams use the big data lifecycle to gain a competitive edge — from sensor-packed cars and telemetry streams to predictive modeling and post-race analysis.">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu10182b0672f7504b7165ae1f9f493b26_32307_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Akansha Jha</a></h1>
+            <h2 class="site-description">Budding programmer, Music lover</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/JhaAkansha/'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/akansha-jha-a91b97222/'
+                        target="_blank"
+                        title="LinkedIn"
+                    >
+                        
+                        
+                            <?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 45.959 45.959" style="enable-background:new 0 0 45.959 45.959;" xml:space="preserve">
+<g>
+	<g>
+		<path d="M5.392,0.492C2.268,0.492,0,2.647,0,5.614c0,2.966,2.223,5.119,5.284,5.119c1.588,0,2.956-0.515,3.957-1.489
+			c0.96-0.935,1.489-2.224,1.488-3.653C10.659,2.589,8.464,0.492,5.392,0.492z M7.847,7.811C7.227,8.414,6.34,8.733,5.284,8.733
+			C3.351,8.733,2,7.451,2,5.614c0-1.867,1.363-3.122,3.392-3.122c1.983,0,3.293,1.235,3.338,3.123
+			C8.729,6.477,8.416,7.256,7.847,7.811z"/>
+		<path d="M0.959,45.467h8.988V12.422H0.959V45.467z M2.959,14.422h4.988v29.044H2.959V14.422z"/>
+		<path d="M33.648,12.422c-4.168,0-6.72,1.439-8.198,2.792l-0.281-2.792H15v33.044h9.959V28.099c0-0.748,0.303-2.301,0.493-2.711
+			c1.203-2.591,2.826-2.591,5.284-2.591c2.831,0,5.223,2.655,5.223,5.797v16.874h10v-18.67
+			C45.959,16.92,39.577,12.422,33.648,12.422z M43.959,43.467h-6V28.593c0-4.227-3.308-7.797-7.223-7.797
+			c-2.512,0-5.358,0-7.099,3.75c-0.359,0.775-0.679,2.632-0.679,3.553v15.368H17V14.422h6.36l0.408,4.044h1.639l0.293-0.473
+			c0.667-1.074,2.776-3.572,7.948-3.572c4.966,0,10.311,3.872,10.311,12.374V43.467z"/>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/understanding-big-data-analytics-with-formula-one/">Understanding Big Data Analytics with Formula One</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Feb 14, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    5 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="-fueling-victory-how-formula-one-uses-big-data-to-win-races">🏎️ Fueling Victory: How Formula One Uses Big Data to Win Races</h1>
+<p>Formula One might look like a sport where victory comes down to the fastest car or most daring driver — but behind every blistering lap is an enormous engine of <em>data</em>. Welcome to the world where machine learning meets motorsport, and terabytes of real-time information help shape every twist, turn, and pit stop decision.</p>
+<p>In this post, we’ll walk you through how Formula One teams use the <strong>big data lifecycle</strong> to gain a competitive edge — from sensor-packed cars and telemetry streams to predictive modeling and post-race analysis.</p>
+<hr>
+<h2 id="-1-data-collection-the-stream-begins">📥 1. Data Collection: The Stream Begins</h2>
+<p>F1 cars are, quite literally, data machines on wheels.</p>
+<ul>
+<li><strong>Sensors Everywhere</strong>: Each car carries around 300 sensors, constantly measuring temperature, pressure, tire wear, fuel consumption, g-forces, and more — generating over 1.1 million data points per second.</li>
+<li><strong>Telemetry</strong>: All of this data is transmitted in real time to the pit wall and team HQ. Teams monitor engine health, lap times, braking patterns, and tire degradation live as the race unfolds.</li>
+<li><strong>Track and Weather Data</strong>: Sensors around the circuit track ambient and surface temperature, wind speed, and grip levels.</li>
+<li><strong>Historical Performance</strong>: Teams also dig deep into archives of race history — weather patterns, past pit strategies, driver behaviors — to inform current decisions.</li>
+</ul>
+<blockquote>
+<p>&ldquo;Every lap is a lesson — and the data is the teacher.&rdquo;</p>
+</blockquote>
+<hr>
+<h2 id="-2-data-storage-where-all-that-info-lives">🗄️ 2. Data Storage: Where All That Info Lives</h2>
+<ul>
+<li><strong>Cloud Data Lakes</strong>: With terabytes of data per race weekend, teams rely on cloud infrastructure and data lakes for scalable storage and quick access.</li>
+<li><strong>Relational Databases</strong>: Structured data like lap times, split timings, and car setup parameters are stored in SQL-based databases.</li>
+<li><strong>Time-Series Databases</strong>: For telemetry and sensor data streaming second-by-second, time-series databases like <em>InfluxDB</em> are key.</li>
+</ul>
+<p>This combination ensures structured and unstructured data are both accessible for real-time and post-race analysis.</p>
+<hr>
+<h2 id="-3-data-cleaning--preprocessing-removing-the-noise">🧹 3. Data Cleaning &amp; Preprocessing: Removing the Noise</h2>
+<p>Before the magic happens, data needs polishing.</p>
+<ul>
+<li><strong>Noise Reduction</strong>: Filtering out sensor glitches or temporary drops in telemetry due to connection issues.</li>
+<li><strong>Missing Data Handling</strong>: Using techniques like interpolation to fill in gaps when sensors fail.</li>
+<li><strong>Data Normalization</strong>: Aligning units and formats so that telemetry, weather, and driver data can be compared or combined.</li>
+</ul>
+<p>Clean data ensures accurate insights and decisions — especially when the wrong move can cost a race.</p>
+<hr>
+<h2 id="-4-data-analysis-understanding-the-race">📊 4. Data Analysis: Understanding the Race</h2>
+<p>Once clean, the data goes through layers of analytics:</p>
+<ul>
+<li><strong>Descriptive Analytics</strong>: What happened? Analyzing trends in lap times, tire wear, or driver performance.</li>
+<li><strong>Predictive Analytics</strong>: What <em>might</em> happen? Machine learning models forecast tire degradation, fuel usage, and even opponent strategies.</li>
+<li><strong>Prescriptive Analytics</strong>: What <em>should</em> we do? Data-driven suggestions for pit strategy, tire choice, or engine tuning.</li>
+<li><strong>Real-Time Analysis</strong>: Engineers monitor live dashboards to react instantly — like changing pit strategy when a rival undercuts.</li>
+</ul>
+<p>This is where the data starts driving decisions.</p>
+<hr>
+<h2 id="-5-data-visualization-making-it-all-visible">📺 5. Data Visualization: Making It All Visible</h2>
+<p>In the heat of a race, engineers don’t have time to read logs.</p>
+<ul>
+<li><strong>Dashboards</strong>: Real-time visualizations help the pit crew monitor performance metrics like tire temp, brake health, and lap deltas.</li>
+<li><strong>Graphs &amp; Heatmaps</strong>: Show trends like rising tire wear or engine stress over time.</li>
+<li><strong>3D Simulations</strong>: Entire race strategies can be modeled visually, showing how a pit stop now could play out 20 laps later.</li>
+</ul>
+<p>Tools like <a class="link" href="https://www.f1-tempo.com/"  target="_blank" rel="noopener"
+    >McLaren Applied&rsquo;s F1 Tempo</a> give teams a way to translate raw data into race-ready insights.</p>
+<hr>
+<h2 id="-6-machine-learning--model-refinement">🤖 6. Machine Learning &amp; Model Refinement</h2>
+<p>F1 teams are now fully embracing AI.</p>
+<ul>
+<li><strong>Model Training</strong>: As new data flows in every race, models are retrained to better predict outcomes like undercut potential or optimal tire stint lengths.</li>
+<li><strong>AI Simulation</strong>: Simulated races using neural networks help optimize strategies across hundreds of “what-if” scenarios.</li>
+<li><strong>Continuous Learning</strong>: Models improve with every season, learning from what worked — and what didn’t.</li>
+</ul>
+<hr>
+<h2 id="-7-decision-making-turning-data-into-action">🧠 7. Decision-Making: Turning Data into Action</h2>
+<ul>
+<li><strong>Strategic Adjustments</strong>: Mid-race decisions like undercutting an opponent or stretching tire life are made based on predictive analysis.</li>
+<li><strong>Driver Feedback</strong>: Data is sent directly to the driver’s cockpit, offering guidance on tire performance, optimal lines, and gaps to rivals.</li>
+<li><strong>Risk Mitigation</strong>: If a part is close to failure, predictive alerts can warn the crew before disaster strikes.</li>
+<li><strong>Car Setup Optimization</strong>: In practice sessions, teams tweak setups — suspension, aero balance, etc. — based on how the data aligns with driver feel.</li>
+</ul>
+<hr>
+<h2 id="-8-feedback-loop-post-race-analysis">🔁 8. Feedback Loop: Post-Race Analysis</h2>
+<p>After the checkered flag, the data work is far from over.</p>
+<ul>
+<li><strong>Post-Race Review</strong>: Comparing expected vs. actual performance, pit strategy efficiency, and any anomalies.</li>
+<li><strong>Driver Insights</strong>: Their feedback — combined with telemetry — helps fine-tune future car setups.</li>
+<li><strong>Continuous Improvement</strong>: Learnings feed into the next race, improving everything from brake cooling systems to fuel maps.</li>
+</ul>
+<hr>
+<h2 id="-9-whats-next-advanced-analytics-in-f1">🚀 9. What’s Next: Advanced Analytics in F1</h2>
+<p>Formula One is only accelerating its use of advanced data techniques:</p>
+<ul>
+<li><strong>AI-Driven Strategy Engines</strong>: Predict outcomes based on live conditions and adjust strategies automatically.</li>
+<li><strong>Predictive Maintenance</strong>: AI can now predict part failures before they happen, saving races (and millions in repairs).</li>
+<li><strong>Biometric Analysis</strong>: Some teams are exploring heart rate, hydration levels, and fatigue in drivers to optimize performance and safety.</li>
+</ul>
+<hr>
+<h2 id="-final-thoughts">🏁 Final Thoughts</h2>
+<p>Formula One is no longer just a test of speed — it’s a test of <strong>data mastery</strong>. Every lap, every pit stop, every millisecond is backed by mountains of analysis and predictive modeling.</p>
+<p>In this race, the car is fast. The driver is skilled.<br>
+But <strong>data is the difference</strong>.</p>
+<hr>
+<p><em>Want to dive deeper? Explore tools like <a class="link" href="https://www.f1-tempo.com/"  target="_blank" rel="noopener"
+    >F1 Tempo by McLaren Applied</a> or learn how AI is reshaping motorsport.</em></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "AJ" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2022 - 
+        
+        2025 Akansha Jha
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.14.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#-1-data-collection-the-stream-begins">📥 1. Data Collection: The Stream Begins</a></li>
+    <li><a href="#-2-data-storage-where-all-that-info-lives">🗄️ 2. Data Storage: Where All That Info Lives</a></li>
+    <li><a href="#-3-data-cleaning--preprocessing-removing-the-noise">🧹 3. Data Cleaning &amp; Preprocessing: Removing the Noise</a></li>
+    <li><a href="#-4-data-analysis-understanding-the-race">📊 4. Data Analysis: Understanding the Race</a></li>
+    <li><a href="#-5-data-visualization-making-it-all-visible">📺 5. Data Visualization: Making It All Visible</a></li>
+    <li><a href="#-6-machine-learning--model-refinement">🤖 6. Machine Learning &amp; Model Refinement</a></li>
+    <li><a href="#-7-decision-making-turning-data-into-action">🧠 7. Decision-Making: Turning Data into Action</a></li>
+    <li><a href="#-8-feedback-loop-post-race-analysis">🔁 8. Feedback Loop: Post-Race Analysis</a></li>
+    <li><a href="#-9-whats-next-advanced-analytics-in-f1">🚀 9. What’s Next: Advanced Analytics in F1</a></li>
+    <li><a href="#-final-thoughts">🏁 Final Thoughts</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
