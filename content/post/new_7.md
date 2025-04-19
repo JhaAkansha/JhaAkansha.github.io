@@ -569,3 +569,731 @@ async def update_item(
     return results
 ```
 
+Here, `q` is the query parameter while others are body keys.
+
+<aside>
+💡 Body keys and body parameters refer to the same thing. For example, in `{"item_id": 1, "user_id": 2}`, `item_id` is a body key/parameter.
+
+</aside>
+
+## Embed a single body parameter
+
+Let's say you only have a single item body parameter from a Pydantic model Item. By default, FastAPI will then expect its body directly. But if you want it to expect a JSON with a key item and inside of it the model contents, as it does when you declare extra body parameters, you can use the special Body parameter embed:
+
+```python
+from typing import Union
+
+from fastapi import Body, FastAPI
+from pydantic import BaseModel
+from typing_extensions import Annotated
+
+app = FastAPI()
+
+class Item(BaseModel):
+    name: str
+    description: Union[str, None] = None
+    price: float
+    tax: Union[float, None] = None
+
+@app.put("/items/{item_id}")
+async def update_item(item_id: int, item: Annotated[Item, Body(embed=True)]):
+    results = {"item_id": item_id, "item": item}
+    return results
+```
+
+In this case FastAPI will expect a body like:
+
+```python
+{
+    "item": {
+        "name": "Foo",
+        "description": "The pretender",
+        "price": 42.0,
+        "tax": 3.2
+    }
+}
+```
+
+## Fields
+
+The same way you can declare additional validation and metadata in *path operation function* parameters with `Query`, `Path` and `Body`, you can declare validation and metadata inside of Pydantic models using Pydantic's `Field`.
+
+```python
+from typing import Annotated
+
+from fastapi import Body, FastAPI
+from pydantic import BaseModel, Field
+
+app = FastAPI()
+
+class Item(BaseModel):
+    name: str
+    description: str | None = Field(
+        default=None, title="The description of the item", max_length=300
+    )
+    price: float = Field(gt=0, description="The price must be greater than zero")
+    tax: float | None = None
+
+@app.put("/items/{item_id}")
+async def update_item(item_id: int, item: Annotated[Item, Body(embed=True)]):
+    results = {"item_id": item_id, "item": item}
+    return results
+```
+
+`Field` works the same way as `Query`, `Path` and `Body`, it has all the same parameters, etc.
+
+## **Nested Models**
+
+### **List fields**
+
+In Python 3.9 and above you can use the standard `list` to declare these type annotations as we'll see below. 
+
+```python
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+
+class Item(BaseModel):
+    name: str
+    description: str | None = None
+    price: float
+    tax: float | None = None
+    tags: list[str] = []
+
+@app.put("/items/{item_id}")
+async def update_item(item_id: int, item: Item):
+    results = {"item_id": item_id, "item": item}
+    return results
+```
+
+### Submodel
+
+```python
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+
+class Image(BaseModel):
+    url: str
+    name: str
+
+class Item(BaseModel):
+    name: str
+    description: str | None = None
+    price: float
+    tax: float | None = None
+    tags: set[str] = set()
+    image: Image | None = None
+
+@app.put("/items/{item_id}")
+async def update_item(item_id: int, item: Item):
+    results = {"item_id": item_id, "item": item}
+    return results
+```
+
+This would mean that FastAPI would expect a body similar to:
+
+```python
+{
+	"name": "Foo",
+	"description": "The pretender",
+	"price": 42.0,
+	"tax": 3.2,
+	"tags": ["rock", "metal", "bar"],
+	"image": {
+		"url": "http://example.com/baz.jpg",
+		"name": "The Foo live"
+		}
+}
+```
+
+### Special types and validation
+
+Apart from normal singular types like `str`, `int`, `float`, etc. you can use more complex singular types that inherit from `str`.To see all the options you have, checkout the docs for [Pydantic's exotic types](https://docs.pydantic.dev/latest/concepts/types/). For example, as in the `Image` model we have a `url` field, we can declare it to be an instance of Pydantic's `HttpUrl` instead of a `str`:
+
+```python
+from fastapi import FastAPI
+from pydantic import BaseModel, HttpUrl
+
+app = FastAPI()
+
+class Image(BaseModel):
+    url: HttpUrl
+    name: str
+
+class Item(BaseModel):
+    name: str
+    description: str | None = None
+    price: float
+    tax: float | None = None
+    tags: set[str] = set()
+    image: Image | None = None
+
+@app.put("/items/{item_id}")
+async def update_item(item_id: int, item: Item):
+    results = {"item_id": item_id, "item": item}
+    return results
+```
+
+You can also use Pydantic models as subtypes of `list`, `set`, etc.:
+
+```python
+from fastapi import FastAPI
+from pydantic import BaseModel, HttpUrl
+
+app = FastAPI()
+
+class Image(BaseModel):
+    url: HttpUrl
+    name: str
+
+class Item(BaseModel):
+    name: str
+    description: str | None = None
+    price: float
+    tax: float | None = None
+    tags: set[str] = set()
+    images: list[Image] | None = None
+
+@app.put("/items/{item_id}")
+async def update_item(item_id: int, item: Item):
+    results = {"item_id": item_id, "item": item}
+    return results
+```
+
+This will expect (convert, validate, document, etc.) a JSON body like:
+
+```python
+{
+    "name": "Foo",
+    "description": "The pretender",
+    "price": 42.0,
+    "tax": 3.2,
+    "tags": [
+        "rock",
+        "metal",
+        "bar"
+    ],
+    "images": [
+        {
+            "url": "http://example.com/baz.jpg",
+            "name": "The Foo live"
+        },
+        {
+            "url": "http://example.com/dave.jpg",
+            "name": "The Baz"
+        }
+    ]
+}
+```
+
+## **Bodies of arbitrary `dict`**
+
+You can also declare a body as a `dict` with keys of some type and values of some other type.This way, you don't have to know beforehand what the valid field/attribute names are (as would be the case with Pydantic models).This would be useful if you want to receive keys that you don't already know.
+
+```python
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.post("/index-weights/")
+async def create_index_weights(weights: dict[int, float]):
+    return weights
+```
+
+# **Extra Data Types**
+
+Up to now, you have been using common data types, like:
+
+- `int`
+- `float`
+- `str`
+- `bool`
+
+But you can also use more complex data types.
+
+And you will still have the same features as seen up to now:
+
+- Great editor support.
+- Data conversion from incoming requests.
+- Data conversion for response data.
+- Data validation.
+- Automatic annotation and documentation.
+
+Here are some of the additional data types you can use:
+
+- `UUID`:
+    - A standard "Universally Unique Identifier", common as an ID in many databases and systems.
+    - In requests and responses will be represented as a `str`.
+- `datetime.datetime`:
+    - A Python `datetime.datetime`.
+    - In requests and responses will be represented as a `str` in ISO 8601 format, like: `2008-09-15T15:53:00+05:00`.
+- `datetime.date`:
+    - Python `datetime.date`.
+    - In requests and responses will be represented as a `str` in ISO 8601 format, like: `2008-09-15`.
+- `datetime.time`:
+    - A Python `datetime.time`.
+    - In requests and responses will be represented as a `str` in ISO 8601 format, like: `14:23:55.003`.
+- `datetime.timedelta`:
+    - A Python `datetime.timedelta`.
+    - In requests and responses will be represented as a `float` of total seconds.
+    - Pydantic also allows representing it as a "ISO 8601 time diff encoding", [see the docs for more info](https://docs.pydantic.dev/latest/concepts/serialization/#json_encoders).
+- `frozenset`:
+    - In requests and responses, treated the same as a `set`:
+        - In requests, a list will be read, eliminating duplicates and converting it to a `set`.
+        - In responses, the `set` will be converted to a `list`.
+        - The generated schema will specify that the `set` values are unique (using JSON Schema's `uniqueItems`).
+- `bytes`:
+    - Standard Python `bytes`.
+    - In requests and responses will be treated as `str`.
+    - The generated schema will specify that it's a `str` with `binary` "format".
+- `Decimal`:
+    - Standard Python `Decimal`.
+    - In requests and responses, handled the same as a `float`.
+- You can check all the valid pydantic data types here: [Pydantic data types](https://docs.pydantic.dev/latest/usage/types/types/).
+
+# Cookie Parameters
+
+You can define Cookie parameters the same way you define `Query` and `Path` parameters.
+
+```python
+from typing import Annotated
+
+from fastapi import Cookie, FastAPI
+
+app = FastAPI()
+
+@app.get("/items/")
+async def read_items(ads_id: Annotated[str | None, Cookie()] = None):
+    return {"ads_id": ads_id}
+```
+
+# Header Parameters
+
+You can define Header parameters the same way you define `Query`, `Path` and `Cookie` parameters.
+
+```python
+from typing import Annotated
+
+from fastapi import FastAPI, Header
+
+app = FastAPI()
+
+@app.get("/items/")
+async def read_items(user_agent: Annotated[str | None, Header()] = None):
+    return {"User-Agent": user_agent}
+```
+
+`Header` has a little extra functionality on top of what `Path`, `Query` and `Cookie` provide. Most of the standard headers are separated by a "hyphen" character, also known as the "minus symbol" (`-`). But a variable like `user-agent` is invalid in Python. So, by default, `Header` will convert the parameter names characters from underscore (`_`) to hyphen (`-`) to extract and document the headers.
+
+Also, HTTP headers are case-insensitive, so, you can declare them with standard Python style (also known as "snake_case"). So, you can use `user_agent` as you normally would in Python code, instead of needing to capitalize the first letters as `User_Agent` or something similar.
+
+If for some reason you need to disable automatic conversion of underscores to hyphens, set the parameter `convert_underscores` of `Header` to `False`: `Header(convert_underscores=False)]`
+
+## Duplicate headers
+
+It is possible to receive duplicate headers. That means, the same header with multiple values. You can define those cases using a list in the type declaration.
+
+You will receive all the values from the duplicate header as a Python `list`. For example, to declare a header of `X-Token` that can appear more than once, you can write:
+
+```python
+from typing import Annotated
+
+from fastapi import FastAPI, Header
+
+app = FastAPI()
+
+@app.get("/items/")
+async def read_items(x_token: Annotated[list[str] | None, Header()] = None):
+    return {"X-Token values": x_token}
+```
+
+If you communicate with that *path operation* sending two HTTP headers like:
+
+```python
+X-Token: foo
+X-Token: bar
+```
+
+The response would be like:
+
+```python
+{
+    "X-Token values": [
+        "bar",
+        "foo"
+    ]
+}
+```
+
+# Response
+
+You can declare the type used for the response by annotating the path operation function return type.
+
+You can use type annotations the same way you would for input data in function parameters, you can use Pydantic models, lists, dictionaries, scalar values like integers, booleans, etc.
+
+```python
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+
+class Item(BaseModel):
+    name: str
+    description: str | None = None
+    price: float
+    tax: float | None = None
+    tags: list[str] = []
+
+@app.post("/items/")
+async def create_item(item: Item) -> Item:
+    return item
+
+@app.get("/items/")
+async def read_items() -> list[Item]:
+    return [
+        Item(name="Portal Gun", price=42.0),
+        Item(name="Plumbus", price=32.0),
+    ]
+```
+
+FastAPI will use this return type to:
+
+- Validate the returned data.
+    - If the data is invalid (e.g. you are missing a field), it means that *your* app code is broken, not returning what it should, and it will return a server error instead of returning incorrect data. This way you and your clients can be certain that they will receive the data and the data shape expected.
+- Add a JSON Schema for the response, in the OpenAPI *path operation*.
+    - This will be used by the automatic docs.
+    - It will also be used by automatic client code generation tools.
+
+But most importantly:
+
+- It will limit and filter the output data to what is defined in the return type.
+    - This is particularly important for **security**, we'll see more of that below.
+
+## `response_model` Parameter
+
+There are some cases where you need or want to return some data that is not exactly what the type declares.
+
+For example, you could want to return a dictionary or a database object, but declare it as a Pydantic model. This way the Pydantic model would do all the data documentation, validation, etc. for the object that you returned (e.g. a dictionary or database object). If you added the return type annotation, tools and editors would 
+complain with a (correct) error telling you that your function is returning a type (e.g. a dict) that is different from what you declared (e.g. a Pydantic model). In those cases, you can use the *path operation decorator* parameter `response_model` instead of the return type.
+
+```python
+from typing import Any
+
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+
+class Item(BaseModel):
+    name: str
+    description: str | None = None
+    price: float
+    tax: float | None = None
+    tags: list[str] = []
+
+@app.post("/items/", response_model=Item)
+async def create_item(item: Item) -> Any:
+    return item
+
+@app.get("/items/", response_model=list[Item])
+async def read_items() -> Any:
+    return [
+        {"name": "Portal Gun", "price": 42.0},
+        {"name": "Plumbus", "price": 32.0},
+    ]
+```
+
+If you declare both a return type and a `response_model`, the `response_model` will take priority and be used by FastAPI. Some other things response models can do:
+
+- You can disable the response model generation by setting `response_model=None`. This will make FastAPI skip the response model generation and that way you can have any return type annotations you need without it affecting your FastAPI application.
+- You can omit optional attributes having default values from the response by setting path operation decorator parameter `response_model_exclude_unset=True`. For example, `@app.post("/items/{item_id}", response_model=Item, response_model_exclude_unset=True)`
+- You can also use the path operation decorator parameters `response_model_include` and `response_model_exclude`. They take a set of str with the name of the attributes to include (omitting the rest) or to exclude (including the rest). This can be used as a quick shortcut if you have only one Pydantic model and want to remove some data from the output. For example: `@app.post("/items", response_model=Item, response_model_include={"name", "description"}, response_model_exclude={"tax"})`
+
+## **Data Filtering**
+
+We want to annotate the function with one type but return something that includes more data. We want FastAPI to keep filtering the data using the response model.
+
+```python
+from fastapi import FastAPI
+from pydantic import BaseModel, EmailStr
+
+app = FastAPI()
+
+class BaseUser(BaseModel):
+    username: str
+    email: EmailStr
+    full_name: str | None = None
+
+class UserIn(BaseUser):
+    password: str
+
+@app.post("/user/")
+async def create_user(user: UserIn) -> BaseUser:
+    return user
+```
+
+## **Return a Response Directly**
+
+```python
+from fastapi import FastAPI, Response
+from fastapi.responses import JSONResponse, RedirectResponse
+
+app = FastAPI()
+
+@app.get("/portal")
+async def get_portal(teleport: bool = False) -> Response:
+    if teleport:
+        return RedirectResponse(url="https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+    return JSONResponse(content={"message": "Here's your interdimensional portal."})
+```
+
+## Extra Models
+
+It is common to have more than one related model. This is especially the case for user models, because:
+
+- The input model needs to be able to have a password.
+- The output model should not have a password.
+- The database model would probably need to have a hashed password.
+
+This is is an example of how they are used:
+
+```python
+from fastapi import FastAPI
+from pydantic import BaseModel, EmailStr
+
+app = FastAPI()
+
+class UserBase(BaseModel):
+    username: str
+    email: EmailStr
+    full_name: str | None = None
+
+class UserIn(UserBase):
+    password: str
+
+class UserOut(UserBase):
+    pass
+
+class UserInDB(UserBase):
+    hashed_password: str
+
+def fake_password_hasher(raw_password: str):
+    return "supersecret" + raw_password
+
+def fake_save_user(user_in: UserIn):
+    hashed_password = fake_password_hasher(user_in.password)
+    user_in_db = UserInDB(**user_in.dict(), hashed_password=hashed_password)
+    print("User saved! ..not really")
+    return user_in_db
+
+@app.post("/user/", response_model=UserOut)
+async def create_user(user_in: UserIn):
+    user_saved = fake_save_user(user_in)
+    return user_saved
+```
+
+To note:
+
+- To create a dictionary from a Pydantic model, use the `.dict()` method that returns a `dict` with the model's data. For example, `UserInDB(**user_dict)`
+- To create a Pydantic model from a `dict`, call the constructor with the `dict`. For example: `UserInDB(**user_dict)`. This is caled unwrapping a dict.
+- Convert from one Pydantic model to another using
+    - `user_dict = user_in.dict(); UserInDB(**user_dict)`
+    - `UserInDB(**user_in.dict())`
+    - `UserInDB(**user_in.dict(), hashed_password=hashed_password)` (to add an extra attribute `hashed_password`)
+
+## Other details
+
+### Union or AnyOf
+
+You can declare a response to be the `Union` of two types, that means, that the response would be any of the two.
+
+```python
+from typing import Union
+
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+
+class BaseItem(BaseModel):
+    description: str
+    type: str
+
+class CarItem(BaseItem):
+    type: str = "car"
+
+class PlaneItem(BaseItem):
+    type: str = "plane"
+    size: int
+
+items = {
+    "item1": {"description": "All my friends drive a low rider", "type": "car"},
+    "item2": {
+        "description": "Music is my aeroplane, it's my aeroplane",
+        "type": "plane",
+        "size": 5,
+    },
+}
+
+@app.get("/items/{item_id}", response_model=Union[PlaneItem, CarItem])
+async def read_item(item_id: str):
+    return items[item_id]
+```
+
+In this example we pass `Union[PlaneItem, CarItem]` as the value of the argument `response_model`. Because we are passing it as a value to an argument instead of putting it in a type annotation, we have to use Union even in Python 3.10.
+
+### List of models
+
+```python
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+
+class Item(BaseModel):
+    name: str
+    description: str
+
+items = [
+    {"name": "Foo", "description": "There comes my hero"},
+    {"name": "Red", "description": "It's my aeroplane"},
+]
+
+@app.get("/items/", response_model=list[Item])
+async def read_items():
+    return items
+```
+
+### Response with arbitrary `dict`
+
+You can also declare a response using a plain arbitrary `dict`, declaring just the type of the keys and values, without using a Pydantic model. This is useful if you don't know the valid field/attribute names (that would be needed for a Pydantic model) beforehand.
+
+```python
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/keyword-weights/", response_model=dict[str, float])
+async def read_keyword_weights():
+    return {"foo": 2.3, "bar": 3.4}
+```
+
+## Response Codes
+
+In HTTP, you send a numeric status code of 3 digits as part of the response. These status codes have a name associated to recognize them, but the important part is the number.
+
+- `100` and above are for "Information". You rarely use them directly. Responses with these status codes cannot have a body.
+- **`200`** and above are for "Successful" responses. These are the ones you would use the most.
+    - `200` is the default status code, which means everything was "OK".
+    - Another example would be `201`, "Created". It is commonly used after creating a new record in the database.
+    - A special case is `204`, "No Content". This response is
+    used when there is no content to return to the client, and so the
+    response must not have a body.
+- **`300`** and above are for "Redirection". Responses with these status codes may or may not have a body, except for `304`, "Not Modified", which must not have one.
+- **`400`** and above are for "Client error" responses. These are the second type you would probably use the most.
+    - An example is `404`, for a "Not Found" response.
+    - For generic errors from the client, you can just use `400`.
+- `500` and above are for server errors. You almost never
+use them directly. When something goes wrong at some part in your
+application code, or server, it will automatically return one of these
+status codes.
+
+```python
+from fastapi import FastAPI, status
+
+app = FastAPI()
+
+@app.post("/items/", status_code=status.HTTP_201_CREATED)
+async def create_item(name: str):
+    return {"name": name}
+```
+
+## Form Data
+
+When you need to receive form fields instead of JSON, you can use `Form`. With `Form` you can declare the same configurations as with `Body` (and `Query`, `Path`, `Cookie`), including validation, examples, an alias (e.g. `user-name` instead of `username`), etc. The way HTML forms (`<form></form>`) sends the data to the server normally uses a "special" encoding for that data, it's different from JSON. FastAPI will make sure to read that data from the right place instead of JSON.
+
+```python
+from typing import Annotated
+
+from fastapi import FastAPI, Form
+
+app = FastAPI()
+
+@app.post("/login/")
+async def login(username: Annotated[str, Form()], password: Annotated[str, Form()]):
+    return {"username": username}
+```
+
+# **Request Files**
+
+You can define files to be uploaded by the client using `File`
+
+<aside>
+💡 To receive uploaded files, first install [`python-multipart`](https://github.com/Kludex/python-multipart)
+
+</aside>
+
+```python
+from typing import Annotated
+
+from fastapi import FastAPI, File, UploadFile
+
+app = FastAPI()
+
+@app.post("/files/")
+async def create_file(file: Annotated[bytes, File()]):
+    return {"file_size": len(file)}
+
+@app.post("/uploadfile/")
+async def create_upload_file(file: UploadFile):
+    return {"filename": file.filename}
+```
+
+The files will be uploaded as "form data".
+
+If you declare the type of your path operation function parameter as bytes, FastAPI will read the file for you and you will receive the contents as bytes.
+
+Keep in mind that this means that the whole contents will be stored in memory. This will work well for small files.
+
+Using `UploadFile` has several advantages over `bytes`:
+
+- You don't have to use `File()` in the default value of the parameter.
+- It uses a "spooled" file:
+    - A file stored in memory up to a maximum size limit, and after passing this limit it will be stored in disk.
+- This means that it will work well for large files like images, videos, large binaries, etc. without consuming all the memory.
+- You can get metadata from the uploaded file.
+- It has a [file-like](https://docs.python.org/3/glossary.html#term-file-like-object) `async` interface.
+- It exposes an actual Python [`SpooledTemporaryFile`](https://docs.python.org/3/library/tempfile.html#tempfile.SpooledTemporaryFile) object that you can pass directly to other libraries that expect a file-like object.
+
+`UploadFile` has the following attributes:
+
+- `filename`: A `str` with the original file name that was uploaded (e.g. `myimage.jpg`).
+- `content_type`: A `str` with the content type (MIME type / media type) (e.g. `image/jpeg`).
+- `file`: A [`SpooledTemporaryFile`](https://docs.python.org/3/library/tempfile.html#tempfile.SpooledTemporaryFile) (a [file-like](https://docs.python.org/3/glossary.html#term-file-like-object) object). This is the actual Python file that you can pass directly to
+other functions or libraries that expect a "file-like" object.
+
+`UploadFile` has the following `async` methods. They all call the corresponding file methods underneath (using the internal `SpooledTemporaryFile`).
+
+- `write(data)`: Writes `data` (`str` or `bytes`) to the file.
+- `read(size)`: Reads `size` (`int`) bytes/characters of the file.
+- `seek(offset)`: Goes to the byte position `offset` (`int`) in the file.
+    - E.g., `await myfile.seek(0)` would go to the start of the file.
+    - This is especially useful if you run `await myfile.read()` once and then need to read the contents again.
+- `close()`: Closes the file.
+
+As all these methods are `async` methods, you need to "await" them.
+
+For example, inside of an `async` *path operation function* you can get the contents with `contents = await myfile.read()`
+
+If you are inside of a normal `def` *path operation function*, you can access the `UploadFile.file` directly, for example `contents = myfile.file.read()`
+
+To note:
+
+- You can make a file optional by using standard type annotations and setting a default value of `None`. For example, function definition from above will change to `async def create_upload_file(file: UploadFile | None = None):`
+- You can also use `File()` with `UploadFile`, for example, to set additional metadata. For example: `async def create_upload_file(
+file: Annotated[UploadFile, File(description="A file read as UploadFile")]):`
+- It's possible to upload several files at the same time. To use that, declare a list of `bytes` or `UploadFile`. For example, `async def create_upload_files(files: list[UploadFile]):`
+
