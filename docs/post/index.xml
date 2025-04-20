@@ -12,42 +12,42 @@
         <pubDate>Tue, 08 Apr 2025 13:23:44 +0530</pubDate>
         
         <guid>https://jhaakansha.github.io/p/bytebattles-2.0/</guid>
-        <description>&lt;h1 id=&#34;-bytebattles-with-ather-energy-30-hours-one-ev--a-lot-of-coffee&#34;&gt;⚡ ByteBattles with Ather Energy: 30 Hours, One EV &amp;amp; a Lot of Coffee&lt;/h1&gt;
+        <description>&lt;h1 id=&#34;bytebattles-with-ather-energy-30-hours-one-ev--a-lot-of-coffee&#34;&gt;ByteBattles with Ather Energy: 30 Hours, One EV &amp;amp; a Lot of Coffee&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;“When was the last time you coded on a real electric vehicle?”&lt;/em&gt;&lt;br&gt;
 – Probably never. Until ByteBattles.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-what-is-bytebattles&#34;&gt;🚀 What is ByteBattles?&lt;/h2&gt;
+&lt;h2 id=&#34;what-is-bytebattles&#34;&gt;What is ByteBattles?&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;ByteBattles&lt;/strong&gt; is a national-level firmware hackathon hosted by &lt;a class=&#34;link&#34; href=&#34;https://www.atherenergy.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Ather Energy&lt;/a&gt;, inviting students and professionals from across India to tackle real-world challenges in the EV (Electric Vehicle) space.&lt;/p&gt;
 &lt;p&gt;Participants were challenged to develop firmware solutions for the &lt;strong&gt;Ather 450x&lt;/strong&gt;, a flagship electric scooter—and yes, we were actually given the scooter to code on.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-pune-to-bangalore-the-journey-begins&#34;&gt;✈️ Pune to Bangalore: The Journey Begins&lt;/h2&gt;
+&lt;h2 id=&#34;pune-to-bangalore-the-journey-begins&#34;&gt;Pune to Bangalore: The Journey Begins&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;🕒 &lt;strong&gt;3:00 AM&lt;/strong&gt;: Flight from Pune&lt;/li&gt;
-&lt;li&gt;🕗 &lt;strong&gt;8:00 AM&lt;/strong&gt;: Land in Bangalore and reach Ather HQ&lt;/li&gt;
-&lt;li&gt;☕ &lt;strong&gt;8:30 AM&lt;/strong&gt;: Check-in, breakfast, orientation&lt;/li&gt;
-&lt;li&gt;🎽 Swag secured: T-shirts + ID cards&lt;/li&gt;
-&lt;li&gt;🏢 Office tour: Our base for the next 30 hours&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;3:00 AM&lt;/strong&gt;: Flight from Pune&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;8:00 AM&lt;/strong&gt;: Land in Bangalore and reach Ather HQ&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;8:30 AM&lt;/strong&gt;: Check-in, breakfast, orientation&lt;/li&gt;
+&lt;li&gt;Swag secured: T-shirts + ID cards&lt;/li&gt;
+&lt;li&gt;Office tour: Our base for the next 30 hours&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;We were five caffeine-powered engineers, barely awake but buzzing with excitement.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-the-problem-statement&#34;&gt;🧠 The Problem Statement&lt;/h2&gt;
+&lt;h2 id=&#34;the-problem-statement&#34;&gt;The Problem Statement&lt;/h2&gt;
 &lt;p&gt;At the orientation, we were introduced to the real challenge:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Implement &lt;strong&gt;7 firmware features&lt;/strong&gt; on the Ather 450x over the weekend.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;With access to development boards, firmware libraries, and the Ather 450x, we were off to a flying start. Kind of.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-hack-mode-on&#34;&gt;💥 Hack Mode: ON&lt;/h2&gt;
+&lt;h2 id=&#34;hack-mode-on&#34;&gt;Hack Mode: ON&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;11:00 AM&lt;/strong&gt;: Coding begins&lt;/li&gt;
-&lt;li&gt;⌨️ Problem 1 solved in 10 mins—&lt;em&gt;or so we thought&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;😓 Turns out&amp;hellip; it was a faulty &lt;strong&gt;USB cable&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Problem 1 solved in 10 mins—&lt;em&gt;or so we thought&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Turns out&amp;hellip; it was a faulty &lt;strong&gt;USB cable&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;While the volunteers helped debug the hardware, we brainstormed and coded two more features—with no working hardware in hand. Grit.&lt;/p&gt;
-&lt;h3 id=&#34;-debug-debug-repeat&#34;&gt;😵 Debug, Debug, Repeat&lt;/h3&gt;
+&lt;h3 id=&#34;debug-debug-repeat&#34;&gt;Debug, Debug, Repeat&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Two team members: Locked into debugging mode&lt;/li&gt;
 &lt;li&gt;Rest of us: Shipping code like our lives depended on it&lt;/li&gt;
@@ -55,23 +55,23 @@
 &lt;/ul&gt;
 &lt;p&gt;But we missed the early submission points—by &lt;strong&gt;just a few minutes&lt;/strong&gt;. That sealed our fate: we didn’t make it to &lt;strong&gt;Phase 2&lt;/strong&gt;.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-phase-2-watching-from-the-sidelines&#34;&gt;🧩 Phase 2: Watching from the Sidelines&lt;/h2&gt;
+&lt;h2 id=&#34;phase-2-watching-from-the-sidelines&#34;&gt;Phase 2: Watching from the Sidelines&lt;/h2&gt;
 &lt;p&gt;While the top 15 teams moved upstairs to tackle advanced problem statements, we made the most of our time:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;🤝 Networked with students &amp;amp; working pros&lt;/li&gt;
-&lt;li&gt;🎤 Interactive Q&amp;amp;As with Ather engineers&lt;/li&gt;
-&lt;li&gt;🛵 Explored stripped-down Ather 450x models&lt;/li&gt;
-&lt;li&gt;🎉 Activities: Dumb charades, music, DJ, even a mystery guitar jam session&lt;/li&gt;
+&lt;li&gt;Networked with students &amp;amp; working pros&lt;/li&gt;
+&lt;li&gt;Interactive Q&amp;amp;As with Ather engineers&lt;/li&gt;
+&lt;li&gt;Explored stripped-down Ather 450x models&lt;/li&gt;
+&lt;li&gt;Activities: Dumb charades, music, DJ, even a mystery guitar jam session&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-night-mode-floor-is-the-new-bed&#34;&gt;💤 Night Mode: Floor is the New Bed&lt;/h2&gt;
+&lt;h2 id=&#34;night-mode-floor-is-the-new-bed&#34;&gt;Night Mode: Floor is the New Bed&lt;/h2&gt;
 &lt;p&gt;By 3 AM, the office had turned into a co-living space:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;🛏️ Bean bags, sleeping bags, and even just floors&lt;/li&gt;
-&lt;li&gt;💤 Brain fog, but hearts still racing with excitement&lt;/li&gt;
+&lt;li&gt;Bean bags, sleeping bags, and even just floors&lt;/li&gt;
+&lt;li&gt;Brain fog, but hearts still racing with excitement&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-the-plot-twist&#34;&gt;⚙️ The Plot Twist&lt;/h2&gt;
+&lt;h2 id=&#34;the-plot-twist&#34;&gt;The Plot Twist&lt;/h2&gt;
 &lt;p&gt;The next morning, we got another shot at accessing our EV.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;30 minutes later&lt;/strong&gt;, we solved the bug that had blocked us the entire day before.&lt;br&gt;
@@ -79,13 +79,13 @@ In one shot, &lt;strong&gt;3 additional features&lt;/strong&gt; started working.
 &lt;/blockquote&gt;
 &lt;p&gt;Talk about tragic timing.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-final-takeaways&#34;&gt;🎯 Final Takeaways&lt;/h2&gt;
+&lt;h2 id=&#34;final-takeaways&#34;&gt;Final Takeaways&lt;/h2&gt;
 &lt;p&gt;Despite not making it to the final round, ByteBattles was:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;💡 A rare opportunity to work with &lt;strong&gt;real EV hardware&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;🔧 Our first hands-on experience with &lt;strong&gt;firmware development&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;🤝 A brilliant space to &lt;strong&gt;network&lt;/strong&gt; with passionate engineers&lt;/li&gt;
-&lt;li&gt;📚 A steep learning curve that pushed all our boundaries&lt;/li&gt;
+&lt;li&gt;A rare opportunity to work with &lt;strong&gt;real EV hardware&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Our first hands-on experience with &lt;strong&gt;firmware development&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;A brilliant space to &lt;strong&gt;network&lt;/strong&gt; with passionate engineers&lt;/li&gt;
+&lt;li&gt;A steep learning curve that pushed all our boundaries&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         </item>
@@ -99,13 +99,13 @@ In one shot, &lt;strong&gt;3 additional features&lt;/strong&gt; started working.
 &lt;p&gt;In the shadows of global cyberspace, a formidable threat actor known as &lt;strong&gt;Salt Typhoon&lt;/strong&gt; has emerged, orchestrating sophisticated cyber espionage operations with alarming precision. This Chinese state-sponsored group, also referred to as &lt;strong&gt;GhostEmperor&lt;/strong&gt;, &lt;strong&gt;FamousSparrow&lt;/strong&gt;, and &lt;strong&gt;UNC2286&lt;/strong&gt;, has been linked to China&amp;rsquo;s Ministry of State Security (MSS) (&lt;a class=&#34;link&#34; href=&#34;https://home.treasury.gov/news/press-releases/jy2792&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;home.treasury.gov&lt;/a&gt;).&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-origins-and-evolution&#34;&gt;🌀 Origins and Evolution&lt;/h2&gt;
+&lt;h2 id=&#34;origins-and-evolution&#34;&gt;Origins and Evolution&lt;/h2&gt;
 &lt;p&gt;Salt Typhoon&amp;rsquo;s activities date back to at least &lt;strong&gt;August 2019&lt;/strong&gt;, with early attempts to infiltrate high-profile targets, including former President Donald Trump (&lt;a class=&#34;link&#34; href=&#34;https://home.treasury.gov/news/press-releases/jy2792&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;home.treasury.gov&lt;/a&gt;). By late 2024, the group had escalated its operations, breaching major U.S. telecommunications companies such as &lt;strong&gt;Verizon&lt;/strong&gt;, &lt;strong&gt;AT&amp;amp;T&lt;/strong&gt;, and &lt;strong&gt;T-Mobile&lt;/strong&gt; (&lt;a class=&#34;link&#34; href=&#34;https://www.bleepingcomputer.com/news/security/white-house-salt-typhoon-hacked-telcos-in-dozens-of-countries&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;bleepingcomputer.com&lt;/a&gt;). These attacks compromised sensitive data, including call metadata and, in some instances, audio recordings of high-profile individuals (&lt;a class=&#34;link&#34; href=&#34;https://www.bleepingcomputer.com/news/security/white-house-salt-typhoon-hacked-telcos-in-dozens-of-countries&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;bleepingcomputer.com&lt;/a&gt;).&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-tactics-and-tools&#34;&gt;🛠️ Tactics and Tools&lt;/h2&gt;
+&lt;h2 id=&#34;tactics-and-tools&#34;&gt;Tactics and Tools&lt;/h2&gt;
 &lt;p&gt;Salt Typhoon employs a diverse arsenal of tools to infiltrate and maintain access to targeted networks. Notably, they utilize &lt;strong&gt;Demodex&lt;/strong&gt;, a Windows kernel-mode rootkit, to gain remote control over servers (&lt;a class=&#34;link&#34; href=&#34;https://home.treasury.gov/news/press-releases/jy2792&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;home.treasury.gov&lt;/a&gt;). Their toolkit includes:&lt;/p&gt;
 &lt;ul&gt;
@@ -117,20 +117,20 @@ In one shot, &lt;strong&gt;3 additional features&lt;/strong&gt; started working.
 &lt;p&gt;These tools enable Salt Typhoon to operate stealthily, exfiltrating vast amounts of sensitive information over extended periods (&lt;a class=&#34;link&#34; href=&#34;https://home.treasury.gov/news/press-releases/jy2792&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;home.treasury.gov&lt;/a&gt;).&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-global-impact&#34;&gt;🌐 Global Impact&lt;/h2&gt;
+&lt;h2 id=&#34;global-impact&#34;&gt;Global Impact&lt;/h2&gt;
 &lt;p&gt;Salt Typhoon&amp;rsquo;s operations are not confined to the United States. The group has targeted telecommunications companies across &lt;strong&gt;dozens of countries&lt;/strong&gt;, exploiting vulnerabilities in core network components, including routers manufactured by &lt;strong&gt;Cisco&lt;/strong&gt; (&lt;a class=&#34;link&#34; href=&#34;https://www.bleepingcomputer.com/news/security/white-house-salt-typhoon-hacked-telcos-in-dozens-of-countries/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;bleepingcomputer.com&lt;/a&gt;). Their activities have raised significant concerns about the security of global communication infrastructures.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-strategic-objectives&#34;&gt;🧩 Strategic Objectives&lt;/h2&gt;
+&lt;h2 id=&#34;strategic-objectives&#34;&gt;Strategic Objectives&lt;/h2&gt;
 &lt;p&gt;The group&amp;rsquo;s primary focus appears to be &lt;strong&gt;counterintelligence&lt;/strong&gt;, aiming to monitor and intercept communications of government officials and high-profile individuals. By compromising telecommunications infrastructure, Salt Typhoon gains access to a wealth of sensitive information, which can be leveraged for strategic advantage in geopolitical contexts (&lt;a class=&#34;link&#34; href=&#34;https://home.treasury.gov/news/press-releases/jy2792&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;home.treasury.gov&lt;/a&gt;).&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-international-response&#34;&gt;⚖️ International Response&lt;/h2&gt;
+&lt;h2 id=&#34;international-response&#34;&gt;International Response&lt;/h2&gt;
 &lt;p&gt;In response to these cyber intrusions, the &lt;strong&gt;U.S. Department of the Treasury&lt;/strong&gt; sanctioned &lt;strong&gt;Sichuan Juxinhe Network Technology&lt;/strong&gt;, a Shanghai-based cybersecurity firm alleged to be directly involved with Salt Typhoon (&lt;a class=&#34;link&#34; href=&#34;https://home.treasury.gov/news/press-releases/jy2792&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;home.treasury.gov&lt;/a&gt;). Additionally, the &lt;strong&gt;White House&lt;/strong&gt; has issued advisories to assist system administrators in hardening network security to mitigate potential threats from such advanced persistent threats (&lt;a class=&#34;link&#34; href=&#34;https://www.bleepingcomputer.com/news/security/white-house-salt-typhoon-hacked-telcos-in-dozens-of-countries/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;bleepingcomputer.com&lt;/a&gt;).&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-conclusion&#34;&gt;🔍 Conclusion&lt;/h2&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;Salt Typhoon exemplifies the evolving nature of cyber espionage, where state-sponsored actors employ sophisticated tactics to infiltrate critical infrastructure and exfiltrate sensitive data. As cyber threats become increasingly complex and pervasive, it is imperative for organizations worldwide to bolster their cybersecurity measures and remain vigilant against such advanced persistent threats.&lt;/p&gt;
 </description>
         </item>
@@ -140,11 +140,11 @@ In one shot, &lt;strong&gt;3 additional features&lt;/strong&gt; started working.
         <pubDate>Fri, 14 Feb 2025 13:23:53 +0530</pubDate>
         
         <guid>https://jhaakansha.github.io/p/understanding-big-data-analytics-with-formula-one/</guid>
-        <description>&lt;h1 id=&#34;-fueling-victory-how-formula-one-uses-big-data-to-win-races&#34;&gt;🏎️ Fueling Victory: How Formula One Uses Big Data to Win Races&lt;/h1&gt;
+        <description>&lt;h1 id=&#34;fueling-victory-how-formula-one-uses-big-data-to-win-races&#34;&gt;Fueling Victory: How Formula One Uses Big Data to Win Races&lt;/h1&gt;
 &lt;p&gt;Formula One might look like a sport where victory comes down to the fastest car or most daring driver — but behind every blistering lap is an enormous engine of &lt;em&gt;data&lt;/em&gt;. Welcome to the world where machine learning meets motorsport, and terabytes of real-time information help shape every twist, turn, and pit stop decision.&lt;/p&gt;
 &lt;p&gt;In this post, we’ll walk you through how Formula One teams use the &lt;strong&gt;big data lifecycle&lt;/strong&gt; to gain a competitive edge — from sensor-packed cars and telemetry streams to predictive modeling and post-race analysis.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-1-data-collection-the-stream-begins&#34;&gt;📥 1. Data Collection: The Stream Begins&lt;/h2&gt;
+&lt;h2 id=&#34;1-data-collection-the-stream-begins&#34;&gt;1. Data Collection: The Stream Begins&lt;/h2&gt;
 &lt;p&gt;F1 cars are, quite literally, data machines on wheels.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Sensors Everywhere&lt;/strong&gt;: Each car carries around 300 sensors, constantly measuring temperature, pressure, tire wear, fuel consumption, g-forces, and more — generating over 1.1 million data points per second.&lt;/li&gt;
@@ -156,7 +156,7 @@ In one shot, &lt;strong&gt;3 additional features&lt;/strong&gt; started working.
 &lt;p&gt;&amp;ldquo;Every lap is a lesson — and the data is the teacher.&amp;rdquo;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-2-data-storage-where-all-that-info-lives&#34;&gt;🗄️ 2. Data Storage: Where All That Info Lives&lt;/h2&gt;
+&lt;h2 id=&#34;2-data-storage-where-all-that-info-lives&#34;&gt;2. Data Storage: Where All That Info Lives&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Cloud Data Lakes&lt;/strong&gt;: With terabytes of data per race weekend, teams rely on cloud infrastructure and data lakes for scalable storage and quick access.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Relational Databases&lt;/strong&gt;: Structured data like lap times, split timings, and car setup parameters are stored in SQL-based databases.&lt;/li&gt;
@@ -164,7 +164,7 @@ In one shot, &lt;strong&gt;3 additional features&lt;/strong&gt; started working.
 &lt;/ul&gt;
 &lt;p&gt;This combination ensures structured and unstructured data are both accessible for real-time and post-race analysis.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-3-data-cleaning--preprocessing-removing-the-noise&#34;&gt;🧹 3. Data Cleaning &amp;amp; Preprocessing: Removing the Noise&lt;/h2&gt;
+&lt;h2 id=&#34;3-data-cleaning--preprocessing-removing-the-noise&#34;&gt;3. Data Cleaning &amp;amp; Preprocessing: Removing the Noise&lt;/h2&gt;
 &lt;p&gt;Before the magic happens, data needs polishing.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Noise Reduction&lt;/strong&gt;: Filtering out sensor glitches or temporary drops in telemetry due to connection issues.&lt;/li&gt;
@@ -173,7 +173,7 @@ In one shot, &lt;strong&gt;3 additional features&lt;/strong&gt; started working.
 &lt;/ul&gt;
 &lt;p&gt;Clean data ensures accurate insights and decisions — especially when the wrong move can cost a race.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-4-data-analysis-understanding-the-race&#34;&gt;📊 4. Data Analysis: Understanding the Race&lt;/h2&gt;
+&lt;h2 id=&#34;4-data-analysis-understanding-the-race&#34;&gt;4. Data Analysis: Understanding the Race&lt;/h2&gt;
 &lt;p&gt;Once clean, the data goes through layers of analytics:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Descriptive Analytics&lt;/strong&gt;: What happened? Analyzing trends in lap times, tire wear, or driver performance.&lt;/li&gt;
@@ -183,7 +183,7 @@ In one shot, &lt;strong&gt;3 additional features&lt;/strong&gt; started working.
 &lt;/ul&gt;
 &lt;p&gt;This is where the data starts driving decisions.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-5-data-visualization-making-it-all-visible&#34;&gt;📺 5. Data Visualization: Making It All Visible&lt;/h2&gt;
+&lt;h2 id=&#34;5-data-visualization-making-it-all-visible&#34;&gt;5. Data Visualization: Making It All Visible&lt;/h2&gt;
 &lt;p&gt;In the heat of a race, engineers don’t have time to read logs.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Dashboards&lt;/strong&gt;: Real-time visualizations help the pit crew monitor performance metrics like tire temp, brake health, and lap deltas.&lt;/li&gt;
@@ -193,7 +193,7 @@ In one shot, &lt;strong&gt;3 additional features&lt;/strong&gt; started working.
 &lt;p&gt;Tools like &lt;a class=&#34;link&#34; href=&#34;https://www.f1-tempo.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;McLaren Applied&amp;rsquo;s F1 Tempo&lt;/a&gt; give teams a way to translate raw data into race-ready insights.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-6-machine-learning--model-refinement&#34;&gt;🤖 6. Machine Learning &amp;amp; Model Refinement&lt;/h2&gt;
+&lt;h2 id=&#34;6-machine-learning--model-refinement&#34;&gt;6. Machine Learning &amp;amp; Model Refinement&lt;/h2&gt;
 &lt;p&gt;F1 teams are now fully embracing AI.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Model Training&lt;/strong&gt;: As new data flows in every race, models are retrained to better predict outcomes like undercut potential or optimal tire stint lengths.&lt;/li&gt;
@@ -201,7 +201,7 @@ In one shot, &lt;strong&gt;3 additional features&lt;/strong&gt; started working.
 &lt;li&gt;&lt;strong&gt;Continuous Learning&lt;/strong&gt;: Models improve with every season, learning from what worked — and what didn’t.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-7-decision-making-turning-data-into-action&#34;&gt;🧠 7. Decision-Making: Turning Data into Action&lt;/h2&gt;
+&lt;h2 id=&#34;7-decision-making-turning-data-into-action&#34;&gt;7. Decision-Making: Turning Data into Action&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Strategic Adjustments&lt;/strong&gt;: Mid-race decisions like undercutting an opponent or stretching tire life are made based on predictive analysis.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Driver Feedback&lt;/strong&gt;: Data is sent directly to the driver’s cockpit, offering guidance on tire performance, optimal lines, and gaps to rivals.&lt;/li&gt;
@@ -209,7 +209,7 @@ In one shot, &lt;strong&gt;3 additional features&lt;/strong&gt; started working.
 &lt;li&gt;&lt;strong&gt;Car Setup Optimization&lt;/strong&gt;: In practice sessions, teams tweak setups — suspension, aero balance, etc. — based on how the data aligns with driver feel.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-8-feedback-loop-post-race-analysis&#34;&gt;🔁 8. Feedback Loop: Post-Race Analysis&lt;/h2&gt;
+&lt;h2 id=&#34;8-feedback-loop-post-race-analysis&#34;&gt;8. Feedback Loop: Post-Race Analysis&lt;/h2&gt;
 &lt;p&gt;After the checkered flag, the data work is far from over.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Post-Race Review&lt;/strong&gt;: Comparing expected vs. actual performance, pit strategy efficiency, and any anomalies.&lt;/li&gt;
@@ -217,7 +217,7 @@ In one shot, &lt;strong&gt;3 additional features&lt;/strong&gt; started working.
 &lt;li&gt;&lt;strong&gt;Continuous Improvement&lt;/strong&gt;: Learnings feed into the next race, improving everything from brake cooling systems to fuel maps.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-9-whats-next-advanced-analytics-in-f1&#34;&gt;🚀 9. What’s Next: Advanced Analytics in F1&lt;/h2&gt;
+&lt;h2 id=&#34;9-whats-next-advanced-analytics-in-f1&#34;&gt;9. What’s Next: Advanced Analytics in F1&lt;/h2&gt;
 &lt;p&gt;Formula One is only accelerating its use of advanced data techniques:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;AI-Driven Strategy Engines&lt;/strong&gt;: Predict outcomes based on live conditions and adjust strategies automatically.&lt;/li&gt;
@@ -225,7 +225,7 @@ In one shot, &lt;strong&gt;3 additional features&lt;/strong&gt; started working.
 &lt;li&gt;&lt;strong&gt;Biometric Analysis&lt;/strong&gt;: Some teams are exploring heart rate, hydration levels, and fatigue in drivers to optimize performance and safety.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-final-thoughts&#34;&gt;🏁 Final Thoughts&lt;/h2&gt;
+&lt;h2 id=&#34;final-thoughts&#34;&gt;Final Thoughts&lt;/h2&gt;
 &lt;p&gt;Formula One is no longer just a test of speed — it’s a test of &lt;strong&gt;data mastery&lt;/strong&gt;. Every lap, every pit stop, every millisecond is backed by mountains of analysis and predictive modeling.&lt;/p&gt;
 &lt;p&gt;In this race, the car is fast. The driver is skilled.&lt;br&gt;
 But &lt;strong&gt;data is the difference&lt;/strong&gt;.&lt;/p&gt;
@@ -240,52 +240,52 @@ But &lt;strong&gt;data is the difference&lt;/strong&gt;.&lt;/p&gt;
         <pubDate>Mon, 12 Aug 2024 13:23:39 +0530</pubDate>
         
         <guid>https://jhaakansha.github.io/p/more-than-just-photoshop-my-adobe-internship-experience/</guid>
-        <description>&lt;h1 id=&#34;-my-internship-experience-at-adobe&#34;&gt;🎨 My Internship Experience at Adobe&lt;/h1&gt;
+        <description>&lt;h1 id=&#34;my-internship-experience-at-adobe&#34;&gt;My Internship Experience at Adobe&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;&amp;ldquo;A dream internship, real-world impact, and a journey into the heart of creativity and innovation.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Landing an internship at &lt;strong&gt;Adobe&lt;/strong&gt; was nothing short of surreal. It was a thrilling and unexpected milestone, and I couldn’t wait to see what life beyond the classroom looked like—working alongside industry veterans and building features that millions might use.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-team-photoshop-express--android-squad&#34;&gt;🧑‍💻 Team Photoshop Express – Android Squad&lt;/h2&gt;
+&lt;h2 id=&#34;team-photoshop-express--android-squad&#34;&gt;Team Photoshop Express – Android Squad&lt;/h2&gt;
 &lt;p&gt;I joined the &lt;strong&gt;Photoshop Express&lt;/strong&gt; team, where I primarily worked on the &lt;strong&gt;Android app&lt;/strong&gt;. What amazed me from day one was the ownership I was given. I wasn&amp;rsquo;t just there to shadow someone—I was contributing to &lt;strong&gt;real features&lt;/strong&gt; that impacted actual users.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-tackling-frustration-with-a-wait-state-loader&#34;&gt;⏳ Tackling Frustration with a Wait State Loader&lt;/h2&gt;
-&lt;h3 id=&#34;-the-problem&#34;&gt;🔍 The Problem&lt;/h3&gt;
+&lt;h2 id=&#34;tackling-frustration-with-a-wait-state-loader&#34;&gt;Tackling Frustration with a Wait State Loader&lt;/h2&gt;
+&lt;h3 id=&#34;the-problem&#34;&gt;The Problem&lt;/h3&gt;
 &lt;p&gt;Long image processing times were leading to:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;User frustration and app abandonment&lt;/li&gt;
 &lt;li&gt;Confusion among new users trying to understand text-to-image generation&lt;/li&gt;
 &lt;li&gt;Lost opportunities to highlight community creativity&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;-the-solution&#34;&gt;💡 The Solution&lt;/h3&gt;
+&lt;h3 id=&#34;the-solution&#34;&gt;The Solution&lt;/h3&gt;
 &lt;p&gt;Introduce a &lt;strong&gt;wait state loader&lt;/strong&gt; that:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Shows community-generated images&lt;/li&gt;
 &lt;li&gt;Displays prompts used to create them&lt;/li&gt;
 &lt;li&gt;Lets users &lt;strong&gt;copy prompts&lt;/strong&gt; for inspiration while they wait&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;-what-i-built&#34;&gt;⚙️ What I Built&lt;/h3&gt;
-&lt;p&gt;✅ An &lt;strong&gt;automated image slider&lt;/strong&gt; that:&lt;/p&gt;
+&lt;h3 id=&#34;what-i-built&#34;&gt;What I Built&lt;/h3&gt;
+&lt;p&gt;An &lt;strong&gt;automated image slider&lt;/strong&gt; that:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Pulls in community images from a remote server&lt;/li&gt;
 &lt;li&gt;Displays them with clean, styled captions&lt;/li&gt;
 &lt;li&gt;Allows quick &lt;strong&gt;one-tap prompt copying&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;-demo&#34;&gt;🎥 Demo&lt;/h3&gt;
+&lt;h3 id=&#34;demo&#34;&gt;Demo&lt;/h3&gt;
 &lt;video width=&#34;640&#34; height=&#34;360&#34; controls&gt;
   &lt;source src=&#34;media/wait_state_loader.mp4&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;
-&lt;h2 id=&#34;-leading-the-generative-expand-feature&#34;&gt;✨ Leading the Generative Expand Feature&lt;/h2&gt;
+&lt;h2 id=&#34;leading-the-generative-expand-feature&#34;&gt;Leading the Generative Expand Feature&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;&amp;ldquo;From concept to production—owning one of the most powerful AI-driven features in the app.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;-what-is-generative-expand&#34;&gt;📸 What is Generative Expand?&lt;/h3&gt;
+&lt;h3 id=&#34;what-is-generative-expand&#34;&gt;What is Generative Expand?&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Generative Expand&lt;/strong&gt; is an innovative feature that allows users to change the &lt;strong&gt;aspect ratio of an image&lt;/strong&gt; by using &lt;strong&gt;AI&lt;/strong&gt; to seamlessly generate and fill in the extended canvas based on the original content.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Imagine expanding a photo horizontally, and the app fills in the sides with realistic, context-aware details—&lt;strong&gt;automatically&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-my-role&#34;&gt;🧑‍💻 My Role&lt;/h3&gt;
+&lt;h3 id=&#34;my-role&#34;&gt;My Role&lt;/h3&gt;
 &lt;p&gt;I was entrusted with &lt;strong&gt;end-to-end ownership&lt;/strong&gt; of this feature during my internship, and it quickly became the most exciting and challenging part of my journey.&lt;/p&gt;
 &lt;h4 id=&#34;responsibilities&#34;&gt;Responsibilities:&lt;/h4&gt;
 &lt;ul&gt;
@@ -295,25 +295,25 @@ But &lt;strong&gt;data is the difference&lt;/strong&gt;.&lt;/p&gt;
 &lt;li&gt;Collaborated with designers, QA, and product teams for polish&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-timeline--execution&#34;&gt;⏳ Timeline &amp;amp; Execution&lt;/h3&gt;
+&lt;h3 id=&#34;timeline--execution&#34;&gt;Timeline &amp;amp; Execution&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;⏱️ &lt;strong&gt;3 weeks of development&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;💬 Continuous feedback and iteration with mentors&lt;/li&gt;
-&lt;li&gt;🔍 Meticulous testing across devices and screen sizes&lt;/li&gt;
-&lt;li&gt;✅ Final implementation went &lt;strong&gt;live&lt;/strong&gt; in the production app&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;3 weeks of development&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Continuous feedback and iteration with mentors&lt;/li&gt;
+&lt;li&gt;Meticulous testing across devices and screen sizes&lt;/li&gt;
+&lt;li&gt;Final implementation went &lt;strong&gt;live&lt;/strong&gt; in the production app&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Seeing my feature &lt;strong&gt;shipped and used by real users&lt;/strong&gt; was one of the most fulfilling moments of the internship.&lt;/p&gt;
 &lt;p&gt;Here&amp;rsquo;s a demo video
 &lt;video width=&#34;640&#34; height=&#34;360&#34; controls&gt;&lt;/p&gt;
   &lt;source src=&#34;C:\Users\akans\JhaAkansha.github.io\media\GenExpand.mp4&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;
-&lt;h2 id=&#34;-enhancing-the-firefly-model-through-prompt-engineering&#34;&gt;🧠 Enhancing the Firefly Model through Prompt Engineering&lt;/h2&gt;
+&lt;h2 id=&#34;enhancing-the-firefly-model-through-prompt-engineering&#34;&gt;Enhancing the Firefly Model through Prompt Engineering&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;&amp;ldquo;The art of talking to AI—shaping how it sees, creates, and imagines.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;One of the most intellectually rewarding parts of my internship involved working on &lt;strong&gt;Prompt Engineering&lt;/strong&gt; for Adobe’s &lt;strong&gt;Firefly model&lt;/strong&gt;, which powers several upcoming features in the &lt;strong&gt;Photoshop Express iOS app&lt;/strong&gt;.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-the-challenge&#34;&gt;🔍 The Challenge&lt;/h3&gt;
+&lt;h3 id=&#34;the-challenge&#34;&gt;The Challenge&lt;/h3&gt;
 &lt;p&gt;The Firefly model needed smarter, trend-aware inputs to produce cleaner, more realistic images. That meant:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Reducing visual &lt;strong&gt;noise&lt;/strong&gt;&lt;/li&gt;
@@ -321,48 +321,48 @@ But &lt;strong&gt;data is the difference&lt;/strong&gt;.&lt;/p&gt;
 &lt;li&gt;Keeping up with rapidly evolving &lt;strong&gt;creative trends&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-what-i-did&#34;&gt;🛠️ What I Did&lt;/h3&gt;
+&lt;h3 id=&#34;what-i-did&#34;&gt;What I Did&lt;/h3&gt;
 &lt;p&gt;As a Prompt Engineer, my responsibilities included:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;🧼 &lt;strong&gt;Refining&lt;/strong&gt; existing prompts to improve clarity and output quality&lt;/li&gt;
-&lt;li&gt;🆕 &lt;strong&gt;Creating new prompt categories&lt;/strong&gt; based on trend analysis&lt;/li&gt;
-&lt;li&gt;✂️ &lt;strong&gt;Cleaning up&lt;/strong&gt; noisy or redundant text elements&lt;/li&gt;
-&lt;li&gt;🔍 Studying competitor apps + user-generated galleries for inspiration&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Refining&lt;/strong&gt; existing prompts to improve clarity and output quality&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Creating new prompt categories&lt;/strong&gt; based on trend analysis&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cleaning up&lt;/strong&gt; noisy or redundant text elements&lt;/li&gt;
+&lt;li&gt;Studying competitor apps + user-generated galleries for inspiration&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;This wasn’t just a technical task—it was part research, part design thinking, and part creative strategy.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-the-results&#34;&gt;📈 The Results&lt;/h3&gt;
-&lt;p&gt;✅ The model produced &lt;strong&gt;cleaner, more accurate, and visually appealing images&lt;/strong&gt;&lt;br&gt;
-✅ New prompt categories helped Firefly stay &lt;strong&gt;aligned with creative trends&lt;/strong&gt;&lt;br&gt;
-✅ Prompt templates became more &lt;strong&gt;user-friendly and intuitive&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;the-results&#34;&gt;The Results&lt;/h3&gt;
+&lt;p&gt;The model produced &lt;strong&gt;cleaner, more accurate, and visually appealing images&lt;/strong&gt;&lt;br&gt;
+New prompt categories helped Firefly stay &lt;strong&gt;aligned with creative trends&lt;/strong&gt;&lt;br&gt;
+Prompt templates became more &lt;strong&gt;user-friendly and intuitive&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I wasn’t just teaching AI how to create—I was helping it create better.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-wrapping-it-all-up&#34;&gt;🎯 Wrapping It All Up&lt;/h2&gt;
-&lt;h3 id=&#34;-conclusion&#34;&gt;✨ Conclusion&lt;/h3&gt;
+&lt;h2 id=&#34;wrapping-it-all-up&#34;&gt;Wrapping It All Up&lt;/h2&gt;
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
 &lt;p&gt;My internship at &lt;strong&gt;Adobe&lt;/strong&gt; was a &lt;strong&gt;transformative journey&lt;/strong&gt;. I got to:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;💡 Build &lt;strong&gt;real features&lt;/strong&gt; that shipped to production&lt;/li&gt;
-&lt;li&gt;🤖 Work hands-on with &lt;strong&gt;AI-driven technologies&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;📱 Contribute directly to &lt;strong&gt;Photoshop Express&lt;/strong&gt; on Android and iOS&lt;/li&gt;
-&lt;li&gt;🤝 Collaborate with an incredibly talented and welcoming team&lt;/li&gt;
+&lt;li&gt;Build &lt;strong&gt;real features&lt;/strong&gt; that shipped to production&lt;/li&gt;
+&lt;li&gt;Work hands-on with &lt;strong&gt;AI-driven technologies&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Contribute directly to &lt;strong&gt;Photoshop Express&lt;/strong&gt; on Android and iOS&lt;/li&gt;
+&lt;li&gt;Collaborate with an incredibly talented and welcoming team&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;It was the perfect blend of &lt;strong&gt;challenge&lt;/strong&gt;, &lt;strong&gt;creativity&lt;/strong&gt;, and &lt;strong&gt;real-world impact&lt;/strong&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I walked in as a student curious about how the industry works—and walked out as a developer who&amp;rsquo;s contributed to one of the most recognized creative platforms in the world.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;-final-thanks&#34;&gt;🙏 Final Thanks&lt;/h3&gt;
+&lt;h3 id=&#34;final-thanks&#34;&gt;Final Thanks&lt;/h3&gt;
 &lt;p&gt;A huge thank you to my mentors and the amazing team at &lt;strong&gt;Adobe Photoshop Express&lt;/strong&gt;. You believed in me, challenged me, and gave me the space to grow. I’ll carry this experience with me for a long time.&lt;/p&gt;
 </description>
         </item>
         <item>
-        <title>GPT 4.0 gibberish</title>
-        <link>https://jhaakansha.github.io/p/gpt-4.0-gibberish/</link>
+        <title>GPT 4.0</title>
+        <link>https://jhaakansha.github.io/p/gpt-4.0/</link>
         <pubDate>Mon, 20 Mar 2023 04:49:14 +0530</pubDate>
         
-        <guid>https://jhaakansha.github.io/p/gpt-4.0-gibberish/</guid>
+        <guid>https://jhaakansha.github.io/p/gpt-4.0/</guid>
         <description>&lt;p&gt;ChatGPT is a conversational AI that listens, learns and challenges developed by OpenAI. It was launched in November 2022. The model is based on Generative Pretrained Transformer 3 (GPT 3) architecture, which is the largest and most advanced models to date. It has been fine-tuned by both supervised and reinforced machine learning techniques. ChatGPT is a sibling model to InstructGPT, which is trained to follow an instruction in a prompt and provide a detailed response.&lt;/p&gt;
 &lt;h2 id=&#34;training-method&#34;&gt;Training method&lt;/h2&gt;
 &lt;p&gt;The model was using Reinforcement Learning from Human Feedback (RLHF), using the same methods as InstructGPT, but with slight differences in the data collection setup. An initial model was trained using supervised fine-tuning: human AI trainers provided conversations in which they played both sides—the user and an AI assistant. The trainers were given access to model-written suggestions to help them compose their responses. This new dialogue dataset was mixed with the InstructGPT dataset, which was then transformed into a dialogue format.
