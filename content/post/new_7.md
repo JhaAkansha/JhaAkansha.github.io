@@ -188,3 +188,95 @@ async def read_items(
         results.update({"q": q})
     return results
 ```
+# **Query Parameters**
+
+The query is the set of key-value pairs that go after the ? in a URL, separated by & characters. For example, in the URL: [`http://127.0.0.1:8000/items/?skip=0&limit=10`](http://127.0.0.1:8000/items/?skip=0&limit=10) 
+
+When you declare other function parameters that are not part of the path parameters, they are automatically interpreted as "query" parameters. As query parameters are not a fixed part of a path, they can be optional and can have default value.
+
+```python
+from fastapi import FastAPI
+
+app = FastAPI()
+
+fake_items_db = [{"item_name": "Foo"}, {"item_name": "Bar"}, {"item_name": "Baz"}]
+
+@app.get("/items/")
+async def read_item(skip: int = 0, limit: int = 10):
+    return fake_items_db[skip : skip + limit]
+```
+
+All the same process that applied for path parameters also applies for query parameters:
+
+- Editor support (obviously)
+- Data "parsing"
+- Data validation
+- Automatic documentation
+
+## **Multiple path and query parameters**
+
+You can declare multiple path parameters and query parameters at the same time, FastAPI knows which is which. And you don't have to declare them in any specific order. They will be detected by name:
+
+```python
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/users/{user_id}/items/{item_id}")
+async def read_user_item(
+    user_id: int, item_id: str, q: str | None = None, short: bool = False
+):
+    item = {"item_id": item_id, "owner_id": user_id}
+    if q:
+        item.update({"q": q})
+    if not short:
+        item.update(
+            {"description": "This is an amazing item that has a long description"}
+        )
+    return item
+```
+
+## **Required query parameters**
+
+When you declare a default value for non-path parameters (for now, we have only seen query parameters), then it is not required.
+
+If you don't want to add a specific value but just make it optional, set the default as `None`.
+
+But when you want to make a query parameter required, you can just not declare any default value:
+
+```python
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/items/{item_id}")
+async def read_user_item(item_id: str, needy: str):
+    item = {"item_id": item_id, "needy": needy}
+    return item
+```
+
+On opening: [`http://127.0.0.1:8000/items/foo-item`](http://127.0.0.1:8000/items/foo-item)  without adding the required parameter `needy`, you will see an error like:
+
+```python
+{
+  "detail": [
+    {
+      "type": "missing",
+      "loc": [
+        "query",
+        "needy"
+      ],
+      "msg": "Field required",
+      "input": null,
+      "url": "https://errors.pydantic.dev/2.1/v/missing"
+    }
+  ]
+}
+```
+
+And of course, you can define some parameters as required, some as having a default value, and some entirely optional. In this case, there are 3 query parameters:
+
+- `needy`, a required `str`.
+- `skip`, an `int` with a default value of `0`.
+- `limit`, an optional `int`.
+
