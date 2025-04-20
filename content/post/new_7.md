@@ -83,3 +83,108 @@ Calling [`http://127.0.0.1:8000/items/foo`](http://127.0.0.1:8000/items/foo)  wi
   ]
 }
 ```
+
+## Order of path matters
+
+Because path operations are evaluated in order,make sure that the path for `/users/me` is declared before the one for `/users/{user_id}`.
+```Python
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/users/me")
+async def read_user_me():
+    return {"user_id": "the current user"}
+
+
+@app.get("/users/{user_id}")
+async def read_user(user_id: str):
+    return {"user_id": user_id}
+```
+Similarly, path operation cannot be redefined. So, if there are two functions for the same path, the first one will be used.
+
+## Predefined values
+
+If you have a path operation that receives a path parameter, but you want the possible valid path parameter values to be predefined, you can use a standard Python Enum.
+
+```Python
+from enum import Enum
+
+from fastapi import FastAPI
+
+
+class ModelName(str, Enum):
+    alexnet = "alexnet"
+    resnet = "resnet"
+    lenet = "lenet"
+
+
+app = FastAPI()
+
+
+@app.get("/models/{model_name}")
+async def get_model(model_name: ModelName):
+    if model_name is ModelName.alexnet:
+        return {"model_name": model_name, "message": "Deep Learning FTW!"}
+
+    if model_name.value == "lenet":
+        return {"model_name": model_name, "message": "LeCNN all the images"}
+
+    return {"model_name": model_name, "message": "Have some residuals"}
+```
+
+## Validations
+
+Before reading this section, please go through Query parameters and its validations: [**Query Parameters**](https://www.notion.so/Query-Parameters-ca1f394d48eb40c99ce4477c816cb593?pvs=21) [Validations](https://www.notion.so/Validations-ff394bfd3b934a33a04ca2c5b0653a8b?pvs=21) [Other Details](https://www.notion.so/Other-Details-45f0465912b84a03b9798ad3062ed586?pvs=21) 
+
+In the same way that you can declare more validations and metadata for query parameters with Query, you can declare the same type of validations and metadata for path parameters with `Path`.
+
+```python
+from typing import Annotated
+
+from fastapi import FastAPI, Path, Query
+
+app = FastAPI()
+
+@app.get("/items/{item_id}")
+async def read_items(
+    item_id: Annotated[int, Path(gt=0, le=1000, title="The ID of the item to get")],
+    q: Annotated[str | None, Query(alias="item-query")] = None,
+):
+    results = {"item_id": item_id}
+    if q:
+        results.update({"q": q})
+    return results
+```
+
+And you can also declare numeric validations:
+
+- `gt`: `g`reater `t`han
+- `ge`: `g`reater than or `e`qual
+- `lt`: `l`ess `t`han
+- `le`: `l`ess than or `e`qual
+
+## Other Details
+
+- Declare more metadata
+    
+    You can declare all the same parameters as for `Query`.
+```Python
+from typing import Annotated
+
+from fastapi import FastAPI, Path, Query
+
+app = FastAPI()
+
+
+@app.get("/items/{item_id}")
+async def read_items(
+    item_id: Annotated[int, Path(title="The ID of the item to get")],
+    q: Annotated[str | None, Query(alias="item-query")] = None,
+):
+    results = {"item_id": item_id}
+    if q:
+        results.update({"q": q})
+    return results
+```
