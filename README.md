@@ -4,7 +4,7 @@
 `hugo serve -D`
 
 ## Create new post
-`hugo new posts/post-title.md`
+`hugo new post/post-title.md`
 
 ## Build static pages
 `hugo` add `-D` flag to build draft sites. 
