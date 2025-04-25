@@ -2835,6 +2835,185 @@ Prompt templates became more &lt;strong&gt;user-friendly and intuitive&lt;/stron
 </description>
         </item>
         <item>
+        <title>New_post</title>
+        <link>https://jhaakansha.github.io/p/new_post/</link>
+        <pubDate>Tue, 27 Jun 2023 14:40:37 +0530</pubDate>
+        
+        <guid>https://jhaakansha.github.io/p/new_post/</guid>
+        <description>&lt;h1 id=&#34;augmented-reality-in-everyday-life-how-ar-can-transform-various-industries-and-personal-experiences&#34;&gt;Augmented Reality in Everyday Life: How AR Can Transform Various Industries and Personal Experiences&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.cgsinc.com/blog/wp-content/uploads/2016/07/AR-Impact.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Augmented Reality in Everyday Life&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Image Source: &lt;a class=&#34;link&#34; href=&#34;https://www.cgsinc.com/blog/5-ways-augmented-reality-impacts-your-daily-life&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CGS Inc.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Augmented Reality (AR) is no longer a speculative concept reserved for sci-fi movies and gaming niches. With the evolution of spatial computing, 5G connectivity, edge processing, and wearables like AR glasses, this technology is stepping into the mainstream. From enterprise applications to personal productivity and entertainment, AR is poised to become a foundational layer of our daily digital interaction.&lt;/p&gt;
+&lt;p&gt;In this article, we’ll explore how AR is transforming various industries and enhancing personal experiences, supported by current use cases and the technologies making it possible.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-is-augmented-reality&#34;&gt;What is Augmented Reality?&lt;/h2&gt;
+&lt;p&gt;Augmented Reality superimposes digital content (images, sounds, text) onto the physical world in real time. Unlike Virtual Reality (VR), which creates a fully immersive digital environment, AR enhances the user&amp;rsquo;s perception of their actual surroundings using devices like smartphones, tablets, and AR headsets.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;ar-in-industry-sector-by-sector-breakdown&#34;&gt;AR in Industry: Sector by Sector Breakdown&lt;/h2&gt;
+&lt;h3 id=&#34;1-retail-and-e-commerce&#34;&gt;1. &lt;strong&gt;Retail and E-Commerce&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Virtual Try-Ons:&lt;/strong&gt; Using facial and body tracking, consumers can virtually try on clothes, eyewear, or makeup through apps like Sephora Virtual Artist and Warby Parker.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AR Showrooms:&lt;/strong&gt; IKEA Place and Wayfair use AR to allow customers to visualize furniture in their homes at scale.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Impact:&lt;/strong&gt; Increases conversion rates, reduces return rates, and enhances personalization through spatial analytics and AI-driven recommendations.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.augray.com/wp-content/uploads/2018/02/AR-in-Retail.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;AR in Retail&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Image Source: &lt;a class=&#34;link&#34; href=&#34;https://www.augray.com/blog/augmented-reality-will-benefit-your-life/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AuGray&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-healthcare&#34;&gt;2. &lt;strong&gt;Healthcare&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Surgical Assistance:&lt;/strong&gt; AR overlays critical data during procedures. Systems like Microsoft HoloLens in conjunction with Medivis’s SurgicalAR provide real-time anatomical guidance.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Patient Education:&lt;/strong&gt; AR can explain diagnoses visually, helping patients better understand procedures and treatments.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rehabilitation and Therapy:&lt;/strong&gt; Gamified AR experiences are being used in cognitive and physical rehab (e.g., MindMaze, XRHealth).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://joinfuturescape.com/wp-content/uploads/2024/02/AR-in-Healthcare.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;AR in Healthcare&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Image Source: &lt;a class=&#34;link&#34; href=&#34;https://joinfuturescape.com/2024/02/14/10-fascinating-examples-of-augmented-reality-in-everyday-life/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Future Scape&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3-education-and-training&#34;&gt;3. &lt;strong&gt;Education and Training&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Immersive Learning:&lt;/strong&gt; Apps like JigSpace and Merge EDU bring interactive, 3D learning to classrooms, from biology dissections to mechanical engineering.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Enterprise Training:&lt;/strong&gt; Boeing and UPS use AR to train workers on complex equipment with step-by-step holographic instructions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AR + AI Integration:&lt;/strong&gt; Smart learning environments adapt in real time to learner performance using computer vision and adaptive algorithms.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.thetechedvocate.org/wp-content/uploads/2024/02/AR-in-Education.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;AR in Education&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Image Source: &lt;a class=&#34;link&#34; href=&#34;https://www.thetechedvocate.org/10-cool-applications-of-ar-technology-in-everyday-life/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;The Tech Edvocate&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;4-manufacturing-and-logistics&#34;&gt;4. &lt;strong&gt;Manufacturing and Logistics&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Remote Assistance:&lt;/strong&gt; AR enables remote experts to provide real-time guidance to on-site workers via smart glasses (e.g., Vuzix, RealWear).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Warehouse Navigation:&lt;/strong&gt; AR glasses can direct pickers to products efficiently, reducing errors and increasing throughput.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Digital Twins:&lt;/strong&gt; AR overlays real-time IoT sensor data on physical machines to aid in predictive maintenance and operational monitoring.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://primeclickmedia.com/wp-content/uploads/2023/06/AR-in-Manufacturing.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;AR in Manufacturing&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Image Source: &lt;a class=&#34;link&#34; href=&#34;https://primeclickmedia.com/augmented-reality-in-everyday-life/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Primeclick Media&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;5-real-estate-and-architecture&#34;&gt;5. &lt;strong&gt;Real Estate and Architecture&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;3D Visualization:&lt;/strong&gt; AR allows clients to walk through unbuilt properties using mobile devices or headsets like Magic Leap 2.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Remote Collaboration:&lt;/strong&gt; Teams can annotate physical environments during site inspections, enabling asynchronous feedback and faster iteration cycles.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Geo-anchored Content:&lt;/strong&gt; Real-world coordinates are used to anchor AR blueprints or interior design plans for in-situ visualization.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.nextechar.com/wp-content/uploads/2023/05/AR-in-Real-Estate.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;AR in Real Estate&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Image Source: &lt;a class=&#34;link&#34; href=&#34;https://www.nextechar.com/blog/real-world-applications-of-augmented-reality&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nextech AR&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;ar-in-personal-life-everyday-applications&#34;&gt;AR in Personal Life: Everyday Applications&lt;/h2&gt;
+&lt;h3 id=&#34;1-navigation-and-travel&#34;&gt;1. &lt;strong&gt;Navigation and Travel&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;AR Wayfinding:&lt;/strong&gt; Apps like Google Maps AR provide heads-up, turn-by-turn directions using the phone’s camera feed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cultural Overlay:&lt;/strong&gt; Museums, landmarks, and tourist destinations use AR to enhance experiences with interactive, multilingual info layers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://primeclickmedia.com/wp-content/uploads/2023/06/AR-Navigation.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;AR Navigation&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Image Source: &lt;a class=&#34;link&#34; href=&#34;https://primeclickmedia.com/augmented-reality-in-everyday-life/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Primeclick Media&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-home-improvement-and-diy&#34;&gt;2. &lt;strong&gt;Home Improvement and DIY&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Smart Measurements:&lt;/strong&gt; LiDAR-enabled AR apps (e.g., RoomScan, MeasureKit) allow for accurate room scanning and object sizing.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AR Design Tools:&lt;/strong&gt; Users can preview wall colors, tile layouts, or new fixtures in real time.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.realsimple.com/wp-content/uploads/2023/02/AR-Home-Design.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;AR Home Improvement&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Image Source: &lt;a class=&#34;link&#34; href=&#34;https://www.realsimple.com/ar-home-design-6831070&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Real Simple&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3-fitness-and-wellness&#34;&gt;3. &lt;strong&gt;Fitness and Wellness&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Form Correction:&lt;/strong&gt; AR fitness mirrors and apps track body posture to offer real-time corrective feedback.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mindfulness and AR Art:&lt;/strong&gt; Immersive AR experiences like TRIPP use visual effects overlaid in the real world to guide meditation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.thetechedvocate.org/wp-content/uploads/2024/02/AR-Fitness.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;AR Fitness&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Image Source: &lt;a class=&#34;link&#34; href=&#34;https://www.thetechedvocate.org/10-cool-applications-of-ar-technology-in-everyday-life/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;The Tech Edvocate&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;4-social-and-entertainment&#34;&gt;4. &lt;strong&gt;Social and Entertainment&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Snapchat and TikTok Lenses:&lt;/strong&gt; AR filters go far beyond visual effects; they create new ways to interact, play, and even perform.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AR Gaming:&lt;/strong&gt; Games like Pokémon GO and the upcoming Niantic AR titles fuse digital gameplay with physical movement and exploration.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;::contentReference[oaicite:0]{index=0}&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Exploring GPT-4: The Next Step in Conversational AI</title>
         <link>https://jhaakansha.github.io/p/exploring-gpt-4-the-next-step-in-conversational-ai/</link>
         <pubDate>Mon, 20 Mar 2023 04:49:14 +0530</pubDate>
