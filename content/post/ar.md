@@ -113,5 +113,3 @@ Augmented Reality superimposes digital content (images, sounds, text) onto the p
 
 - **Snapchat and TikTok Lenses:** AR filters go far beyond visual effects; they create new ways to interact, play, and even perform.
 - **AR Gaming:** Games like Pokémon GO and the upcoming Niantic AR titles fuse digital gameplay with physical movement and exploration.
-
-::contentReference[oaicite:0]{index=0}
