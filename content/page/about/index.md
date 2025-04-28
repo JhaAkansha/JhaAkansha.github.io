@@ -15,4 +15,3 @@ menu:
             icon: user
 ---
 
-I am a budding programmer with a deep love for reading and music. I am pursuing B.Tech in Electronics and Telecommunication at MKSSS Cummins College of Engineering, Pune. Currently, I am working on my problem solving skills but in future, I wish to focus more on open-source development and data science. Still haven't exactly figured out what I'll specialize in, just gonna have fun and learn as much as I could for now.
