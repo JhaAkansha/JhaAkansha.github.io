@@ -1,7 +1,6 @@
 ---
 title: "Exploring GPT-4: The Next Step in Conversational AI"
 date: 2023-03-20T04:49:14+05:30
-#draft: true
 ---
 
 ChatGPT, a conversational AI developed by OpenAI, has captivated users with its ability to listen, learn, and respond with human-like conversations. Launched in November 2022, ChatGPT is based on the **Generative Pretrained Transformer 3 (GPT-3)** architecture, one of the largest and most advanced language models available. Fine-tuned using both supervised and reinforcement learning techniques, ChatGPT is designed to understand instructions and provide detailed, context-aware responses. It is also a sibling model to **InstructGPT**, which focuses specifically on following instructions to generate detailed and accurate outputs.
