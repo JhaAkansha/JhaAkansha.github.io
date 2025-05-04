@@ -16,5 +16,5 @@ It has its own cluster management. It utilizes Hadoop in two ways: storage and p
 * It has master-slave architecture
 * Its cluster consists of a single master and multiple slaves
 * It depends on two abstractions:
-    1. RDD
-    2. DAG
+    1. RDD - It is a group os data items that can be stored in memory on worker nodes.
+    2. DAG - Used to manage data flow. It is a finite directed graph that performs a sequence of computations on data.
