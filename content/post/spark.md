@@ -27,5 +27,9 @@ It has its own cluster management. It utilizes Hadoop in two ways: storage and p
     5. Executor - A process launched for an application on a worker node. It runs tasks and keeps data in memory on disk storage across them. It reads and writes data to the external sources. Every application contains its executor.
 
     ### RDD
-    It is the fundamental structure of Spark. It is immutable, distributed collections of objects. It contains any type of Python, Java, Scala objects, including user-defined classes.
-    
+    It is the fundamental structure of Spark. It is immutable, distributed collections of objects. It contains any type of Python, Java, Scala objects, including user-defined classes. It is read-only, partitioned collections of records. Each dataset in RDD is divided into logical partitions, which may be computed on different nodes of the cluster. It is a fault tolerant collection if elements. RDDs are of two types:
+    1. Parallelized collections - Created by invoking SparkContext's parallelize method.
+    2. Hadoop datasets - Created from HDFS files.
+    Transformation creates RDD datasets from existing ones. An RDD stores the data in-memory as long as possible. If the data grows larger than the threshold, it spills into the disk. Due to this, the computation becomes faster. If some node holding the data in memory fails, then that part of computations has to be processed again. To avoid this, check pointing is performed after some stages. There are two RDD operations:
+    1. Transformation - New dataset from an existing one. It is lazy.
+    2. Action - Return a value to the driver program after running a computation on the dataset.
