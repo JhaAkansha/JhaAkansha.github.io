@@ -2835,6 +2835,98 @@ Prompt templates became more &lt;strong&gt;user-friendly and intuitive&lt;/stron
 </description>
         </item>
         <item>
+        <title>Spark</title>
+        <link>https://jhaakansha.github.io/p/spark/</link>
+        <pubDate>Wed, 12 Jun 2024 13:13:17 +0530</pubDate>
+        
+        <guid>https://jhaakansha.github.io/p/spark/</guid>
+        <description>&lt;h1 id=&#34;apache-spark&#34;&gt;Apache Spark&lt;/h1&gt;
+&lt;p&gt;Apache Spark is an open-source unified analytics engine designed for large-scale data processing. It provides an interface for programming entire clusters with built-in data parallelism and fault tolerance.&lt;/p&gt;
+&lt;p&gt;Built on top of the Hadoop MapReduce framework, Spark enhances it by supporting a wider range of computations, including interactive queries and stream processing. It features its own cluster management system, but can also utilize Hadoop for storage and processing.&lt;/p&gt;
+&lt;p&gt;Spark executes applications much faster—especially in-memory—by caching intermediate data, reducing disk I/O overhead. It offers built-in APIs for Java, Python, and Scala, and supports SQL queries, real-time streaming, machine learning, and graph computation.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-is-spark-streaming&#34;&gt;What is Spark Streaming?&lt;/h2&gt;
+&lt;p&gt;Spark Streaming is a component of Spark that enables scalable, high-throughput, fault-tolerant stream processing of live data streams.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Leverages Spark Core’s fast scheduling capability.&lt;/li&gt;
+&lt;li&gt;Ingests data in &lt;strong&gt;mini-batches&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Applies &lt;strong&gt;RDD transformations&lt;/strong&gt; to these mini-batches.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;architecture-of-spark&#34;&gt;Architecture of Spark&lt;/h2&gt;
+&lt;p&gt;Apache Spark follows a &lt;strong&gt;master-slave architecture&lt;/strong&gt;, consisting of a single master node and multiple slave (worker) nodes. It is designed around two key abstractions:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;RDD (Resilient Distributed Dataset)&lt;/strong&gt; — A distributed collection of data that can be processed in parallel.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DAG (Directed Acyclic Graph)&lt;/strong&gt; — Represents a logical execution plan composed of transformations.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;dag-directed-acyclic-graph&#34;&gt;DAG (Directed Acyclic Graph)&lt;/h3&gt;
+&lt;p&gt;The DAG is a directed graph where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Each &lt;strong&gt;node&lt;/strong&gt; is an RDD partition.&lt;/li&gt;
+&lt;li&gt;Each &lt;strong&gt;edge&lt;/strong&gt; represents a transformation on the data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The DAG execution model is composed of:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Driver Program&lt;/strong&gt;: The process that runs the &lt;code&gt;main()&lt;/code&gt; function and creates the &lt;code&gt;SparkContext&lt;/code&gt; object.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cluster Manager&lt;/strong&gt;: Allocates resources across applications (e.g., YARN, Mesos, or Spark&amp;rsquo;s built-in manager).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Worker Nodes&lt;/strong&gt;: Execute application code assigned by the cluster manager.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Executor&lt;/strong&gt;: A process launched on a worker node to run tasks and store data in memory or disk. Each Spark application has its own executors.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Task&lt;/strong&gt;: A unit of work that is sent to one executor.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;rdd-resilient-distributed-dataset&#34;&gt;RDD (Resilient Distributed Dataset)&lt;/h3&gt;
+&lt;p&gt;The &lt;strong&gt;RDD&lt;/strong&gt; is the foundational data structure in Spark. It is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Immutable&lt;/strong&gt; and &lt;strong&gt;distributed&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;A collection of records stored across multiple nodes.&lt;/li&gt;
+&lt;li&gt;Able to contain any type of object: Python, Java, Scala, or even user-defined types.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;key-characteristics&#34;&gt;Key Characteristics&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Partitioned&lt;/strong&gt; across the cluster.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Read-only&lt;/strong&gt; collections.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fault-tolerant&lt;/strong&gt; using lineage (recomputation).&lt;/li&gt;
+&lt;li&gt;Stored &lt;strong&gt;in-memory&lt;/strong&gt; when possible; otherwise spilled to disk.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Checkpointing&lt;/strong&gt; is used to save RDDs to stable storage to prevent recomputation on node failure.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;types-of-rdds&#34;&gt;Types of RDDs&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Parallelized Collections&lt;/strong&gt;&lt;br&gt;
+Created by invoking &lt;code&gt;SparkContext.parallelize()&lt;/code&gt; method.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Hadoop Datasets&lt;/strong&gt;&lt;br&gt;
+Created from external storage systems like HDFS, S3, etc.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;rdd-operations&#34;&gt;RDD Operations&lt;/h3&gt;
+&lt;p&gt;RDDs support two kinds of operations:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Transformations&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Lazily evaluated.&lt;/li&gt;
+&lt;li&gt;Create a new RDD from an existing one.&lt;/li&gt;
+&lt;li&gt;Examples: &lt;code&gt;map()&lt;/code&gt;, &lt;code&gt;filter()&lt;/code&gt;, &lt;code&gt;flatMap()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Actions&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Trigger execution of RDD transformations.&lt;/li&gt;
+&lt;li&gt;Return values to the driver or write to external storage.&lt;/li&gt;
+&lt;li&gt;Examples: &lt;code&gt;collect()&lt;/code&gt;, &lt;code&gt;count()&lt;/code&gt;, &lt;code&gt;saveAsTextFile()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;Apache Spark combines the flexibility of functional programming with the power of distributed computing, making it a go-to engine for big data analytics, real-time processing, and complex workflows.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Augmented Reality in Everyday Life</title>
         <link>https://jhaakansha.github.io/p/augmented-reality-in-everyday-life/</link>
         <pubDate>Tue, 27 Jun 2023 14:40:37 +0530</pubDate>
