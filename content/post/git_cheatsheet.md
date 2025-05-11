@@ -1,7 +1,6 @@
 ---
 title: "Git Cheatsheet"
 date: 2022-11-11T13:23:31+05:30
-#draft: true
 ---
 
 ## CREATE REPOSITORIES
