@@ -30,7 +30,5 @@ While ChatGPT is an impressive AI, it’s not without its limitations. Here are 
 - **Bias and Harmful Instructions**: Despite efforts to make the model refuse inappropriate requests, there are still instances where it may respond to harmful or biased instructions. OpenAI uses a **Moderation API** to flag or block unsafe content, but this system can still generate false positives and negatives.
 
 ## Conclusion
-
 ChatGPT represents a remarkable leap in conversational AI technology, powered by advanced machine learning and reinforcement learning techniques. While it shows immense potential, there are still challenges that need to be addressed to improve its accuracy, reduce verbosity, and better handle ambiguity.
-
 As OpenAI continues to refine and evolve its models, we can expect even more powerful and reliable versions of ChatGPT to emerge, further pushing the boundaries of AI and its real-world applications.
