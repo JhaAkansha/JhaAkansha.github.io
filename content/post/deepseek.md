@@ -43,7 +43,6 @@ DeepSeek’s ability to integrate knowledge from different sectors means that AI
 As AI becomes more integrated into society, the importance of ethical decision-making grows. DeepSeek’s advanced reasoning capabilities can help ensure that AI systems make decisions that are aligned with ethical standards and societal values.
 
 ---
-
 ## ChatGPT vs. DeepSeek: A Comparison
 
 While **ChatGPT** is a highly advanced language model that has revolutionized human-computer interactions, DeepSeek takes things a step further. Let’s compare these two technologies to understand their respective strengths and limitations.
