@@ -61,7 +61,6 @@ While **ChatGPT** is a highly advanced language model that has revolutionized hu
 - **DeepSeek**: DeepSeek’s applications are broader and deeper. It’s ideal for industries that demand complex decision-making and cross-disciplinary insights, such as healthcare, law, and finance. It could also be used for personal AI assistants that anticipate and respond to the user’s needs in a more context-aware and sophisticated manner.
 
 ---
-
 ## Looking Ahead: The Future of AI with DeepSeek
 
 DeepSeek represents a new era in artificial intelligence, one where machines don’t just perform tasks—they understand, reason, and adapt. This could lead to breakthroughs in AI-driven solutions for everything from healthcare diagnosis to personalized education and beyond.
