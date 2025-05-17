@@ -12,7 +12,6 @@ Built on top of the Hadoop MapReduce framework, Spark enhances it by supporting 
 Spark executes applications much faster—especially in-memory—by caching intermediate data, reducing disk I/O overhead. It offers built-in APIs for Java, Python, and Scala, and supports SQL queries, real-time streaming, machine learning, and graph computation.
 
 ---
-
 ## What is Spark Streaming?
 
 Spark Streaming is a component of Spark that enables scalable, high-throughput, fault-tolerant stream processing of live data streams.
