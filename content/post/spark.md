@@ -21,7 +21,6 @@ Spark Streaming is a component of Spark that enables scalable, high-throughput, 
 - Applies **RDD transformations** to these mini-batches.
 
 ---
-
 ## Architecture of Spark
 
 Apache Spark follows a **master-slave architecture**, consisting of a single master node and multiple slave (worker) nodes. It is designed around two key abstractions:
