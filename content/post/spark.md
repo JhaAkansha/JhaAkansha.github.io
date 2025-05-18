@@ -29,7 +29,6 @@ Apache Spark follows a **master-slave architecture**, consisting of a single mas
 2. **DAG (Directed Acyclic Graph)** — Represents a logical execution plan composed of transformations.
 
 ---
-
 ### DAG (Directed Acyclic Graph)
 
 The DAG is a directed graph where:
