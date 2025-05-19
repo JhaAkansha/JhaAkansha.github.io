@@ -45,11 +45,9 @@ The DAG execution model is composed of:
 5. **Task**: A unit of work that is sent to one executor.
 
 ---
-
 ### RDD (Resilient Distributed Dataset)
 
 The **RDD** is the foundational data structure in Spark. It is:
-
 - **Immutable** and **distributed**.
 - A collection of records stored across multiple nodes.
 - Able to contain any type of object: Python, Java, Scala, or even user-defined types.
