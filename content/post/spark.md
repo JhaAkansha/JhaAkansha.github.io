@@ -53,7 +53,6 @@ The **RDD** is the foundational data structure in Spark. It is:
 - Able to contain any type of object: Python, Java, Scala, or even user-defined types.
 
 #### Key Characteristics
-
 - **Partitioned** across the cluster.
 - **Read-only** collections.
 - **Fault-tolerant** using lineage (recomputation).
