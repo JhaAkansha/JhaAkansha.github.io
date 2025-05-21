@@ -70,7 +70,6 @@ The **RDD** is the foundational data structure in Spark. It is:
 ### RDD Operations
 
 RDDs support two kinds of operations:
-
 1. **Transformations**  
    - Lazily evaluated.
    - Create a new RDD from an existing one.
