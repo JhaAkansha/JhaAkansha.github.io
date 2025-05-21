@@ -60,7 +60,6 @@ The **RDD** is the foundational data structure in Spark. It is:
 - **Checkpointing** is used to save RDDs to stable storage to prevent recomputation on node failure.
 
 #### Types of RDDs
-
 1. **Parallelized Collections**  
    Created by invoking `SparkContext.parallelize()` method.
 
