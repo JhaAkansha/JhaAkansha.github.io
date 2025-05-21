@@ -67,7 +67,6 @@ The **RDD** is the foundational data structure in Spark. It is:
    Created from external storage systems like HDFS, S3, etc.
 
 ---
-
 ### RDD Operations
 
 RDDs support two kinds of operations:
