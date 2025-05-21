@@ -82,4 +82,3 @@ RDDs support two kinds of operations:
 
 ---
 Apache Spark combines the flexibility of functional programming with the power of distributed computing, making it a go-to engine for big data analytics, real-time processing, and complex workflows.
-
