@@ -10,7 +10,6 @@ Formula One might look like a sport where victory comes down to the fastest car 
 In this post, we’ll walk you through how Formula One teams use the **big data lifecycle** to gain a competitive edge — from sensor-packed cars and telemetry streams to predictive modeling and post-race analysis.
 
 ---
-
 ## 1. Data Collection: The Stream Begins
 
 F1 cars are, quite literally, data machines on wheels.
