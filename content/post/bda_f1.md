@@ -11,7 +11,6 @@ In this post, we’ll walk you through how Formula One teams use the **big data 
 
 ---
 ## 1. Data Collection: The Stream Begins
-
 F1 cars are, quite literally, data machines on wheels.
 - **Sensors Everywhere**: Each car carries around 300 sensors, constantly measuring temperature, pressure, tire wear, fuel consumption, g-forces, and more — generating over 1.1 million data points per second.
 - **Telemetry**: All of this data is transmitted in real time to the pit wall and team HQ. Teams monitor engine health, lap times, braking patterns, and tire degradation live as the race unfolds.
