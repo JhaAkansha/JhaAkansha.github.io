@@ -20,7 +20,6 @@ F1 cars are, quite literally, data machines on wheels.
 > "Every lap is a lesson — and the data is the teacher."
 
 ---
-
 ## 2. Data Storage: Where All That Info Lives
 
 - **Cloud Data Lakes**: With terabytes of data per race weekend, teams rely on cloud infrastructure and data lakes for scalable storage and quick access.
