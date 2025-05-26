@@ -38,7 +38,6 @@ Before the magic happens, data needs polishing.
 Clean data ensures accurate insights and decisions — especially when the wrong move can cost a race.
 
 ---
-
 ## 4. Data Analysis: Understanding the Race
 
 Once clean, the data goes through layers of analytics:
