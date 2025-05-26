@@ -28,7 +28,6 @@ F1 cars are, quite literally, data machines on wheels.
 This combination ensures structured and unstructured data are both accessible for real-time and post-race analysis.
 
 ---
-
 ## 3. Data Cleaning & Preprocessing: Removing the Noise
 
 Before the magic happens, data needs polishing.
