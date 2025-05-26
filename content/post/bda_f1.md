@@ -31,7 +31,6 @@ This combination ensures structured and unstructured data are both accessible fo
 ## 3. Data Cleaning & Preprocessing: Removing the Noise
 
 Before the magic happens, data needs polishing.
-
 - **Noise Reduction**: Filtering out sensor glitches or temporary drops in telemetry due to connection issues.
 - **Missing Data Handling**: Using techniques like interpolation to fill in gaps when sensors fail.
 - **Data Normalization**: Aligning units and formats so that telemetry, weather, and driver data can be compared or combined.
