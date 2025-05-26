@@ -21,7 +21,6 @@ F1 cars are, quite literally, data machines on wheels.
 
 ---
 ## 2. Data Storage: Where All That Info Lives
-
 - **Cloud Data Lakes**: With terabytes of data per race weekend, teams rely on cloud infrastructure and data lakes for scalable storage and quick access.
 - **Relational Databases**: Structured data like lap times, split timings, and car setup parameters are stored in SQL-based databases.
 - **Time-Series Databases**: For telemetry and sensor data streaming second-by-second, time-series databases like *InfluxDB* are key.
