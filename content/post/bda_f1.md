@@ -50,7 +50,6 @@ Once clean, the data goes through layers of analytics:
 This is where the data starts driving decisions.
 
 ---
-
 ## 5. Data Visualization: Making It All Visible
 
 In the heat of a race, engineers don’t have time to read logs.
