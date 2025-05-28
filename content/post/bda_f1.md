@@ -61,7 +61,6 @@ In the heat of a race, engineers don’t have time to read logs.
 Tools like [McLaren Applied's F1 Tempo](https://www.f1-tempo.com/) give teams a way to translate raw data into race-ready insights.
 
 ---
-
 ## 6. Machine Learning & Model Refinement
 
 F1 teams are now fully embracing AI.
