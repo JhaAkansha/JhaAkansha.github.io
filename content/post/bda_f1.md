@@ -64,7 +64,6 @@ Tools like [McLaren Applied's F1 Tempo](https://www.f1-tempo.com/) give teams a 
 ## 6. Machine Learning & Model Refinement
 
 F1 teams are now fully embracing AI.
-
 - **Model Training**: As new data flows in every race, models are retrained to better predict outcomes like undercut potential or optimal tire stint lengths.
 - **AI Simulation**: Simulated races using neural networks help optimize strategies across hundreds of “what-if” scenarios.
 - **Continuous Learning**: Models improve with every season, learning from what worked — and what didn’t.
