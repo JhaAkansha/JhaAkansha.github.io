@@ -86,7 +86,6 @@ After the checkered flag, the data work is far from over.
 - **Continuous Improvement**: Learnings feed into the next race, improving everything from brake cooling systems to fuel maps.
 
 ---
-
 ## 9. What’s Next: Advanced Analytics in F1
 
 Formula One is only accelerating its use of advanced data techniques:
