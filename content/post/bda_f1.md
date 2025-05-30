@@ -69,7 +69,6 @@ F1 teams are now fully embracing AI.
 - **Continuous Learning**: Models improve with every season, learning from what worked — and what didn’t.
 
 ---
-
 ## 7. Decision-Making: Turning Data into Action
 
 - **Strategic Adjustments**: Mid-race decisions like undercutting an opponent or stretching tire life are made based on predictive analysis.
