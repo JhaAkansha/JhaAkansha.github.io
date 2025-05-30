@@ -77,7 +77,6 @@ F1 teams are now fully embracing AI.
 - **Car Setup Optimization**: In practice sessions, teams tweak setups — suspension, aero balance, etc. — based on how the data aligns with driver feel.
 
 ---
-
 ## 8. Feedback Loop: Post-Race Analysis
 
 After the checkered flag, the data work is far from over.
