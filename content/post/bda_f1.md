@@ -95,7 +95,6 @@ Formula One is only accelerating its use of advanced data techniques:
 - **Biometric Analysis**: Some teams are exploring heart rate, hydration levels, and fatigue in drivers to optimize performance and safety.
 
 ---
-
 ## Final Thoughts
 
 Formula One is no longer just a test of speed — it’s a test of **data mastery**. Every lap, every pit stop, every millisecond is backed by mountains of analysis and predictive modeling.
