@@ -103,6 +103,5 @@ In this race, the car is fast. The driver is skilled.
 But **data is the difference**.
 
 ---
-
 *Want to dive deeper? Explore tools like [F1 Tempo by McLaren Applied](https://www.f1-tempo.com/) or learn how AI is reshaping motorsport.*
 
