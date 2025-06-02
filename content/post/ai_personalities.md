@@ -14,7 +14,6 @@ This blog explores what AI personalities are, why they matter, and how they shap
 An AI personality refers to the **distinct tone, behavior, and communication style** an AI system uses to interact with users. This can range from friendly and conversational to formal and task-oriented. Unlike static software, AI can adapt its tone based on context, making the interaction feel more natural or user-specific.
 
 ### Key Elements of AI Personality:
-
 - **Tone of Voice**: Is the AI casual, professional, witty, or neutral?
 - **Response Style**: Does it provide detailed explanations or brief answers?
 - **Empathy & Emotion**: Does it acknowledge emotions or remain purely factual?
