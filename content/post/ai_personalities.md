@@ -20,7 +20,6 @@ An AI personality refers to the **distinct tone, behavior, and communication sty
 - **Adaptability**: Can it modify behavior based on user preferences or history?
 
 ---
-
 ## Why AI Personalities Matter
 
 AI personalities aren't just aesthetic choices—they directly affect user experience, engagement, and trust.
