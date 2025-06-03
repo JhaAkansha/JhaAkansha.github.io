@@ -23,7 +23,6 @@ An AI personality refers to the **distinct tone, behavior, and communication sty
 ## Why AI Personalities Matter
 
 AI personalities aren't just aesthetic choices—they directly affect user experience, engagement, and trust.
-
 ### 1. **User Comfort & Trust**
 A friendly and relatable tone can make users feel more at ease, especially in high-stress scenarios like mental health chatbots or customer service.
 
