@@ -42,7 +42,6 @@ While AI personalities vary widely, they often fall into a few recognizable cate
 - **Playful**: Humorous, creative, and sometimes quirky—used in entertainment or casual contexts.
 
 ---
-
 ## The Ethical Dimension
 
 Creating AI personalities also introduces ethical questions:
