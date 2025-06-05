@@ -33,7 +33,6 @@ A well-designed personality can make technical responses more accessible by tail
 Users are more likely to continue interacting with an AI that feels responsive, helpful, and human-aware.
 
 ---
-
 ## Types of AI Personalities
 
 While AI personalities vary widely, they often fall into a few recognizable categories:
