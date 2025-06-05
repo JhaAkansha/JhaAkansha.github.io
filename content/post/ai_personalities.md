@@ -36,7 +36,6 @@ Users are more likely to continue interacting with an AI that feels responsive, 
 ## Types of AI Personalities
 
 While AI personalities vary widely, they often fall into a few recognizable categories:
-
 - **Assistant**: Professional, neutral, focused on productivity (e.g., Siri, Google Assistant).
 - **Companion**: Friendly, empathetic, designed for conversation or emotional support.
 - **Expert**: Direct, factual, and technical—common in educational or enterprise tools.
