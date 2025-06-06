@@ -43,7 +43,6 @@ While AI personalities vary widely, they often fall into a few recognizable cate
 
 ---
 ## The Ethical Dimension
-
 Creating AI personalities also introduces ethical questions:
 
 - Should an AI express emotions it doesn't "feel"?
