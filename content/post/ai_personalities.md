@@ -51,7 +51,6 @@ These are ongoing challenges in AI development that require careful consideratio
 
 ---
 ## The Future of AI Personalities
-
 As AI continues to evolve, future systems will likely support **customizable personalities**, allowing users to choose how their AI sounds and behaves. This personalization could extend from tone and gender to cultural context and even humor level.
 
 We may also see AI personalities evolve dynamically over time—learning from interactions, adapting to individual preferences, and becoming more contextually aware.
