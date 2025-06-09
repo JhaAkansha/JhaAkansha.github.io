@@ -50,7 +50,6 @@ Creating AI personalities also introduces ethical questions:
 These are ongoing challenges in AI development that require careful consideration of psychology, design, and user diversity.
 
 ---
-
 ## The Future of AI Personalities
 
 As AI continues to evolve, future systems will likely support **customizable personalities**, allowing users to choose how their AI sounds and behaves. This personalization could extend from tone and gender to cultural context and even humor level.
