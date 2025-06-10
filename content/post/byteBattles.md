@@ -1,7 +1,6 @@
 ---
 title: "ByteBattles 2.0"
 date: 2025-04-08T13:23:44+05:30
-draft: false
 ---
 
 # ByteBattles with Ather Energy: 30 Hours, One EV & a Lot of Coffee
