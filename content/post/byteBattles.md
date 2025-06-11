@@ -33,7 +33,6 @@ With access to development boards, firmware libraries, and the Ather 450x, we we
 
 ---
 ## Hack Mode: ON
-
 - **11:00 AM**: Coding begins  
 - Problem 1 solved in 10 mins—*or so we thought*
 - Turns out... it was a faulty **USB cable**
