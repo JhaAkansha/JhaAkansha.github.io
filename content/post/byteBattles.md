@@ -21,7 +21,6 @@ Participants were challenged to develop firmware solutions for the **Ather 450x*
 - **8:30 AM**: Check-in, breakfast, orientation
 - Swag secured: T-shirts + ID cards
 - Office tour: Our base for the next 30 hours
-
 We were five caffeine-powered engineers, barely awake but buzzing with excitement.
 
 ---
