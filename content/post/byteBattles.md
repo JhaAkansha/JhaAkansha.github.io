@@ -32,7 +32,6 @@ At the orientation, we were introduced to the real challenge:
 With access to development boards, firmware libraries, and the Ather 450x, we were off to a flying start. Kind of.
 
 ---
-
 ## Hack Mode: ON
 
 - **11:00 AM**: Coding begins  
