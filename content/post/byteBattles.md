@@ -15,7 +15,6 @@ date: 2025-04-08T13:23:44+05:30
 Participants were challenged to develop firmware solutions for the **Ather 450x**, a flagship electric scooter—and yes, we were actually given the scooter to code on.
 
 ---
-
 ## Pune to Bangalore: The Journey Begins
 
 - **3:00 AM**: Flight from Pune
