@@ -48,7 +48,6 @@ While the volunteers helped debug the hardware, we brainstormed and coded two mo
 But we missed the early submission points—by **just a few minutes**. That sealed our fate: we didn’t make it to **Phase 2**.
 
 ---
-
 ## Phase 2: Watching from the Sidelines
 
 While the top 15 teams moved upstairs to tackle advanced problem statements, we made the most of our time:
