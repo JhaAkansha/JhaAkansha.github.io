@@ -9,7 +9,6 @@ date: 2025-04-08T13:23:44+05:30
 > – Probably never. Until ByteBattles.
 
 ---
-
 ## What is ByteBattles?
 
 **ByteBattles** is a national-level firmware hackathon hosted by [Ather Energy](https://www.atherenergy.com/), inviting students and professionals from across India to tackle real-world challenges in the EV (Electric Vehicle) space.
