@@ -16,7 +16,6 @@ Participants were challenged to develop firmware solutions for the **Ather 450x*
 
 ---
 ## Pune to Bangalore: The Journey Begins
-
 - **3:00 AM**: Flight from Pune
 - **8:00 AM**: Land in Bangalore and reach Ather HQ
 - **8:30 AM**: Check-in, breakfast, orientation
