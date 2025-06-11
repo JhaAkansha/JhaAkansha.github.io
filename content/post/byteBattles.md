@@ -24,7 +24,6 @@ Participants were challenged to develop firmware solutions for the **Ather 450x*
 We were five caffeine-powered engineers, barely awake but buzzing with excitement.
 
 ---
-
 ## The Problem Statement
 
 At the orientation, we were introduced to the real challenge:  
