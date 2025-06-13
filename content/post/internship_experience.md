@@ -46,13 +46,11 @@ An **automated image slider** that:
 > *"From concept to production—owning one of the most powerful AI-driven features in the app."*
 
 ### What is Generative Expand?
-
 **Generative Expand** is an innovative feature that allows users to change the **aspect ratio of an image** by using **AI** to seamlessly generate and fill in the extended canvas based on the original content.
 
 > Imagine expanding a photo horizontally, and the app fills in the sides with realistic, context-aware details—**automatically**.
 
 ---
-
 ### My Role
 
 I was entrusted with **end-to-end ownership** of this feature during my internship, and it quickly became the most exciting and challenging part of my journey.
@@ -64,7 +62,6 @@ I was entrusted with **end-to-end ownership** of this feature during my internsh
 - Collaborated with designers, QA, and product teams for polish
 
 ---
-
 ### Timeline & Execution
 
 - **3 weeks of development**  
@@ -95,7 +92,6 @@ The Firefly model needed smarter, trend-aware inputs to produce cleaner, more re
 - Keeping up with rapidly evolving **creative trends**
 
 ---
-
 ### What I Did
 
 As a Prompt Engineer, my responsibilities included:
@@ -118,7 +114,6 @@ Prompt templates became more **user-friendly and intuitive**
 > I wasn’t just teaching AI how to create—I was helping it create better.
 
 ---
-
 ## Wrapping It All Up
 
 ### Conclusion
