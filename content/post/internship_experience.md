@@ -15,25 +15,20 @@ Landing an internship at **Adobe** was nothing short of surreal. It was a thrill
 I joined the **Photoshop Express** team, where I primarily worked on the **Android app**. What amazed me from day one was the ownership I was given. I wasn't just there to shadow someone—I was contributing to **real features** that impacted actual users.
 
 ---
-
 ## Tackling Frustration with a Wait State Loader
-
 ### The Problem
-
 Long image processing times were leading to:
 - User frustration and app abandonment
 - Confusion among new users trying to understand text-to-image generation
 - Lost opportunities to highlight community creativity
 
 ### The Solution
-
 Introduce a **wait state loader** that:
 - Shows community-generated images
 - Displays prompts used to create them
 - Lets users **copy prompts** for inspiration while they wait
 
 ### What I Built
-
 An **automated image slider** that:
 - Pulls in community images from a remote server  
 - Displays them with clean, styled captions  
