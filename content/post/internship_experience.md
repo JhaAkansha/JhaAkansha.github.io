@@ -1,7 +1,6 @@
 ---
 title: "More Than Just Photoshop: My Adobe Internship Experience"
 date: 2024-08-12T13:23:39+05:30
-draft: false
 ---
 
 # My Internship Experience at Adobe
@@ -11,7 +10,6 @@ draft: false
 Landing an internship at **Adobe** was nothing short of surreal. It was a thrilling and unexpected milestone, and I couldn’t wait to see what life beyond the classroom looked like—working alongside industry veterans and building features that millions might use.
 
 ---
-
 ## Team Photoshop Express – Android Squad
 
 I joined the **Photoshop Express** team, where I primarily worked on the **Android app**. What amazed me from day one was the ownership I was given. I wasn't just there to shadow someone—I was contributing to **real features** that impacted actual users.
