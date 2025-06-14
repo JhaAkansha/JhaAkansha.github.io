@@ -130,7 +130,6 @@ It was the perfect blend of **challenge**, **creativity**, and **real-world impa
 > I walked in as a student curious about how the industry works—and walked out as a developer who's contributed to one of the most recognized creative platforms in the world.
 
 ---
-
 ### Final Thanks
 
 A huge thank you to my mentors and the amazing team at **Adobe Photoshop Express**. You believed in me, challenged me, and gave me the space to grow. I’ll carry this experience with me for a long time.
