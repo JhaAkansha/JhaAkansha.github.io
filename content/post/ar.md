@@ -1,7 +1,6 @@
 ---
 title: "Augmented Reality in Everyday Life"
 date: 2023-06-27T14:40:37+05:30
-draft: false
 ---
 # Augmented Reality in Everyday Life: How AR Can Transform Various Industries and Personal Experiences
 ---
