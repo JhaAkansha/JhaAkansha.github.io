@@ -13,3 +13,11 @@ In a world increasingly defined by data, speed, and connectivity, a subtle yet p
 At its core, edge computing brings computation and data storage closer to the devices where data is generated—be it IoT sensors, smartphones, autonomous vehicles, or industrial machines. Instead of sending all that data to a centralized cloud for processing, edge computing handles much of the work locally, or at nearby "edge" servers.
 
 This shift is all about **latency, bandwidth, and real-time performance**. By reducing the physical distance data must travel, edge computing enables faster decisions, less network congestion, and more reliable applications—critical for use cases like self-driving cars, AR/VR, and remote medical diagnostics.
+
+## Why Now?
+
+Several converging trends are accelerating the adoption of edge computing:
+
+- **IoT Explosion**: Billions of connected devices are generating vast volumes of data that need instant analysis.
+- **5G Rollout**: The ultra-low latency of 5G makes edge computing even more potent, allowing real-time communication between devices and edge nodes.
+- **AI at the Edge**: Advances in machine learning are allowing powerful inference models to run on smaller devices, enabling intelligent decision-making on the spot.
