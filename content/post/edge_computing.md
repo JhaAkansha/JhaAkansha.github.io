@@ -13,7 +13,6 @@ At its core, edge computing brings computation and data storage closer to the de
 This shift is all about **latency, bandwidth, and real-time performance**. By reducing the physical distance data must travel, edge computing enables faster decisions, less network congestion, and more reliable applications—critical for use cases like self-driving cars, AR/VR, and remote medical diagnostics.
 
 ## Why Now?
-
 Several converging trends are accelerating the adoption of edge computing:
 
 - **IoT Explosion**: Billions of connected devices are generating vast volumes of data that need instant analysis.
