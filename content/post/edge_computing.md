@@ -19,7 +19,6 @@ Several converging trends are accelerating the adoption of edge computing:
 - **5G Rollout**: The ultra-low latency of 5G makes edge computing even more potent, allowing real-time communication between devices and edge nodes.
 - **AI at the Edge**: Advances in machine learning are allowing powerful inference models to run on smaller devices, enabling intelligent decision-making on the spot.
 
-
 ## Use Cases in Action
 
 1. **Smart Cities**: Edge devices in traffic systems can process data locally to optimize signals in real-time and reduce congestion.
