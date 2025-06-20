@@ -26,7 +26,6 @@ Several converging trends are accelerating the adoption of edge computing:
 3. **Retail**: Stores can use edge analytics to personalize customer experiences or detect theft without uploading hours of video footage to the cloud.
 
 ## Challenges Ahead
-
 Edge computing isn’t without hurdles. Security at the edge is more complex—there are more endpoints to protect. Data management, device interoperability, and maintaining consistent updates across dispersed hardware also present significant operational challenges.
 
 ## The Road Ahead
