@@ -75,7 +75,8 @@ int Pop (struct StackArr *S) {
 | Time Complexity of IsEmptyStack()        | O(1) |  
 | Time Complexity of IsFullStack()         | O(1) |  
 
-However, the maximum size of the array must be defined at the beginning and cannot be changed. Trying to push a new element into a full stack causes an implementation-specific exception. Therefore, a simple array implementation is not ideal and hence dynamic array implementation is preferred.  
+However, the maximum size of the array must be defined at the beginning and cannot be changed. Trying to push a new element into a full stack causes an implementation-specific exception. Therefore, a simple array implementation is not ideal and hence dynamic array implementation is preferred.
+
 ## Dynamic Array Implementation
 In this approach, if the array is full, we create a new array of twice the size and copy items. With this approach, pushing n items takes time proportional to n.  
 
