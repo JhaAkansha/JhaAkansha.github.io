@@ -1,7 +1,6 @@
 ---
 title: "Stack"
 date: 2022-11-05T16:23:59+05:30
-#draft: true
 ---
 
 A stack is an ordered list in which insertion and deletion are done at one end called the "top".  
