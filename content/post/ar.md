@@ -12,7 +12,6 @@ In this article, we’ll explore how AR is transforming various industries and e
 ---
 
 ## What is Augmented Reality?
-
 Augmented Reality superimposes digital content (images, sounds, text) onto the physical world in real time. Unlike Virtual Reality (VR), which creates a fully immersive digital environment, AR enhances the user's perception of their actual surroundings using devices like smartphones, tablets, and AR headsets.
 
 ---
