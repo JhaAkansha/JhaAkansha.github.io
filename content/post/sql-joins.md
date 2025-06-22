@@ -34,3 +34,9 @@ Use it when you want all records from the left table, regardless of matches.
 
 ## 3. RIGHT JOIN (or RIGHT OUTER JOIN)
 **Returns**: All rows from the right table, and the matched rows from the left table. If no match, returns `NULL` on the left side.
+
+```sql
+SELECT *
+FROM orders
+RIGHT JOIN customers ON orders.customer_id = customers.id;
+```
