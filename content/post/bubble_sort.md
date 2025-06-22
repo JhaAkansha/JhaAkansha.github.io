@@ -34,6 +34,7 @@ and so on until the number of comparisons is 1. Therefore, total number of compa
 = n(n - 1)/2  
 This is equivalent to n².  
 **Best Case** : &nbsp; The best occurs when the array is already sorted. The time complexity in this case is O(n).  
+
 ## Optimized BubbleSort  
 ```C
 for (i = 0; i < n-1; i++) {
