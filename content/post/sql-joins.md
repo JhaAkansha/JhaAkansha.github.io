@@ -20,3 +20,8 @@ FROM orders
 INNER JOIN customers ON orders.customer_id = customers.id;
 ```
 Use it when you want to retrieve only the data that exists in both databases.
+
+## 2. LEFT JOIN (or LEFT OUTER JOIN)
+
+**Returns**: All rows from the left table, and the matched rows from the right table. If no match, returns `NULL` on the right side.
+
