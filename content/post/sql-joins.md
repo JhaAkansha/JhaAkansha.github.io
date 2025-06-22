@@ -32,3 +32,4 @@ LEFT JOIN orders ON customer.id = orders.customer_id;
 ```
 Use it when you want all records from the left table, regardless of matches.
 
+## 3. RIGHT JOIN (or RIGHT OUTER JOIN)
