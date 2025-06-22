@@ -25,3 +25,10 @@ Use it when you want to retrieve only the data that exists in both databases.
 
 **Returns**: All rows from the left table, and the matched rows from the right table. If no match, returns `NULL` on the right side.
 
+```sql
+SELECT *
+FROM customers
+LEFT JOIN orders ON customer.id = orders.customer_id;
+```
+Use it when you want all records from the left table, regardless of matches.
+
