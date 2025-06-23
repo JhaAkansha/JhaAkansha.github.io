@@ -1,0 +1,22 @@
+---
+title: "Sql Joins"
+date: 2023-07-02T22:23:59+05:30
+draft: false
+---
+
+# Understanding SQL Joins: A Quick Guide
+
+When working with relational databases, **SQL joins** allow you to combine rows from two or more tables based on a related column. Here's a quick breakdown of the most common types of joins:
+
+---
+
+## 1. INNER JOIN
+
+**Returns**: Only rows that have matching values in both tables.
+
+```sql
+SELECT *
+FROM orders
+INNER JOIN customers ON orders.customer_id = customers.id;
+```
+Use it when you want to retrieve only the data that exists in both databases.
