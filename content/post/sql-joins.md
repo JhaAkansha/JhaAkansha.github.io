@@ -43,3 +43,4 @@ RIGHT JOIN customers ON orders.customer_id = customers.id;
 Use it when you want all records from the right table, with or without matches.
 
 ## 4. FULL JOIN (or FULL OUTER JOIN)
+**Returns**: All rows when there is a match either left or right table. Non-matching rows will have `NULL` where appropriate.
