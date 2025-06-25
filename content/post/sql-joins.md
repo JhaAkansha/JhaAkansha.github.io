@@ -44,3 +44,9 @@ Use it when you want all records from the right table, with or without matches.
 
 ## 4. FULL JOIN (or FULL OUTER JOIN)
 **Returns**: All rows when there is a match either left or right table. Non-matching rows will have `NULL` where appropriate.
+
+```sql
+SELECT *
+FROM customers
+FULL OUTER JOIN orders ON  customers.id = orders.customer_id;
+```
