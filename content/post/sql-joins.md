@@ -51,3 +51,4 @@ FROM customers
 FULL OUTER JOIN orders ON  customers.id = orders.customer_id;
 ```
 Use it when you want to see everything from both tables, matched or not.
+
