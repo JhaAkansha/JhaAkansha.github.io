@@ -54,3 +54,9 @@ Use it when you want to see everything from both tables, matched or not.
 
 ## 5. CROSS JOIN
 **Returns**: The Cartesian product of the two tables (every combination of rows).
+
+```sql
+SELECT *
+FROM products
+CROSS JOIN categories;
+```
