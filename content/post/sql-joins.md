@@ -60,3 +60,4 @@ SELECT *
 FROM products
 CROSS JOIN categories;
 ```
+Use with caution - can return a very large number of rows.
