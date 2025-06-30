@@ -64,3 +64,5 @@ Use with caution - can return a very large number of rows.
 
 ## 6. SELF JOIN
 **Returns**: A join of a table to itself, useful for hierarchical or related data within one table.
+
+```sql
