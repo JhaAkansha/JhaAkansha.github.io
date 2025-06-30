@@ -66,3 +66,6 @@ Use with caution - can return a very large number of rows.
 **Returns**: A join of a table to itself, useful for hierarchical or related data within one table.
 
 ```sql
+SELECT A.name AS Employee, B.name AS Manager
+FROM employees A
+JOIN employees B ON A.manager_id = B.id;
