@@ -69,3 +69,4 @@ Use with caution - can return a very large number of rows.
 SELECT A.name AS Employee, B.name AS Manager
 FROM employees A
 JOIN employees B ON A.manager_id = B.id;
+```
