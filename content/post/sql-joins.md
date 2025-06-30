@@ -70,3 +70,4 @@ SELECT A.name AS Employee, B.name AS Manager
 FROM employees A
 JOIN employees B ON A.manager_id = B.id;
 ```
+Use it when you need to compare rows within the same table.
