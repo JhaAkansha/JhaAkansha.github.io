@@ -1,7 +1,6 @@
 ---
 title: "Understanding SQL Joins"
 date: 2023-07-02T22:23:59+05:30
-draft: false
 ---
 
 # Understanding SQL Joins: A Quick Guide
