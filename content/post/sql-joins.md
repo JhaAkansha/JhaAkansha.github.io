@@ -31,7 +31,7 @@ LEFT JOIN orders ON customer.id = orders.customer_id;
 ```
 Use it when you want all records from the left table, regardless of matches.
 
-## 3. RIGHT JOIN (or RIGHT OUTER JOIN)
+## RIGHT JOIN (or RIGHT OUTER JOIN)
 **Returns**: All rows from the right table, and the matched rows from the left table. If no match, returns `NULL` on the left side.
 
 ```sql
@@ -41,7 +41,7 @@ RIGHT JOIN customers ON orders.customer_id = customers.id;
 ```
 Use it when you want all records from the right table, with or without matches.
 
-## 4. FULL JOIN (or FULL OUTER JOIN)
+## FULL JOIN (or FULL OUTER JOIN)
 **Returns**: All rows when there is a match either left or right table. Non-matching rows will have `NULL` where appropriate.
 
 ```sql
@@ -51,7 +51,7 @@ FULL OUTER JOIN orders ON  customers.id = orders.customer_id;
 ```
 Use it when you want to see everything from both tables, matched or not.
 
-## 5. CROSS JOIN
+## CROSS JOIN
 **Returns**: The Cartesian product of the two tables (every combination of rows).
 
 ```sql
@@ -61,7 +61,7 @@ CROSS JOIN categories;
 ```
 Use with caution - can return a very large number of rows.
 
-## 6. SELF JOIN
+## SELF JOIN
 **Returns**: A join of a table to itself, useful for hierarchical or related data within one table.
 
 ```sql
