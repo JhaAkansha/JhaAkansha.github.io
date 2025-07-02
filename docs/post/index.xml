@@ -2992,7 +2992,7 @@ These are ongoing challenges in AI development that require careful consideratio
         <description>&lt;h1 id=&#34;understanding-sql-joins-a-quick-guide&#34;&gt;Understanding SQL Joins: A Quick Guide&lt;/h1&gt;
 &lt;p&gt;When working with relational databases, &lt;strong&gt;SQL joins&lt;/strong&gt; allow you to combine rows from two or more tables based on a related column. Here&amp;rsquo;s a quick breakdown of the most common types of joins:&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;1-inner-join&#34;&gt;1. INNER JOIN&lt;/h2&gt;
+&lt;h2 id=&#34;inner-join&#34;&gt;INNER JOIN&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Returns&lt;/strong&gt;: Only rows that have matching values in both tables.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -3007,7 +3007,7 @@ These are ongoing challenges in AI development that require careful consideratio
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Use it when you want to retrieve only the data that exists in both databases.&lt;/p&gt;
-&lt;h2 id=&#34;2-left-join-or-left-outer-join&#34;&gt;2. LEFT JOIN (or LEFT OUTER JOIN)&lt;/h2&gt;
+&lt;h2 id=&#34;left-join-or-left-outer-join&#34;&gt;LEFT JOIN (or LEFT OUTER JOIN)&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Returns&lt;/strong&gt;: All rows from the left table, and the matched rows from the right table. If no match, returns &lt;code&gt;NULL&lt;/code&gt; on the right side.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
