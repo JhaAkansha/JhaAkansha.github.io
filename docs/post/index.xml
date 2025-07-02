@@ -3022,7 +3022,7 @@ These are ongoing challenges in AI development that require careful consideratio
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Use it when you want all records from the left table, regardless of matches.&lt;/p&gt;
-&lt;h2 id=&#34;3-right-join-or-right-outer-join&#34;&gt;3. RIGHT JOIN (or RIGHT OUTER JOIN)&lt;/h2&gt;
+&lt;h2 id=&#34;right-join-or-right-outer-join&#34;&gt;RIGHT JOIN (or RIGHT OUTER JOIN)&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Returns&lt;/strong&gt;: All rows from the right table, and the matched rows from the left table. If no match, returns &lt;code&gt;NULL&lt;/code&gt; on the left side.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -3037,7 +3037,7 @@ These are ongoing challenges in AI development that require careful consideratio
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Use it when you want all records from the right table, with or without matches.&lt;/p&gt;
-&lt;h2 id=&#34;4-full-join-or-full-outer-join&#34;&gt;4. FULL JOIN (or FULL OUTER JOIN)&lt;/h2&gt;
+&lt;h2 id=&#34;full-join-or-full-outer-join&#34;&gt;FULL JOIN (or FULL OUTER JOIN)&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Returns&lt;/strong&gt;: All rows when there is a match either left or right table. Non-matching rows will have &lt;code&gt;NULL&lt;/code&gt; where appropriate.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -3052,7 +3052,7 @@ These are ongoing challenges in AI development that require careful consideratio
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Use it when you want to see everything from both tables, matched or not.&lt;/p&gt;
-&lt;h2 id=&#34;5-cross-join&#34;&gt;5. CROSS JOIN&lt;/h2&gt;
+&lt;h2 id=&#34;cross-join&#34;&gt;CROSS JOIN&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Returns&lt;/strong&gt;: The Cartesian product of the two tables (every combination of rows).&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -3067,7 +3067,7 @@ These are ongoing challenges in AI development that require careful consideratio
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Use with caution - can return a very large number of rows.&lt;/p&gt;
-&lt;h2 id=&#34;6-self-join&#34;&gt;6. SELF JOIN&lt;/h2&gt;
+&lt;h2 id=&#34;self-join&#34;&gt;SELF JOIN&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Returns&lt;/strong&gt;: A join of a table to itself, useful for hierarchical or related data within one table.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
