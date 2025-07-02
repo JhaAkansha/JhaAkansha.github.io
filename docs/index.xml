@@ -2984,11 +2984,11 @@ These are ongoing challenges in AI development that require careful consideratio
 </description>
         </item>
         <item>
-        <title>Sql Joins</title>
-        <link>https://jhaakansha.github.io/p/sql-joins/</link>
+        <title>Understanding SQL Joins</title>
+        <link>https://jhaakansha.github.io/p/understanding-sql-joins/</link>
         <pubDate>Sun, 02 Jul 2023 22:23:59 +0530</pubDate>
         
-        <guid>https://jhaakansha.github.io/p/sql-joins/</guid>
+        <guid>https://jhaakansha.github.io/p/understanding-sql-joins/</guid>
         <description>&lt;h1 id=&#34;understanding-sql-joins-a-quick-guide&#34;&gt;Understanding SQL Joins: A Quick Guide&lt;/h1&gt;
 &lt;p&gt;When working with relational databases, &lt;strong&gt;SQL joins&lt;/strong&gt; allow you to combine rows from two or more tables based on a related column. Here&amp;rsquo;s a quick breakdown of the most common types of joins:&lt;/p&gt;
 &lt;hr&gt;
