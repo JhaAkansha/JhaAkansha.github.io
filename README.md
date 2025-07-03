@@ -19,3 +19,4 @@ After cloning, add theme: `git submodule add https://github.com/dillonzq/LoveIt.
 # Akansha Jha's Personal Blog
 
 ## Overview
+A personal blog where I write about programming and other tech-focused topics.
