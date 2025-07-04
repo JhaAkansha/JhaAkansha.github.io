@@ -20,3 +20,6 @@ After cloning, add theme: `git submodule add https://github.com/dillonzq/LoveIt.
 
 ## Overview
 A personal blog where I write about programming and other tech-focused topics.
+
+## Live website
+[https://jhaakansha.github.io/](https://jhaakansha.github.io/)
