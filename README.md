@@ -33,3 +33,6 @@ A personal blog where I write about programming and other tech-focused topics.
 ## Features
 - Dark mode toggle
 - Clean, minimal navigation: Home, About, Archives, Search, Links
+
+
+## Installation and Local Development
