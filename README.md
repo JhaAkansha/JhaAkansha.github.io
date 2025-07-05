@@ -31,3 +31,4 @@ A personal blog where I write about programming and other tech-focused topics.
 - **Content Format**: Markdown
 
 ## Features
+- Dark mode toggle
