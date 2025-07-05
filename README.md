@@ -23,3 +23,9 @@ A personal blog where I write about programming and other tech-focused topics.
 
 ## Live website
 [https://jhaakansha.github.io/](https://jhaakansha.github.io/)
+
+## Built with
+- **Framework**: [Hugo](https://gohugo.io/) (static site generator)  
+- **Theme**: [Stack](https://github.com/CaiJimmy/hugo-theme-stack) by Jimmy  
+- **Hosting**: GitHub Pages  
+- **Content Format**: Markdown
