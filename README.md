@@ -29,3 +29,5 @@ A personal blog where I write about programming and other tech-focused topics.
 - **Theme**: [Stack](https://github.com/CaiJimmy/hugo-theme-stack) by Jimmy  
 - **Hosting**: GitHub Pages  
 - **Content Format**: Markdown
+
+## Features
