@@ -36,3 +36,9 @@ A personal blog where I write about programming and other tech-focused topics.
 
 
 ## Installation and Local Development
+
+To run the blog locally:
+```bash
+# Clone the repository
+git clone https://github.com/jhaakansha/your-blog-repo.git
+cd your-blog-repo
