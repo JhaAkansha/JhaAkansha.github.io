@@ -46,3 +46,4 @@ cd your-blog-repo
 
 # Install Hugo (follow guide at https://gohugo.io/getting-started/installing/)
 
+# Run the development server
