@@ -50,3 +50,4 @@ cd your-blog-repo
 hugo server
 then visit http://localhost:1313 in your browser.
 
+## Usage
