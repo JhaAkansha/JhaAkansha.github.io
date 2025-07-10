@@ -52,3 +52,4 @@ hugo server
 then visit http://localhost:1313 in your browser.
 
 ## Usage
+- Add new posts in content/posts/ as .md files.
