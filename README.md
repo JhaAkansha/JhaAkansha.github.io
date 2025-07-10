@@ -42,6 +42,7 @@ To run the blog locally:
 # Clone the repository
 git clone https://github.com/jhaakansha/your-blog-repo.git
 cd your-blog-repo
+```
 
 
 # Install Hugo (follow guide at https://gohugo.io/getting-started/installing/)
