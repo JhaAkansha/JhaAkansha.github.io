@@ -55,3 +55,5 @@ then visit http://localhost:1313 in your browser.
 - Add new posts in `content/posts/` as .md files.
 - Use Hugo front matter to define metadata like `title`, `date`, `summary`, `tags`, etc.
 - Static pages like About can be added under `content/` .
+
+## Deployment
