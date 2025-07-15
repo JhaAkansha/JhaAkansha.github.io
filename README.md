@@ -57,3 +57,4 @@ then visit http://localhost:1313 in your browser.
 - Static pages like About can be added under `content/` .
 
 ## Deployment
+- Hosted via GitHub Pages.
