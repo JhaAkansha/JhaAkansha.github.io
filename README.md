@@ -64,3 +64,4 @@ then visit http://localhost:1313 in your browser.
 ## Customization
 To change the design or layout:
 - Modify `config.toml` for theme and site settings.
+- Add custom styles or components in the `layouts/` or `assets/` directory.
