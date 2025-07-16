@@ -62,3 +62,5 @@ then visit http://localhost:1313 in your browser.
 - Optional: Automate build with GitHub Actions.
 
 ## Customization
+To change the design or layout:
+- Modify 
