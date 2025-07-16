@@ -58,3 +58,4 @@ then visit http://localhost:1313 in your browser.
 
 ## Deployment
 - Hosted via GitHub Pages.
+- Hugo builds the static site. Just push updates to the `main` branch and the site gets rebuilt automatically (if Pages is configured).
