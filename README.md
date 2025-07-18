@@ -65,4 +65,4 @@ then visit http://localhost:1313 in your browser.
 To change the design or layout:
 - Modify `config.toml` for theme and site settings.
 - Add custom styles or components in the `layouts/` or `assets/` directory.
-- Check the [https://hugostack.dev/](Stack theme documentation) for detailed customization options.
+- Check the [https://hugostack.dev/] (Stack theme documentation) for detailed customization options.
