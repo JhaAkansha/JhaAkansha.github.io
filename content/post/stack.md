@@ -4,16 +4,23 @@ date: 2022-11-05T16:23:59+05:30
 ---
 
 A stack is an ordered list in which insertion and deletion are done at one end called the "top".  
+
 ## Main Stack Operations
+
 * Push: Inserts data onto the stack.  
 * Pull: Removes and returns the last inserted data from the stack.  
+
 ## Auxiliary Stack Operations
+
 * Top: Returns the last inserted element without removing it.  
 * Size: returns  the number of elements stored in the stack.  
 * IsEmptyStack: Check whether the stack is empty or not.  
 * IsFullStack: Check whether the stack is full or not.  
+
 ## Simple Array Implementation
+
 This implementation of stack uses simple array. We add elements from left to right and use a variable to keep track of the index of the top element. If the array i full, a push operation will throw a *full stack exception*. Similarly, if we try to delete an element from an empty array, it will throw a *stack empty exception*.  
+
 ```C
 
 struct StackArr { 
