@@ -66,3 +66,5 @@ To change the design or layout:
 - Modify `config.toml` for theme and site settings.
 - Add custom styles or components in the `layouts/` or `assets/` directory.
 - Check the [Stack theme documentation](https://hugostack.dev/) for detailed customization options.
+
+## Contributing
