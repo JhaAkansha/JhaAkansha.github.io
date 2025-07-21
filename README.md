@@ -68,3 +68,4 @@ To change the design or layout:
 - Check the [Stack theme documentation](https://hugostack.dev/) for detailed customization options.
 
 ## Contributing
+Suggestions, corrections, or improvements are welcome! Feel free to open an issue or submit a pull request.
