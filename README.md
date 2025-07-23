@@ -70,3 +70,5 @@ To change the design or layout:
 
 ## Contributing
 Suggestions, corrections, or improvements are welcome! Feel free to open an issue or submit a pull request.
+
+## Useful Commands
