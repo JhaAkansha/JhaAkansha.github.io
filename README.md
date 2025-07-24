@@ -71,12 +71,12 @@ To change the design or layout:
 ## Contributing
 Suggestions, corrections, or improvements are welcome! Feel free to open an issue or submit a pull request.
 
-## Useful Commands
+# Useful Commands
 
-# Deploy with draft posts
+## Deploy with draft posts
 `hugo serve -D`
 
-# Create new post
+## Create new post
 `hugo new post/post-title.md`
 
 # Build static pages
