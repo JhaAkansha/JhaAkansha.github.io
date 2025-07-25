@@ -45,10 +45,10 @@ cd your-blog-repo
 ```
 
 
-# Install Hugo
+## Install Hugo
 follow guide at https://gohugo.io/getting-started/installing/
 
-# Run the development server
+## Run the development server
 hugo server
 then visit http://localhost:1313 in your browser.
 
