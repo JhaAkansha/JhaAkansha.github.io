@@ -48,4 +48,6 @@ cd your-blog-repo
 
 # Run the development server
 hugo server
+then visit http://localhost:1313 in your browser.
+
 
