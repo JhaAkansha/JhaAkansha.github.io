@@ -23,3 +23,8 @@ Examples include processing payments, financial transactions in real-time; track
 
 
 ## What does it mean when it is said that Kafka is an event streaming platform?
+Kafka combines 3 key capabilities:-
+1. To publish (write) and subscribe (read) to streams of events, including continuous import/export of your data from other systems.
+2. To store streams of events durably and reliably for as long as you want.
+3. To process streams of events as they occur or retrospectively.
+
