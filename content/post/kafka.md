@@ -28,3 +28,18 @@ Kafka combines 3 key capabilities:-
 2. To store streams of events durably and reliably for as long as you want.
 3. To process streams of events as they occur or retrospectively.
 
+## Kafka Data Model
+- Contains messages and topics
+- Messages represent information such as lines in a log file, a row of stock market data or an error message from the system.
+- Messages are goruped into categories called topics, e.g., logMessage or stockMessage.
+- Topics are divided into one or more partitions. A partition is equivalent to a commit log.
+- Each partition contains an ordered set of messages.
+- Each message is identified by its offset in the partition.
+- Messages are added at one end of the partition and consumed at the other
+- Producers are processes that publish message into a topic.
+- Consumers are processes that receive the messages from a topic.
+- Brokers are processes or servers within Kafka that process the messages.
+- A Kafka cluster consists of a set of brokers that process the messages.
+- Each machine in the cluster can run one broker
+- They cordinate amongst each other using zookeeper
+- One broker acts as a leader for a partition and handles the delivery and persistence, while others act as followers.
