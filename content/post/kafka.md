@@ -12,3 +12,10 @@ Apache Kafka is an open-source distributed event streaming platform. It has a pu
 1. **High Throughput**: Deliver messages at network limited throughput using a cluster of machines with latencies as low as 2ms.
 2. **Scalable**: Scale production clusters up to a thousand brokers, trillions of messages per day, petabytes of data, hundreds of thousands of partitions. Elastically expand and contract storage and processing.
 3. **Permanent Storage**: Store streams of data safely in distributed, durable, fault-tolerant cluster.
+4. **High Availability**: Stretch clusters efficiently over availability zones or connect separate clusters across geographic regions.
+5. **Built-in Stream Processing**: Process streams of events with joins, aggregations, filters, transformations, and more, using event-time and exactly-once processing.
+6. **Connect to almost anything**: Kafka’s out-of-the-box Connect interface integrates with hundreds of event sources and event sinks including Postgres, JMS, Elasticsearch, AWS S3, and more.
+8. Resilient architecturve which has resolved unusual complications in data sharing.
+
+## What is event streaming?
+- 
