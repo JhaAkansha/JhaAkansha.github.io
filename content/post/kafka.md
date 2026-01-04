@@ -18,4 +18,4 @@ Apache Kafka is an open-source distributed event streaming platform. It has a pu
 8. Resilient architecturve which has resolved unusual complications in data sharing.
 
 ## What is event streaming?
-- 
+Event streaming is the process of capturing data in real-time from event sources like databases, sensors, mobile devices etc. in the form of stream of events, sotring these events durably for later retrieval. Kafka allows manipulating, processing and reacting to the event streams in real-time as well as retrospectively, routing the event streams to different destination technologies as needed. It ensures a continuous flow and interpretation of data so that the right info is at the right place at the right time.
