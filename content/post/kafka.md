@@ -43,3 +43,12 @@ Kafka combines 3 key capabilities:-
 - Each machine in the cluster can run one broker
 - They cordinate amongst each other using zookeeper
 - One broker acts as a leader for a partition and handles the delivery and persistence, while others act as followers.
+
+## Partition Distributors
+- Partitions can be distributed across Kafka clusters.
+- Each Kafka server may handle one or more partitions.
+- A partition can be replicated across several servers for fault tolerance
+- One server is marked as a leader for the partiton and the others are marked as followers.
+- The leader controls the read and write for the partition, the followers replicate the data.
+- If a leader fails, one of the followers automatically becomes the leader.
+- Zookeeper is used for leader selection.
