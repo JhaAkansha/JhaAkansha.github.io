@@ -52,3 +52,10 @@ Kafka combines 3 key capabilities:-
 - The leader controls the read and write for the partition, the followers replicate the data.
 - If a leader fails, one of the followers automatically becomes the leader.
 - Zookeeper is used for leader selection.
+
+## 3 Major components
+1. **Kafka core**: A central hub to transport and store event streams in real time.
+2. **Kafka connect**: A framework to import event streams from other source data systems into Kafka and export event streams from Kafka to destination data systems.
+3. **Kafka Streams**: A Java library to process event streams live as they occur.
+
+## Architecture
