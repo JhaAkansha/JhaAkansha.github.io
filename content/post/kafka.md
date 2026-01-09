@@ -59,3 +59,46 @@ Kafka combines 3 key capabilities:-
 3. **Kafka Streams**: A Java library to process event streams live as they occur.
 
 ## Architecture
+
+Apache Kafka follows a **distributed, log-based architecture** designed for scalability, durability, and fault tolerance.
+
+At a high level, Kafka consists of **Producers**, **Brokers**, **Topics with Partitions**, and **Consumers**, all coordinated by **ZooKeeper (legacy) or KRaft (modern Kafka)**.
+
+---
+
+### High-Level Kafka Architecture
+
+```mermaid
+graph LR
+    Producer1 -->|Publish| Broker1
+    Producer2 -->|Publish| Broker2
+
+    Broker1 --> Topic
+    Broker2 --> Topic
+
+    Topic --> Broker1
+    Topic --> Broker2
+
+    Broker1 -->|Consume| Consumer1
+    Broker2 -->|Consume| Consumer2
+```
+#### flow explanation
+1. Producers publish messages to Kafka topics.
+2. Kafka brokers store these messages in partitions.
+3. Consumers fetch messages from brokers independently.
+
+### Topic and Partition Architecture
+```mermaid
+graph TD
+    Topic["Kafka Topic"]
+    Topic --> P0["Partition 0"]
+    Topic --> P1["Partition 1"]
+    Topic --> P2["Partition 2"]
+
+    P0 --> B1["Broker 1"]
+    P1 --> B2["Broker 2"]
+    P2 --> B3["Broker 3"]
+```
+- Topics are split into partitions for parallelism.
+- Each partition is an ordered, immutable log.
+- Ordering is guaranteed only within a partition.
