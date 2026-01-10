@@ -114,3 +114,16 @@ graph LR
     - Multiple followers (replicate data)
 - If the leader fails, a follower is automatically elected as the new leader.
 
+### Consumer Groups Architecture
+```mermaind
+graph TD
+    Topic --> P0["Partition 0"]
+    Topic --> P1["Partition 1"]
+
+    P0 --> C1["Consumer 1"]
+    P1 --> C2["Consumer 2"]
+
+```
+- Consumers work together in consumer groups.
+- Each partition is consumed by only one consumer per group.
+- Enables horizontal scalability and parallel processing.
