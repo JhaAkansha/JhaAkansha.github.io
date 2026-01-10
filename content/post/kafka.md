@@ -102,3 +102,15 @@ graph TD
 - Topics are split into partitions for parallelism.
 - Each partition is an ordered, immutable log.
 - Ordering is guaranteed only within a partition.
+
+### Partition Replication and Fault Tolerance
+```mermaid
+graph LR
+    Leader["Leader Replica"] --> F1["Follower Replica"]
+    Leader --> F2["Follower Replica"]
+```
+- Each partition has:
+    - One leader (handles all reads and writes)
+    - Multiple followers (replicate data)
+- If the leader fails, a follower is automatically elected as the new leader.
+
