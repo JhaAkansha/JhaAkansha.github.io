@@ -127,3 +127,13 @@ graph TD
 - Consumers work together in consumer groups.
 - Each partition is consumed by only one consumer per group.
 - Enables horizontal scalability and parallel processing.
+
+### Metadata and Coordination
+- ZooKeeper (older Kafka versions) or KRaft (newer versions) is used for:
+    - Broker metadata management
+    - Leader election
+    - Cluster coordination
+- Modern Kafka clusters use KRaft, removing the ZooKeeper dependency.
+
+## Replication
+- 
