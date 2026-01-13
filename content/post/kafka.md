@@ -136,4 +136,10 @@ graph TD
 - Modern Kafka clusters use KRaft, removing the ZooKeeper dependency.
 
 ## Replication
-- 
+- Uses the primary backup method of replication.
+- One machine (one replica) is called a leader and is chosen as the primary.
+- Remaining machines (replicas) are chosen as followers and act as backup.
+- The leader propagates the writes to the followers.
+- The leader waits until the writes are completed on all the replicas.
+- If a replica is down, it is skipped for the write until it comes back.
+- If a leader fails, one of the followers is chosen as new leader. This mechanism can handle n-1 failures where n is the replication factor.
