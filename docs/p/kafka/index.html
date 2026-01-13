@@ -330,7 +330,7 @@ Why Apache Kafka High Throughput: Deliver messages at network limited throughput
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    5 minute read
                 </time>
             </div>
         
@@ -351,7 +351,192 @@ Why Apache Kafka High Throughput: Deliver messages at network limited throughput
 <li><strong>High Throughput</strong>: Deliver messages at network limited throughput using a cluster of machines with latencies as low as 2ms.</li>
 <li><strong>Scalable</strong>: Scale production clusters up to a thousand brokers, trillions of messages per day, petabytes of data, hundreds of thousands of partitions. Elastically expand and contract storage and processing.</li>
 <li><strong>Permanent Storage</strong>: Store streams of data safely in distributed, durable, fault-tolerant cluster.</li>
+<li><strong>High Availability</strong>: Stretch clusters efficiently over availability zones or connect separate clusters across geographic regions.</li>
+<li><strong>Built-in Stream Processing</strong>: Process streams of events with joins, aggregations, filters, transformations, and more, using event-time and exactly-once processing.</li>
+<li><strong>Connect to almost anything</strong>: Kafka’s out-of-the-box Connect interface integrates with hundreds of event sources and event sinks including Postgres, JMS, Elasticsearch, AWS S3, and more.</li>
+<li>Resilient architecturve which has resolved unusual complications in data sharing.</li>
 </ol>
+<h2 id="what-is-event-streaming">What is event streaming?</h2>
+<p>Event streaming is the process of capturing data in real-time from event sources like databases, sensors, mobile devices etc. in the form of stream of events, sotring these events durably for later retrieval. Kafka allows manipulating, processing and reacting to the event streams in real-time as well as retrospectively, routing the event streams to different destination technologies as needed. It ensures a continuous flow and interpretation of data so that the right info is at the right place at the right time.
+Examples include processing payments, financial transactions in real-time; tracking and monitoring cars, truck, fleets and shipments; coontinuous capturing and analyzing of sensor data of IoT devices.</p>
+<h2 id="what-does-it-mean-when-it-is-said-that-kafka-is-an-event-streaming-platform">What does it mean when it is said that Kafka is an event streaming platform?</h2>
+<p>Kafka combines 3 key capabilities:-</p>
+<ol>
+<li>To publish (write) and subscribe (read) to streams of events, including continuous import/export of your data from other systems.</li>
+<li>To store streams of events durably and reliably for as long as you want.</li>
+<li>To process streams of events as they occur or retrospectively.</li>
+</ol>
+<h2 id="kafka-data-model">Kafka Data Model</h2>
+<ul>
+<li>Contains messages and topics</li>
+<li>Messages represent information such as lines in a log file, a row of stock market data or an error message from the system.</li>
+<li>Messages are goruped into categories called topics, e.g., logMessage or stockMessage.</li>
+<li>Topics are divided into one or more partitions. A partition is equivalent to a commit log.</li>
+<li>Each partition contains an ordered set of messages.</li>
+<li>Each message is identified by its offset in the partition.</li>
+<li>Messages are added at one end of the partition and consumed at the other</li>
+<li>Producers are processes that publish message into a topic.</li>
+<li>Consumers are processes that receive the messages from a topic.</li>
+<li>Brokers are processes or servers within Kafka that process the messages.</li>
+<li>A Kafka cluster consists of a set of brokers that process the messages.</li>
+<li>Each machine in the cluster can run one broker</li>
+<li>They cordinate amongst each other using zookeeper</li>
+<li>One broker acts as a leader for a partition and handles the delivery and persistence, while others act as followers.</li>
+</ul>
+<h2 id="partition-distributors">Partition Distributors</h2>
+<ul>
+<li>Partitions can be distributed across Kafka clusters.</li>
+<li>Each Kafka server may handle one or more partitions.</li>
+<li>A partition can be replicated across several servers for fault tolerance</li>
+<li>One server is marked as a leader for the partiton and the others are marked as followers.</li>
+<li>The leader controls the read and write for the partition, the followers replicate the data.</li>
+<li>If a leader fails, one of the followers automatically becomes the leader.</li>
+<li>Zookeeper is used for leader selection.</li>
+</ul>
+<h2 id="3-major-components">3 Major components</h2>
+<ol>
+<li><strong>Kafka core</strong>: A central hub to transport and store event streams in real time.</li>
+<li><strong>Kafka connect</strong>: A framework to import event streams from other source data systems into Kafka and export event streams from Kafka to destination data systems.</li>
+<li><strong>Kafka Streams</strong>: A Java library to process event streams live as they occur.</li>
+</ol>
+<h2 id="architecture">Architecture</h2>
+<p>Apache Kafka follows a <strong>distributed, log-based architecture</strong> designed for scalability, durability, and fault tolerance.</p>
+<p>At a high level, Kafka consists of <strong>Producers</strong>, <strong>Brokers</strong>, <strong>Topics with Partitions</strong>, and <strong>Consumers</strong>, all coordinated by <strong>ZooKeeper (legacy) or KRaft (modern Kafka)</strong>.</p>
+<hr>
+<h3 id="high-level-kafka-architecture">High-Level Kafka Architecture</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">graph LR
+</span></span><span class="line"><span class="cl">    Producer1 --&gt;|Publish| Broker1
+</span></span><span class="line"><span class="cl">    Producer2 --&gt;|Publish| Broker2
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    Broker1 --&gt; Topic
+</span></span><span class="line"><span class="cl">    Broker2 --&gt; Topic
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    Topic --&gt; Broker1
+</span></span><span class="line"><span class="cl">    Topic --&gt; Broker2
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    Broker1 --&gt;|Consume| Consumer1
+</span></span><span class="line"><span class="cl">    Broker2 --&gt;|Consume| Consumer2
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="flow-explanation">flow explanation</h4>
+<ol>
+<li>Producers publish messages to Kafka topics.</li>
+<li>Kafka brokers store these messages in partitions.</li>
+<li>Consumers fetch messages from brokers independently.</li>
+</ol>
+<h3 id="topic-and-partition-architecture">Topic and Partition Architecture</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">graph TD
+</span></span><span class="line"><span class="cl">    Topic[&#34;Kafka Topic&#34;]
+</span></span><span class="line"><span class="cl">    Topic --&gt; P0[&#34;Partition 0&#34;]
+</span></span><span class="line"><span class="cl">    Topic --&gt; P1[&#34;Partition 1&#34;]
+</span></span><span class="line"><span class="cl">    Topic --&gt; P2[&#34;Partition 2&#34;]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    P0 --&gt; B1[&#34;Broker 1&#34;]
+</span></span><span class="line"><span class="cl">    P1 --&gt; B2[&#34;Broker 2&#34;]
+</span></span><span class="line"><span class="cl">    P2 --&gt; B3[&#34;Broker 3&#34;]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Topics are split into partitions for parallelism.</li>
+<li>Each partition is an ordered, immutable log.</li>
+<li>Ordering is guaranteed only within a partition.</li>
+</ul>
+<h3 id="partition-replication-and-fault-tolerance">Partition Replication and Fault Tolerance</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">graph LR
+</span></span><span class="line"><span class="cl">    Leader[&#34;Leader Replica&#34;] --&gt; F1[&#34;Follower Replica&#34;]
+</span></span><span class="line"><span class="cl">    Leader --&gt; F2[&#34;Follower Replica&#34;]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Each partition has:
+<ul>
+<li>One leader (handles all reads and writes)</li>
+<li>Multiple followers (replicate data)</li>
+</ul>
+</li>
+<li>If the leader fails, a follower is automatically elected as the new leader.</li>
+</ul>
+<h3 id="consumer-groups-architecture">Consumer Groups Architecture</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">graph TD
+</span></span><span class="line"><span class="cl">    Topic --&gt; P0[&#34;Partition 0&#34;]
+</span></span><span class="line"><span class="cl">    Topic --&gt; P1[&#34;Partition 1&#34;]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    P0 --&gt; C1[&#34;Consumer 1&#34;]
+</span></span><span class="line"><span class="cl">    P1 --&gt; C2[&#34;Consumer 2&#34;]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Consumers work together in consumer groups.</li>
+<li>Each partition is consumed by only one consumer per group.</li>
+<li>Enables horizontal scalability and parallel processing.</li>
+</ul>
+<h3 id="metadata-and-coordination">Metadata and Coordination</h3>
+<ul>
+<li>ZooKeeper (older Kafka versions) or KRaft (newer versions) is used for:
+<ul>
+<li>Broker metadata management</li>
+<li>Leader election</li>
+<li>Cluster coordination</li>
+</ul>
+</li>
+<li>Modern Kafka clusters use KRaft, removing the ZooKeeper dependency.</li>
+</ul>
+<h2 id="replication">Replication</h2>
+<ul>
+<li>Uses the primary backup method of replication.</li>
+<li>One machine (one replica) is called a leader and is chosen as the primary.</li>
+<li>Remaining machines (replicas) are chosen as followers and act as backup.</li>
+<li>The leader propagates the writes to the followers.</li>
+<li>The leader waits until the writes are completed on all the replicas.</li>
+<li>If a replica is down, it is skipped for the write until it comes back.</li>
+<li>If a leader fails, one of the followers is chosen as new leader. This mechanism can handle n-1 failures where n is the replication factor.</li>
+</ul>
 
 </section>
 
@@ -534,6 +719,25 @@ Why Apache Kafka High Throughput: Deliver messages at network limited throughput
             <nav id="TableOfContents">
   <ol>
     <li><a href="#why-apache-kafka">Why Apache Kafka</a></li>
+    <li><a href="#what-is-event-streaming">What is event streaming?</a></li>
+    <li><a href="#what-does-it-mean-when-it-is-said-that-kafka-is-an-event-streaming-platform">What does it mean when it is said that Kafka is an event streaming platform?</a></li>
+    <li><a href="#kafka-data-model">Kafka Data Model</a></li>
+    <li><a href="#partition-distributors">Partition Distributors</a></li>
+    <li><a href="#3-major-components">3 Major components</a></li>
+    <li><a href="#architecture">Architecture</a>
+      <ol>
+        <li><a href="#high-level-kafka-architecture">High-Level Kafka Architecture</a>
+          <ol>
+            <li><a href="#flow-explanation">flow explanation</a></li>
+          </ol>
+        </li>
+        <li><a href="#topic-and-partition-architecture">Topic and Partition Architecture</a></li>
+        <li><a href="#partition-replication-and-fault-tolerance">Partition Replication and Fault Tolerance</a></li>
+        <li><a href="#consumer-groups-architecture">Consumer Groups Architecture</a></li>
+        <li><a href="#metadata-and-coordination">Metadata and Coordination</a></li>
+      </ol>
+    </li>
+    <li><a href="#replication">Replication</a></li>
   </ol>
 </nav>
         </div>

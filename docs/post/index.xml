@@ -2847,7 +2847,192 @@ Prompt templates became more &lt;strong&gt;user-friendly and intuitive&lt;/stron
 &lt;li&gt;&lt;strong&gt;High Throughput&lt;/strong&gt;: Deliver messages at network limited throughput using a cluster of machines with latencies as low as 2ms.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Scalable&lt;/strong&gt;: Scale production clusters up to a thousand brokers, trillions of messages per day, petabytes of data, hundreds of thousands of partitions. Elastically expand and contract storage and processing.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Permanent Storage&lt;/strong&gt;: Store streams of data safely in distributed, durable, fault-tolerant cluster.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;High Availability&lt;/strong&gt;: Stretch clusters efficiently over availability zones or connect separate clusters across geographic regions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Built-in Stream Processing&lt;/strong&gt;: Process streams of events with joins, aggregations, filters, transformations, and more, using event-time and exactly-once processing.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Connect to almost anything&lt;/strong&gt;: Kafka’s out-of-the-box Connect interface integrates with hundreds of event sources and event sinks including Postgres, JMS, Elasticsearch, AWS S3, and more.&lt;/li&gt;
+&lt;li&gt;Resilient architecturve which has resolved unusual complications in data sharing.&lt;/li&gt;
 &lt;/ol&gt;
+&lt;h2 id=&#34;what-is-event-streaming&#34;&gt;What is event streaming?&lt;/h2&gt;
+&lt;p&gt;Event streaming is the process of capturing data in real-time from event sources like databases, sensors, mobile devices etc. in the form of stream of events, sotring these events durably for later retrieval. Kafka allows manipulating, processing and reacting to the event streams in real-time as well as retrospectively, routing the event streams to different destination technologies as needed. It ensures a continuous flow and interpretation of data so that the right info is at the right place at the right time.
+Examples include processing payments, financial transactions in real-time; tracking and monitoring cars, truck, fleets and shipments; coontinuous capturing and analyzing of sensor data of IoT devices.&lt;/p&gt;
+&lt;h2 id=&#34;what-does-it-mean-when-it-is-said-that-kafka-is-an-event-streaming-platform&#34;&gt;What does it mean when it is said that Kafka is an event streaming platform?&lt;/h2&gt;
+&lt;p&gt;Kafka combines 3 key capabilities:-&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;To publish (write) and subscribe (read) to streams of events, including continuous import/export of your data from other systems.&lt;/li&gt;
+&lt;li&gt;To store streams of events durably and reliably for as long as you want.&lt;/li&gt;
+&lt;li&gt;To process streams of events as they occur or retrospectively.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;kafka-data-model&#34;&gt;Kafka Data Model&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Contains messages and topics&lt;/li&gt;
+&lt;li&gt;Messages represent information such as lines in a log file, a row of stock market data or an error message from the system.&lt;/li&gt;
+&lt;li&gt;Messages are goruped into categories called topics, e.g., logMessage or stockMessage.&lt;/li&gt;
+&lt;li&gt;Topics are divided into one or more partitions. A partition is equivalent to a commit log.&lt;/li&gt;
+&lt;li&gt;Each partition contains an ordered set of messages.&lt;/li&gt;
+&lt;li&gt;Each message is identified by its offset in the partition.&lt;/li&gt;
+&lt;li&gt;Messages are added at one end of the partition and consumed at the other&lt;/li&gt;
+&lt;li&gt;Producers are processes that publish message into a topic.&lt;/li&gt;
+&lt;li&gt;Consumers are processes that receive the messages from a topic.&lt;/li&gt;
+&lt;li&gt;Brokers are processes or servers within Kafka that process the messages.&lt;/li&gt;
+&lt;li&gt;A Kafka cluster consists of a set of brokers that process the messages.&lt;/li&gt;
+&lt;li&gt;Each machine in the cluster can run one broker&lt;/li&gt;
+&lt;li&gt;They cordinate amongst each other using zookeeper&lt;/li&gt;
+&lt;li&gt;One broker acts as a leader for a partition and handles the delivery and persistence, while others act as followers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;partition-distributors&#34;&gt;Partition Distributors&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Partitions can be distributed across Kafka clusters.&lt;/li&gt;
+&lt;li&gt;Each Kafka server may handle one or more partitions.&lt;/li&gt;
+&lt;li&gt;A partition can be replicated across several servers for fault tolerance&lt;/li&gt;
+&lt;li&gt;One server is marked as a leader for the partiton and the others are marked as followers.&lt;/li&gt;
+&lt;li&gt;The leader controls the read and write for the partition, the followers replicate the data.&lt;/li&gt;
+&lt;li&gt;If a leader fails, one of the followers automatically becomes the leader.&lt;/li&gt;
+&lt;li&gt;Zookeeper is used for leader selection.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-major-components&#34;&gt;3 Major components&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Kafka core&lt;/strong&gt;: A central hub to transport and store event streams in real time.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Kafka connect&lt;/strong&gt;: A framework to import event streams from other source data systems into Kafka and export event streams from Kafka to destination data systems.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Kafka Streams&lt;/strong&gt;: A Java library to process event streams live as they occur.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;architecture&#34;&gt;Architecture&lt;/h2&gt;
+&lt;p&gt;Apache Kafka follows a &lt;strong&gt;distributed, log-based architecture&lt;/strong&gt; designed for scalability, durability, and fault tolerance.&lt;/p&gt;
+&lt;p&gt;At a high level, Kafka consists of &lt;strong&gt;Producers&lt;/strong&gt;, &lt;strong&gt;Brokers&lt;/strong&gt;, &lt;strong&gt;Topics with Partitions&lt;/strong&gt;, and &lt;strong&gt;Consumers&lt;/strong&gt;, all coordinated by &lt;strong&gt;ZooKeeper (legacy) or KRaft (modern Kafka)&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;high-level-kafka-architecture&#34;&gt;High-Level Kafka Architecture&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;graph LR
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Producer1 --&amp;gt;|Publish| Broker1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Producer2 --&amp;gt;|Publish| Broker2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Broker1 --&amp;gt; Topic
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Broker2 --&amp;gt; Topic
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Topic --&amp;gt; Broker1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Topic --&amp;gt; Broker2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Broker1 --&amp;gt;|Consume| Consumer1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Broker2 --&amp;gt;|Consume| Consumer2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;flow-explanation&#34;&gt;flow explanation&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Producers publish messages to Kafka topics.&lt;/li&gt;
+&lt;li&gt;Kafka brokers store these messages in partitions.&lt;/li&gt;
+&lt;li&gt;Consumers fetch messages from brokers independently.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;topic-and-partition-architecture&#34;&gt;Topic and Partition Architecture&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;graph TD
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Topic[&amp;#34;Kafka Topic&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Topic --&amp;gt; P0[&amp;#34;Partition 0&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Topic --&amp;gt; P1[&amp;#34;Partition 1&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Topic --&amp;gt; P2[&amp;#34;Partition 2&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    P0 --&amp;gt; B1[&amp;#34;Broker 1&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    P1 --&amp;gt; B2[&amp;#34;Broker 2&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    P2 --&amp;gt; B3[&amp;#34;Broker 3&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Topics are split into partitions for parallelism.&lt;/li&gt;
+&lt;li&gt;Each partition is an ordered, immutable log.&lt;/li&gt;
+&lt;li&gt;Ordering is guaranteed only within a partition.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;partition-replication-and-fault-tolerance&#34;&gt;Partition Replication and Fault Tolerance&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;graph LR
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Leader[&amp;#34;Leader Replica&amp;#34;] --&amp;gt; F1[&amp;#34;Follower Replica&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Leader --&amp;gt; F2[&amp;#34;Follower Replica&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Each partition has:
+&lt;ul&gt;
+&lt;li&gt;One leader (handles all reads and writes)&lt;/li&gt;
+&lt;li&gt;Multiple followers (replicate data)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;If the leader fails, a follower is automatically elected as the new leader.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;consumer-groups-architecture&#34;&gt;Consumer Groups Architecture&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;graph TD
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Topic --&amp;gt; P0[&amp;#34;Partition 0&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Topic --&amp;gt; P1[&amp;#34;Partition 1&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    P0 --&amp;gt; C1[&amp;#34;Consumer 1&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    P1 --&amp;gt; C2[&amp;#34;Consumer 2&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Consumers work together in consumer groups.&lt;/li&gt;
+&lt;li&gt;Each partition is consumed by only one consumer per group.&lt;/li&gt;
+&lt;li&gt;Enables horizontal scalability and parallel processing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;metadata-and-coordination&#34;&gt;Metadata and Coordination&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;ZooKeeper (older Kafka versions) or KRaft (newer versions) is used for:
+&lt;ul&gt;
+&lt;li&gt;Broker metadata management&lt;/li&gt;
+&lt;li&gt;Leader election&lt;/li&gt;
+&lt;li&gt;Cluster coordination&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Modern Kafka clusters use KRaft, removing the ZooKeeper dependency.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;replication&#34;&gt;Replication&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Uses the primary backup method of replication.&lt;/li&gt;
+&lt;li&gt;One machine (one replica) is called a leader and is chosen as the primary.&lt;/li&gt;
+&lt;li&gt;Remaining machines (replicas) are chosen as followers and act as backup.&lt;/li&gt;
+&lt;li&gt;The leader propagates the writes to the followers.&lt;/li&gt;
+&lt;li&gt;The leader waits until the writes are completed on all the replicas.&lt;/li&gt;
+&lt;li&gt;If a replica is down, it is skipped for the write until it comes back.&lt;/li&gt;
+&lt;li&gt;If a leader fails, one of the followers is chosen as new leader. This mechanism can handle n-1 failures where n is the replication factor.&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         </item>
         <item>
