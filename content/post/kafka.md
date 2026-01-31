@@ -6,4 +6,6 @@ draft: false
 
 # Apache Kafka
 
-Apache Kafka is an open-source distributed event streaming platform. It has a publish-subscribe messaging system which allows exchanging of data between applications, servers and processors as well.
+Apache Kafka is an open-source distributed event streaming platform. It has a publish-subscribe messaging system which allows exchanging of data between applications, servers and processors as well. Kafka is written in Java and Scala. It is scalable and fault-tolerant and has topic-based partition FIFO queues.
+
+## Why Apache Kafka
